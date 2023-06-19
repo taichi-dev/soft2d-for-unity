@@ -298,7 +298,7 @@ namespace Taichi.Soft2D.Plugin
 
 #if UNITY_EDITOR
 
-        // functions below are used to create Soft2D GameObjects in Hierarchy window
+        // Functions below are used to create Soft2D GameObjects in Hierarchy window
         #region Create Sof2D Prefabs
 
         [MenuItem(menuPath + "/Body/Body", false)]

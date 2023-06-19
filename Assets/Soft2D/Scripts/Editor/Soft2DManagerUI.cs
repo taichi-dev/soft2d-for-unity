@@ -184,9 +184,9 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Max Num Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
-            EditorGUILayout.PropertyField(S2MaxParticleNum, new GUIContent("Max Particle Number", "The current maximum allowed number of particles"));
-            EditorGUILayout.PropertyField(S2MaxBodyNum, new GUIContent("Max Body Number", "The current maximum allowed number of bodies"));
-            EditorGUILayout.PropertyField(S2MaxTriggerNum, new GUIContent("Max Trigger Number", "The current maximum allowed number of triggers"));
+            EditorGUILayout.PropertyField(S2MaxParticleNum, new GUIContent("Max Particle Number", "The maximum allowed number of particles"));
+            EditorGUILayout.PropertyField(S2MaxBodyNum, new GUIContent("Max Body Number", "The maximum allowed number of bodies"));
+            EditorGUILayout.PropertyField(S2MaxTriggerNum, new GUIContent("Max Trigger Number", "The maximum allowed number of triggers"));
             EditorGUILayout.EndVertical();
 
             EditorGUILayout.Space(10);

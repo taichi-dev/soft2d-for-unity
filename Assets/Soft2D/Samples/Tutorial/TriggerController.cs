@@ -6,8 +6,7 @@ public class TriggerController : MonoBehaviour
 {
     public ETrigger trigger;
     public Text text;
-
-    // Update is called once per frame
+    
     void Update()
     {
         bool isTriggered = trigger.QueryParticles();

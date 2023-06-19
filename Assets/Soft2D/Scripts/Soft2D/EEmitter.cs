@@ -45,20 +45,20 @@ namespace Taichi.Soft2D.Plugin
         [HideInInspector] [Tooltip("Emitting body's color will be generated randomly if true")] public bool rainbow;
         [HideInInspector] [Tooltip("An event which will be invoked while emitting a body")] public UnityEvent OnEmitterOut;
 
-        //Visit Shape.md for more information
+        // Visit Shape.md for more information
         [HideInInspector] [Tooltip("Emitting body's shape type")] public ShapeType shapeType;
-        //Box parameters, available when shapeType is Box
+        // Box parameters, available when shapeType is Box
         [HideInInspector] [Tooltip("Box's half width")] public float halfWidth;
         [HideInInspector] [Tooltip("Box's half height")] public float halfHeight;
-        //Circle parameter, available when shapeType is Circle
+        // Circle parameter, available when shapeType is Circle
         [HideInInspector] [Tooltip("Circle's radius")] public float radius;
-        //Capsule parameters, available when shapeType is Capsule
+        // Capsule parameters, available when shapeType is Capsule
         [HideInInspector] [Tooltip("Capsule's half rect length")] public float halfRectLength;
         [HideInInspector] [Tooltip("Capsule's cap radius")]public float capRadius;
-        //Ellipse parameters, available when shapeType is Ellipse
+        // Ellipse parameters, available when shapeType is Ellipse
         [HideInInspector] [Tooltip("Ellipse's radius on X axis")] public float radiusX;
         [HideInInspector] [Tooltip("Ellipse's radius on Y axis")] public float radiusY;
-        //Polygon parameters, available when shapeType is Polygon
+        // Polygon parameters, available when shapeType is Polygon
         [HideInInspector] [Tooltip("Polygon vertices' local positions")] public List<Vector2> verticesPosition;
         
         [HideInInspector] [Tooltip("Use mesh body or not")] public bool useMesh;

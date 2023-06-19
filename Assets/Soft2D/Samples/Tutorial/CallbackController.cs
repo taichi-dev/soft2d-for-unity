@@ -16,13 +16,13 @@ public class CallbackController : MonoBehaviour
         {
             IntPtr particlePtr = IntPtr.Add(particles, i * particleSize);
             S2Particle particle = Marshal.PtrToStructure<S2Particle>(particlePtr);
-            // you can manipulate your particles here:
-            // for example, we can delete them:
+            // You can manipulate your particles here:
+            // For example, we can delete them:
             particle.is_removed = 1;
             Marshal.StructureToPtr(particle,particlePtr,false);
         }
     }
-    // Update is called once per frame
+    
     void Update()
     {
         trigger.InvokeCallbackAsync(ManipulateParticles);

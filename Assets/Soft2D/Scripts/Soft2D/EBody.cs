@@ -8,20 +8,20 @@ namespace Taichi.Soft2D.Plugin
 {
     public class EBody : BodyBase
     {
-        //Visit Shape.md for more information
+        // Visit Shape.md for more information
         [HideInInspector] [Tooltip("Body's shape type")] public ShapeType shapeType;
-        //Box parameters, available when shapeType is Box
+        // Box parameters, available when shapeType is Box
         [HideInInspector] [Tooltip("Box's half width")] public float halfWidth;
         [HideInInspector] [Tooltip("Box's half height")] public float halfHeight;
-        //Circle parameter, available when shapeType is Circle
+        // Circle parameter, available when shapeType is Circle
         [HideInInspector] [Tooltip("Circle's radius")] public float radius;
-        //Capsule parameters, available when shapeType is Capsule
+        // Capsule parameters, available when shapeType is Capsule
         [HideInInspector] [Tooltip("Capsule's Half Rect Length")] public float halfRectLength;
         [HideInInspector] [Tooltip("Capsule's Cap Radius")]public float capRadius;
-        //Ellipse parameters, available when shapeType is Ellipse
+        // Ellipse parameters, available when shapeType is Ellipse
         [HideInInspector] [Tooltip("Ellipse's radius on X axis")] public float radiusX;
         [HideInInspector] [Tooltip("Ellipse's radius on Y axis")] public float radiusY;
-        //Polygon parameters, available when shapeType is Polygon
+        // Polygon parameters, available when shapeType is Polygon
         [HideInInspector] [Tooltip("Polygon vertices' local positions")] public List<Vector2> verticesPosition;
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace Taichi.Soft2D.Plugin
         protected override void CreateS2Body(S2Material material, S2Kinematics kinematics, uint tagBuffer)
         {
             S2Shape shape;
-            // if body's shapeType is Polygon, we need an IntPtr to pass vertices array to Soft2D
+            // If body's shapeType is Polygon, we need an IntPtr to pass vertices array to Soft2D
             IntPtr ptr = IntPtr.Zero;
             switch (shapeType)
             {
