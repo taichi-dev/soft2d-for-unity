@@ -53,8 +53,8 @@ Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可
 
 ### Environment Requirements
 
-- Graphics APIs: Vulkan or Metal
-- Unity version：2021.3.15 or higher
+- Graphics API: Vulkan or Metal
+- Unity version：2021.3.22f1 or higher
 - Render Pipeline：built-in or URP 
 
 ### Installation
@@ -66,10 +66,6 @@ Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可
 - [Overview](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/Docs/Simplified_Chinese/Overview.md)
 - [Tutorial](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/Docs/Simplified_Chinese/Tutorials/Tutorial.md)
 
-## License
-Soft2D is distributed under the terms of Apache License (Version 2.0).
-
-See [Apache License](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/LICENSE) for details.
 
 ## Contact Us
 
