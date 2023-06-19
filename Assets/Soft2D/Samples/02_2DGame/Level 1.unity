@@ -35798,10 +35798,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 352331159722651328, guid: abd937719b287894a8cbc2e4595bdf57,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2641630008930415597, guid: abd937719b287894a8cbc2e4595bdf57,
         type: 3}
       propertyPath: m_Text
       value: 'Level 1 : Where dream begins'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203080999637044465, guid: abd937719b287894a8cbc2e4595bdf57,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3226961400317921408, guid: abd937719b287894a8cbc2e4595bdf57,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3716271325557820829, guid: abd937719b287894a8cbc2e4595bdf57,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7292076412367778661, guid: abd937719b287894a8cbc2e4595bdf57,
         type: 3}
