@@ -1,0 +1,25 @@
+#pragma kernel DrawValidationImage
+
+RWStructuredBuffer<int> colliderBuffer;
+RWStructuredBuffer<int> triggerBuffer;
+
+RWTexture2D<float4> ResultTexture;
+int resolutionY;
+uint ratio;
+
+[numthreads(8,8,1)]
+void DrawValidationImage (uint3 id : SV_DispatchThreadID)
+{
+    if(colliderBuffer[resolutionY*id.x+id.y]>0)
+    {
+        ResultTexture[id.xy] = float4(0,1,0,1);
+    }
+    else
+    {
+        ResultTexture[id.xy] = float4(0,0,0,0);
+    }
+    if(triggerBuffer[resolutionY*id.x+id.y]>0)
+    {
+        ResultTexture[id.xy] = float4(1,0,0,1);
+    }
+}

@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7938939022831793364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6618364003110701257}
+  - component: {fileID: 5743881528395175527}
+  m_Layer: 0
+  m_Name: Emitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6618364003110701257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7938939022831793364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5743881528395175527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7938939022831793364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db08603624682f4da1f070d296cd738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitOnAwake: 1
+  linearVelocity: {x: 0, y: -7}
+  angularVelocity: 0
+  lifetime: 100
+  frequency: 2
+  materialType: 0
+  density: 1000
+  youngsModulus: 0.3
+  poissonsRatio: 0.2
+  particleTag: 1
+  isRandom: 0
+  baseColor:
+    serializedVersion: 2
+    rgba: 3368648960
+  randColors: []
+  rainbow: 0
+  OnEmitterOut:
+    m_PersistentCalls:
+      m_Calls: []
+  shapeType: 1
+  halfWidth: 0.1
+  halfHeight: 0.1
+  radius: 0.02
+  halfRectLength: 0
+  capRadius: 0
+  radiusX: 0
+  radiusY: 0
+  verticesPosition: []
+  useMesh: 0
+  meshSprite: {fileID: 0}
+  meshScale: 0
