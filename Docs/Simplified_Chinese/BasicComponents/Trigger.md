@@ -1,6 +1,6 @@
 # Trigger
 
-> Trigger 是一个能检测 Soft2D 粒子并触发相关事件的触发器。对应代码中的 ETrigger 类型。 Trigger 的作用范围由它的 BoxCollider2D 组件控制。
+> Trigger 是一个拥有特定形状的空间区域。它可以检测到经过它的粒子。对应代码中的 ETrigger 类型。 Trigger 的作用范围由它的 BoxCollider2D 组件控制。
 
 > 本文中 Trigger 均表示 Soft2D 内的触发器组件。
 

@@ -1,6 +1,6 @@
 # Body
 
-> Body 是由一组内部粒子组成的一个物体。对应代码中的 EBody 类型。
+> Body 是一个可以被模拟的连续体，由一组粒子组成。一个 body 拥有 shape, center, material 等属性。对应代码中的 EBody 类型。
 
 ## 使用 Body GameObject 的方法
 

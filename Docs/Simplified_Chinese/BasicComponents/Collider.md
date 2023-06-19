@@ -1,6 +1,6 @@
 # Collider
 
-> Collider 是具有特定形状的几何体，它们可以与 Soft2D 粒子产生碰撞交互进而影响 Soft2D 粒子的运动。对应代码中的 ECollider 类型。
+> Collider 是一个障碍物，会阻挡 body 的运动。对应代码中的 ECollider 类型。
 
 > 本文中 Collider 均表示 Soft2D 内的 Collider 组件。
 
