@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3785404050484907315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3785404050484907313}
+  - component: {fileID: 3785404050484907311}
+  - component: {fileID: 3785404050484907312}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3785404050484907313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3785404050484907315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1152.6532, y: 536.02264, z: 7.71286}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3785404050484907311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3785404050484907315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f09f2e02b0117542858a234192ce5f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instanceMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  instanceMaterial: {fileID: 2100000, guid: cc64f838278c03542ba1d2a10180af53, type: 2}
+  instanceSize: 0.03
+  emissionColor: {r: 0, g: 0, b: 0, a: 0}
+  smoothness: 0
+  metallic: 0
+  occlusionSize: 0
+  layerIndex: 3
+  debugQuad: {fileID: 0}
+  colliderCol: {r: 0.3647059, g: 0.90588236, b: 0, a: 1}
+  triggerCol: {r: 0.9647059, g: 0.93333334, b: 0.023529412, a: 1}
+  pause: 0
+  worldOffset: {x: 0, y: 0}
+  worldExtent: {x: 4, y: 4}
+  enableGyro: 0
+  gyroScale: 0
+  enableForceField: 0
+  forceFieldScale: 1.1
+  gravity: {x: 0, y: -50}
+  timeStep: 0.004
+  enableDebugTools: 0
+  shaderType: 0
+  enableWorldBoundary: 1
+  collisionType: 0
+  frictionCoefficient: 0
+  restitutionCoefficient: 0
+  S2MaxParticleNum: 90000
+  S2MaxBodyNum: 10000
+  S2MaxTriggerNum: 10000
+  S2GridResolution: 128
+  S2Substep: 0.0001
+  S2MeshBodyForceScale: 0.000001
+  S2NormalForceScale: 0.1
+  S2VelocityForceScale: 0.1
+  S2FineGridScale: 4
+--- !u!114 &3785404050484907312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3785404050484907315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00186aef459489c459bb85657980ce21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiManager: {fileID: 0}
+  inventoriesRemain: []
+  currentInvId: -1
+  lvlData: {fileID: 11400000, guid: a01f16ee5ac9ef0458b2783e69326a95, type: 2}
