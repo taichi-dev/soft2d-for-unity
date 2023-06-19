@@ -4,7 +4,6 @@ using UnityEngine;
 using Game;
 using Taichi.Soft2D.Generated;
 using Taichi.Soft2D.Plugin;
-using UnityEngine.Serialization;
 
 public class DestinationBase : MonoBehaviour
 {

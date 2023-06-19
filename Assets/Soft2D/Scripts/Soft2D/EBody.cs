@@ -1,10 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
 using Taichi.Soft2D.Generated;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Taichi.Soft2D.Plugin
 {

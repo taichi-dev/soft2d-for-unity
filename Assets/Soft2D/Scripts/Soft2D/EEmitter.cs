@@ -5,7 +5,6 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using Taichi.Soft2D.Generated;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Taichi.Soft2D.Plugin

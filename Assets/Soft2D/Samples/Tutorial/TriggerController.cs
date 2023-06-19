@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using Taichi.Soft2D.Plugin;
 using UnityEngine;
 using UnityEngine.UI;

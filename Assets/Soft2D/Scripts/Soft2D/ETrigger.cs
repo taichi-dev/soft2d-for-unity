@@ -7,7 +7,7 @@ namespace Taichi.Soft2D.Plugin
     public class ETrigger : MonoBehaviour
     {
         protected Soft2D.Trigger trigger;
-        [HideInInspector] [Tooltip("Trigger is initialized")] public bool isInitialized;
+        [Tooltip("Trigger is initialized")] public bool isInitialized => trigger != null;
 
         /// <summary>
         /// Invoke input callback in Soft2D async.
@@ -17,9 +17,8 @@ namespace Taichi.Soft2D.Plugin
         public void InvokeCallbackAsync(S2ParticleManipulationCallback callback)
         {
             S2ParticleManipulationCallback s2ParticleManipulationCallback = callback;
-            if (trigger == null)
-                return;
-            trigger.ManipulateParticlesInTriggerAsync(s2ParticleManipulationCallback);
+            if (isInitialized)
+                trigger.ManipulateParticlesInTriggerAsync(s2ParticleManipulationCallback);
         }
 
         /// <summary>
@@ -29,7 +28,7 @@ namespace Taichi.Soft2D.Plugin
         public void SetUnityAndSoft2DPosition(Vector2 pos)
         {
             transform.position = new Vector3(pos.x, pos.y, transform.position.z);
-            if(trigger != null)
+            if(isInitialized)
                 trigger.SetTriggerPosition(pos);
         }
 
@@ -39,7 +38,7 @@ namespace Taichi.Soft2D.Plugin
         /// <param name="pos">trigger's position</param>
         public void SetSoft2DPosition(Vector2 pos)
         {
-            if(trigger != null)
+            if(isInitialized)
                 trigger.SetTriggerPosition(pos);
         }
 
@@ -70,7 +69,8 @@ namespace Taichi.Soft2D.Plugin
         /// <param name="rotation">trigger's rotation (degree)</param>
         public void SetSoft2DRotation(float rotation)
         {
-            trigger.SetTriggerRotation(Mathf.Deg2Rad * rotation);
+            if (isInitialized)
+                trigger.SetTriggerRotation(Mathf.Deg2Rad * rotation);
         }
 
         /// <summary>
@@ -79,7 +79,9 @@ namespace Taichi.Soft2D.Plugin
         /// <returns>trigger's rotation in Soft2D side (degree)</returns>
         public float GetSoft2DRotation()
         {
-            return trigger.GetTriggerRotation() * Mathf.Rad2Deg;
+            if (isInitialized)
+                return trigger.GetTriggerRotation() * Mathf.Rad2Deg;
+            return 0;
         }
 
         /// <summary>
@@ -88,7 +90,8 @@ namespace Taichi.Soft2D.Plugin
         /// <param name="tag">specific tag(above 0)</param>
         public void DestroyParticlesByTag(int tag)
         {
-            Soft2D.World.RemoveParticlesInTriggerByTag(this.trigger, (uint)tag << 24, 0xff000000);
+            if (isInitialized)
+                Soft2D.World.RemoveParticlesInTriggerByTag(this.trigger, (uint)tag << 24, 0xff000000);
         }
 
         /// <summary>
@@ -96,7 +99,8 @@ namespace Taichi.Soft2D.Plugin
         /// </summary>
         public void DestroyParticles()
         {
-            Soft2D.World.RemoveParticlesInTrigger(this.trigger);
+            if (isInitialized)
+                Soft2D.World.RemoveParticlesInTrigger(this.trigger);
         }
 
         /// <summary>
@@ -106,7 +110,9 @@ namespace Taichi.Soft2D.Plugin
         /// <returns>if there are particles with specific tag inside the trigger area</returns>
         public bool QueryParticlesByTag(int tag)
         {
-            return Soft2D.World.QueryTriggerOverlappedByTag(this.trigger, (uint)tag << 24);
+            if (isInitialized)
+                return Soft2D.World.QueryTriggerOverlappedByTag(this.trigger, (uint)tag << 24);
+            return false;
         }
 
         /// <summary>
@@ -115,7 +121,9 @@ namespace Taichi.Soft2D.Plugin
         /// <returns>if there are particles inside the trigger area</returns>
         public bool QueryParticles()
         {
-            return Soft2D.World.QueryTriggerOverlapped(this.trigger);
+            if (isInitialized)
+                return Soft2D.World.QueryTriggerOverlapped(this.trigger);
+            return false;
         }
 
         /// <summary>
@@ -125,7 +133,9 @@ namespace Taichi.Soft2D.Plugin
         /// <returns></returns>
         public uint QueryParticleNumByTag(int tag)
         {
-            return Soft2D.World.QueryParticleNumInTriggerByTag(this.trigger, (uint)tag << 24);
+            if (isInitialized)
+                return Soft2D.World.QueryParticleNumInTriggerByTag(this.trigger, (uint)tag << 24);
+            return 0;
         }
 
         /// <summary>
@@ -161,7 +171,6 @@ namespace Taichi.Soft2D.Plugin
             var kinematics = Utils.CreateKinematics(createInfo);
             var shape = Utils.CreateBoxShape(size.x / 2, size.y / 2);
             trigger = Soft2D.World.CreateTrigger(kinematics, shape);
-            isInitialized = true;
         }
 
         #endregion

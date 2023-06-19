@@ -359,7 +359,7 @@ MonoBehaviour:
   particleTag: 1
   uniformColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4290806278
   randomColor: 0
   meshSprite: {fileID: 21300000, guid: d9cba3328cc108b47b107d1c79abd2cb, type: 3}
   meshScale: 0.2

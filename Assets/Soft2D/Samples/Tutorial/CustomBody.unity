@@ -474,7 +474,7 @@ MonoBehaviour:
   particleTag: 1
   uniformColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4290806278
   randomColor: 0
   particlesPosition:
   - {x: 0, y: 0}

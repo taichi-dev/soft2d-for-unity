@@ -477,7 +477,7 @@ MonoBehaviour:
   isRandom: 0
   uniformColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4278225663
   randColors: []
   rainbow: 0
   OnEmitterOut:

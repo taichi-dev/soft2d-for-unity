@@ -1,11 +1,6 @@
 #if UNITY_EDITOR
 
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Taichi.Soft2D.Plugin;
 using UnityEditor;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.Rendering;
 

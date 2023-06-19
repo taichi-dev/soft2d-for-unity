@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Taichi.Soft2D.Generated;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Taichi.Soft2D.Plugin
 {

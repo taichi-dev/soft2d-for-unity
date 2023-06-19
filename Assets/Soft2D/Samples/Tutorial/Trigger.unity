@@ -712,7 +712,7 @@ MonoBehaviour:
   particleTag: 1
   uniformColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4290806278
   randomColor: 0
   shapeType: 0
   halfWidth: 0.1

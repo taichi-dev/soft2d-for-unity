@@ -1,11 +1,6 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using UnityEngine;
-using Soft2D = Taichi.Soft2D;
 using Taichi.Soft2D.Generated;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Taichi.Soft2D.Plugin

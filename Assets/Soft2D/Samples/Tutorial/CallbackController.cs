@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Taichi.Soft2D.Generated;
 using Taichi.Soft2D.Plugin;

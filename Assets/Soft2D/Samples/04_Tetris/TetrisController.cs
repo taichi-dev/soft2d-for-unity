@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Taichi.Soft2D.Plugin;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class TetrisController : MonoBehaviour
 {

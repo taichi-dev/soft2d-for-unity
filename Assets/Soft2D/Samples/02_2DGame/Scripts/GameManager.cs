@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Taichi.Soft2D.Plugin;
-using UnityEditor;
-using UnityEngine.Serialization;
 
 namespace Game
 {
