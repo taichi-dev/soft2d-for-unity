@@ -8,7 +8,7 @@ Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可
 
 图形 API: Vulkan 或 Metal
 
-Unity 版本：2021.3.15 或更高
+Unity 版本：2021.3.22f1 或更高
 
 图形管线：built-in 或 URP 管线
 
