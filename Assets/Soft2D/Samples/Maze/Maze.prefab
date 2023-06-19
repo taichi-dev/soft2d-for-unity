@@ -132,7 +132,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 657073d9e846dd64589f45bab2753742,
         type: 3}
       propertyPath: m_Name
-      value: maze5
+      value: maze
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 657073d9e846dd64589f45bab2753742,
         type: 3}
