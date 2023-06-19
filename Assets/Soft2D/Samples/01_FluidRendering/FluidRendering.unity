@@ -186,7 +186,7 @@ MonoBehaviour:
   S2MeshBodyForceScale: 0.000001
   S2NormalForceScale: 0.1
   S2VelocityForceScale: 0.1
-  S2FineGridResolution: 4
+  S2FineGridScale: 4
 --- !u!4 &677877
 Transform:
   m_ObjectHideFlags: 0
@@ -234,7 +234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05109b3e6a1fdf948bb2bfeffa2c0abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInitialized: 0
   collisionType: 0
   frictionCoefficient: 0
   restitutionCoefficient: 0
@@ -449,7 +448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05109b3e6a1fdf948bb2bfeffa2c0abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInitialized: 0
   collisionType: 0
   frictionCoefficient: 0
   restitutionCoefficient: 0
@@ -849,7 +847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05109b3e6a1fdf948bb2bfeffa2c0abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInitialized: 0
   collisionType: 0
   frictionCoefficient: 0
   restitutionCoefficient: 0
@@ -1302,7 +1299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05109b3e6a1fdf948bb2bfeffa2c0abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInitialized: 0
   collisionType: 0
   frictionCoefficient: 0
   restitutionCoefficient: 0

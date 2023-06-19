@@ -2,6 +2,7 @@
   <!-- <img height="150" src="https://github.com/taichi-dev/soft2d/blob/main/docs/images/logo_large.png"  /> -->
 </div>
 
+
 <h1 align="center">Soft2D for Unity</h1>
 
 <div align="center">
@@ -17,19 +18,19 @@
 
 <h4 align="center">
     <p>
-        <b>English</b> |
-        <a href="https://github.com/taichi-dev/soft2d-unity-urp/blob/main/README_CN.md">简体中文</a> 
-    <p>
+        <a href="https://github.com/taichi-dev/soft2d-unity-urp/#readme">English</a> |
+        <b>简体中文</b> 
+    </p>
 </h4>
 
-## What is Soft2D for Unity？
+## Soft2D for Unity 是什么？
 Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D for Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户方便地在 Unity 中实现各种物理模拟与渲染效果。
 
 <div align="center">
 <img src="Presentation/FluidRendering.gif" alt="FluidRendering"> <img src="Presentation/Maze.gif" alt="Maze">
 </div>
 
-## Why Soft2D for Unity？
+## 为什么使用 Soft2D for Unity？
 
 - 支持**五大主流平台**的运行，全设备覆盖无死角:
 
@@ -49,29 +50,41 @@ Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可
 - 包含了**很多教程和展示场景**供用户了解插件的强劲功能。
 - 与 Unity 内组件**深度绑定**，Soft2D 的粒子可以与 Unity 的碰撞体和触发器产生交互。
 
-## Getting Started
+## 开始使用 Soft2D for Unity
 
-### Environment Requirements
+### 环境要求
 
-- Graphics APIs: Vulkan or Metal
-- Unity version：2021.3.15 or higher
-- Render Pipeline：built-in or URP 
+- 图形 API: Vulkan 或 Metal
+- Unity 版本：2021.3.15 或更高
+- 渲染管线：built-in 或 URP 管线
 
-### Installation
+### 安装
 
-[Download Soft2D for Unity](https://github.com/taichi-dev/soft2d-unity-urp/releases/download/v0.1.0/Soft2D.v0.1.0.7z) and unzip it anywhere in your Unity Assets folder (just not inside the Editor, Plugins or Resources directories).
+[下载 Soft2D for Unity](https://github.com/taichi-dev/soft2d-unity-urp/releases/download/v0.1.0/Soft2D.v0.1.0.7z) 并在 Unity Assets 文件夹下的任何位置打开它 (除了 Editor, Plugins 或 Resources 文件夹下)。
 
-## Documentation
+## 内容结构
+
+Soft2D for Unity 插件内的结构如下：
+
+	/Core		Soft2D 和 Taichi 的库文件与包装脚本
+	/Materials	Soft2D 粒子和测试工具的渲染着色器和材质
+	/Prefabs		Soft2D for Unity 插件的预制体
+	/Samples    Soft2D for Unity 插件的教程与效果演示场景
+	/Scripts	  Soft2D for Unity 插件的脚本
+
+## 文档
 
 - [Overview](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/Docs/Simplified_Chinese/Overview.md)
-- [Tutorial](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/Docs/Simplified_Chinese/Tutorials/Tutorial.md)
+- [教程](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/Docs/Simplified_Chinese/Tutorials/Tutorial.md)
 
-## License
-Soft2D is distributed under the terms of Apache License (Version 2.0).
+## 许可证
 
-See [Apache License](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/LICENSE) for details.
+Soft2D 是根据 Apache 许可证（版本2.0）分发的。
 
-## Contact Us
+查看 [Apache License](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/LICENSE) 以获取细节。
 
-- If you spot an technical or documentation issue, please file an issue at  [Github Issues](https://github.com/taichi-dev/soft2d-unity-urp/issues).
-- If you are willing to participate in Soft2D for Unity，please file a Pull Request.
+## 联系我们
+
+- 如果你在文档和使用过程中发现了困难或错误，欢迎在 [Github Issues](https://github.com/taichi-dev/soft2d-unity-urp/issues) 提出 issue。
+- 如果你愿意参与 Soft2D for Unity 的开发，欢迎给我们提出 Pull Request。
+
