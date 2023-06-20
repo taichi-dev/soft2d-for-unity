@@ -995,7 +995,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2342,7 +2342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05109b3e6a1fdf948bb2bfeffa2c0abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInitialized: 0
   collisionType: 0
   frictionCoefficient: 0
   restitutionCoefficient: 0
@@ -2403,7 +2402,7 @@ MonoBehaviour:
   youngsModulus: 5
   poissonsRatio: 0.2
   particleTag: 1
-  baseColor:
+  uniformColor:
     serializedVersion: 2
     rgba: 4291395840
   randomColor: 0
@@ -2536,7 +2535,7 @@ PrefabInstance:
     - target: {fileID: 3949743919671436436, guid: dcf12b49f3b24a84abf5c8e11c6156d8,
         type: 3}
       propertyPath: orthographic size
-      value: 1.111691
+      value: 1.0618955
       objectReference: {fileID: 0}
     - target: {fileID: 3949743919671436438, guid: dcf12b49f3b24a84abf5c8e11c6156d8,
         type: 3}
@@ -2798,7 +2797,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24778,7 +24777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05109b3e6a1fdf948bb2bfeffa2c0abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInitialized: 0
   collisionType: 0
   frictionCoefficient: 0
   restitutionCoefficient: 0
