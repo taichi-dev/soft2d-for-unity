@@ -1,9 +1,5 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-
-#if UNITY_POST_PROCESSING_STACK_V2
-
 using UnityEngine.Rendering.Universal;
 
 public class KawaseBlur : ScriptableRendererFeature
@@ -118,5 +114,3 @@ public class KawaseBlur : ScriptableRendererFeature
         renderer.EnqueuePass(scriptablePass);
     }
 }
-
-#endif
