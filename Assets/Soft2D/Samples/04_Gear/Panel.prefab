@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 806244281115945050}
   m_Layer: 0
-  m_Name: Tetris
+  m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
