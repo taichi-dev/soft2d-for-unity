@@ -15,7 +15,7 @@ Soft2D 插件支持两种方式导入 Unity 项目中，它们分别是 Unity As
    - 在 Package Manager 窗口选择 **My Assets** 选项卡，找到 Soft2D 插件，并点击 **Download** 按钮将其下载到本地。
 
 - Github 
-   - 在 Github 仓库页面访问 Soft2D 插件： [Soft2D for Unity](https://github.com/taichi-dev/soft2d-unity-urp)；
+   - 在 Github 仓库页面访问 Soft2D 插件： [Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity)；
    - 在 **Releases** 页面获取适当版本的插件文件并下载下来；
    - 直接将下载下来的 **Soft2D.unitypackage** 文件拖拽到编辑器的 **Project** 视图中；
    - Unity 编辑器会弹出一个导入设置窗口，确认无误后点击 **Import** 按钮。

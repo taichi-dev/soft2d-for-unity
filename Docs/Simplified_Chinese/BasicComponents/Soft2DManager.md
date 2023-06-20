@@ -4,7 +4,7 @@
 
 ## 使用 Soft2DManager GameObject 的方法
 
-[gif](../../GIFs/Soft2DManager.gif)
+![gif](../../GIFs/Soft2DManager.gif)
 
 ## 参数面板
 

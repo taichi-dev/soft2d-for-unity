@@ -4,7 +4,7 @@
 
 ## 使用 Emitter GameObject 的方法
 
-[gif](../../GIFs/Emitter.gif)
+![gif](../../GIFs/Emitter.gif)
 
 ## 参数面板
 
