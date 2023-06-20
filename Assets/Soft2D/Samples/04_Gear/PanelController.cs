@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Taichi.Soft2D.Plugin;
 using UnityEngine;
 
-public class TetrisController : MonoBehaviour
+public class PanelController : MonoBehaviour
 {
     public GameObject movingCube;
     public EEmitter emitter;
