@@ -1355,7 +1355,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3379,7 +3379,7 @@ PrefabInstance:
     - target: {fileID: 3949743919671436436, guid: dcf12b49f3b24a84abf5c8e11c6156d8,
         type: 3}
       propertyPath: orthographic size
-      value: 1.2090218
+      value: 1.0618955
       objectReference: {fileID: 0}
     - target: {fileID: 3949743919671436438, guid: dcf12b49f3b24a84abf5c8e11c6156d8,
         type: 3}
@@ -3628,7 +3628,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

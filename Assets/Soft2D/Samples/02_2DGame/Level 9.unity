@@ -553,7 +553,7 @@ PrefabInstance:
     - target: {fileID: 7292076413263937595, guid: abd937719b287894a8cbc2e4595bdf57,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7292076413263937595, guid: abd937719b287894a8cbc2e4595bdf57,
         type: 3}
@@ -843,7 +843,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2229,7 +2229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd15ed1f2e271a44a28f87d93c62ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInitialized: 0
 --- !u!61 &772420674
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2361,7 +2360,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2562,7 +2561,7 @@ MonoBehaviour:
   isRandom: 0
   uniformColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4291395840
   randColors: []
   rainbow: 0
   OnEmitterOut:
@@ -2593,7 +2592,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &992837211
 PrefabInstance:
@@ -2743,7 +2742,7 @@ PrefabInstance:
     - target: {fileID: 3949743919671436436, guid: dcf12b49f3b24a84abf5c8e11c6156d8,
         type: 3}
       propertyPath: orthographic size
-      value: 1.2090218
+      value: 1.0618955
       objectReference: {fileID: 0}
     - target: {fileID: 3949743919671436438, guid: dcf12b49f3b24a84abf5c8e11c6156d8,
         type: 3}
@@ -2857,7 +2856,7 @@ Transform:
   - {fileID: 366081360}
   - {fileID: 895415899}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1516760955 stripped
 MonoBehaviour:
@@ -2993,7 +2992,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
