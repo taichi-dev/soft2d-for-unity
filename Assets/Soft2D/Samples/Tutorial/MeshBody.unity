@@ -354,7 +354,7 @@ MonoBehaviour:
   lifetime: 100
   materialType: 0
   density: 1000
-  youngsModulus: 0.9
+  youngsModulus: 5
   poissonsRatio: 0.2
   particleTag: 1
   uniformColor:
