@@ -508,7 +508,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press Spacebar to open the gate
+  m_Text: Press "Space" key to open gate
 --- !u!222 &43106487
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10219,6 +10219,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 572294939261567088, guid: e664a65b4a3fc0041a54fdb49ff79a43,
+        type: 3}
+      propertyPath: m_Name
+      value: Panel
+      objectReference: {fileID: 0}
     - target: {fileID: 806244281115945050, guid: e664a65b4a3fc0041a54fdb49ff79a43,
         type: 3}
       propertyPath: m_RootOrder
@@ -10287,7 +10292,7 @@ PrefabInstance:
     - target: {fileID: 806244281115945051, guid: e664a65b4a3fc0041a54fdb49ff79a43,
         type: 3}
       propertyPath: m_Name
-      value: Tetris
+      value: Panel
       objectReference: {fileID: 0}
     - target: {fileID: 2085676006967812517, guid: e664a65b4a3fc0041a54fdb49ff79a43,
         type: 3}
