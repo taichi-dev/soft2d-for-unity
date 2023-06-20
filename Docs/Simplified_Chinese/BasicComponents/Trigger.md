@@ -6,7 +6,7 @@
 
 ## 使用 Trigger GameObject 的方法
 
-[gif](../../GIFs/Trigger.gif)
+![gif](../../GIFs/Trigger.gif)
 
 ## 内置函数
 

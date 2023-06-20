@@ -4,7 +4,7 @@
 
 ## 使用 Body GameObject 的方法
 
-[gif](../../GIFs/Body.gif)
+![gif](../../GIFs/Body.gif)
 
 ## 参数面板
 
@@ -45,7 +45,7 @@ CustomBody 是用户指定采样点的 Body。对应代码中的 ECustomBody 类
 
 ### 使用 CustomBody GameObject 的方法
 
-[gif](../../GIFs/CustomBody.gif)
+![gif](../../GIFs/CustomBody.gif)
 
 ### 参数面板
 
@@ -58,7 +58,7 @@ MeshBody 是带有拓扑关系的 Body。每个传入网格的顶点位置会生
 
 ### 使用 MeshBody GameObject 的方法
 
-[gif](../../GIFs/MeshBody.gif)
+![gif](../../GIFs/MeshBody.gif)
 
 ### 参数面板
 

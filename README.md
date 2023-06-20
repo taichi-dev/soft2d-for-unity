@@ -18,7 +18,7 @@
 <h4 align="center">
     <p>
         <b>English</b> |
-        <a href="https://github.com/taichi-dev/soft2d-unity-urp/blob/main/README_CN.md">简体中文</a> 
+        <a href="https://github.com/taichi-dev/soft2d-for-unity/blob/main/README_CN.md">简体中文</a> 
     <p>
 </h4>
 
@@ -32,13 +32,11 @@ Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可
 ## Why Soft2D for Unity？
 
 - 支持**五大主流平台**的运行，全设备覆盖无死角:
-
   ![Windows](http://img.shields.io/badge/-Windows-0078D6?style=flat-square&logo=windows&logoColor=fff)
   ![Linux](http://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=000)
   ![Android](http://img.shields.io/badge/-Android-3DDC84?style=flat-square&logo=android&logoColor=fff)
   ![macOS](http://img.shields.io/badge/-macOS-15171a?style=flat-square&logo=macos&logoColor=fff)
   ![iOS](http://img.shields.io/badge/-iOS-1f1f1f?style=flat-square&logo=ios&logoColor=fff)
-
 - 支持多种材料多种形状的物理模拟：
   - 流体
   - 沙子
@@ -59,15 +57,15 @@ Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可
 
 ### Installation
 
-[Download Soft2D for Unity](https://github.com/taichi-dev/soft2d-unity-urp/releases/download/v0.1.0/Soft2D.v0.1.0.7z) and unzip it anywhere in your Unity Assets folder (just not inside the Editor, Plugins or Resources directories).
+[Download Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity/releases/download/v0.1.0/Soft2D.v0.1.0.7z) and unzip it anywhere in your Unity Assets folder (just not inside the Editor, Plugins or Resources directories).
 
 ## Documentation
 
-- [Overview](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/Docs/Simplified_Chinese/Overview.md)
-- [Tutorial](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/Docs/Simplified_Chinese/Tutorials/Tutorial.md)
+- [Overview](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/Simplified_Chinese/Overview.md)
+- [Tutorial](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/Simplified_Chinese/Tutorials/Tutorial.md)
 
 
 ## Contact Us
 
-- If you spot an technical or documentation issue, please file an issue at  [Github Issues](https://github.com/taichi-dev/soft2d-unity-urp/issues).
+- If you spot an technical or documentation issue, please file an issue at [Github Issues](https://github.com/taichi-dev/soft2d-for-unity/issues).
 - If you are willing to participate in Soft2D for Unity，please file a Pull Request.

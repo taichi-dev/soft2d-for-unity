@@ -18,7 +18,7 @@
 
 <h4 align="center">
     <p>
-        <a href="https://github.com/taichi-dev/soft2d-unity-urp/#readme">English</a> |
+        <a href="https://github.com/taichi-dev/soft2d-for-unity/#readme">English</a> |
         <b>简体中文</b> 
     </p>
 </h4>
@@ -33,13 +33,11 @@ Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可
 ## 为什么使用 Soft2D for Unity？
 
 - 支持**五大主流平台**的运行，全设备覆盖无死角:
-
   ![Windows](http://img.shields.io/badge/-Windows-0078D6?style=flat-square&logo=windows&logoColor=fff)
   ![Linux](http://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=000)
   ![Android](http://img.shields.io/badge/-Android-3DDC84?style=flat-square&logo=android&logoColor=fff)
   ![macOS](http://img.shields.io/badge/-macOS-15171a?style=flat-square&logo=macos&logoColor=fff)
   ![iOS](http://img.shields.io/badge/-iOS-1f1f1f?style=flat-square&logo=ios&logoColor=fff)
-
 - 支持多种材料多种形状的物理模拟：
   - 流体
   - 沙子
@@ -60,31 +58,34 @@ Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可
 
 ### 安装
 
-[下载 Soft2D for Unity](https://github.com/taichi-dev/soft2d-unity-urp/releases/download/v0.1.0/Soft2D.v0.1.0.7z) 并在 Unity Assets 文件夹下的任何位置打开它 (除了 Editor, Plugins 或 Resources 文件夹下)。
+[下载 Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity/releases/download/v0.1.0/Soft2D.v0.1.0.7z) 并在 Unity Assets 文件夹下的任何位置打开它 (除了 Editor, Plugins 或 Resources 文件夹下)。
 
 ## 内容结构
 
 Soft2D for Unity 插件内的结构如下：
 
-	/Core		Soft2D 和 Taichi 的库文件与包装脚本
-	/Materials	Soft2D 粒子和测试工具的渲染着色器和材质
-	/Prefabs		Soft2D for Unity 插件的预制体
-	/Samples    Soft2D for Unity 插件的教程与效果演示场景
-	/Scripts	  Soft2D for Unity 插件的脚本
+```
+.
+├── Core          // Soft2D 和 Taichi 的库文件与包装脚本
+├── Materials     // Soft2D 粒子的着色器和材质
+├── Prefabs       // Soft2D for Unity 插件的预制体
+├── Samples       // Soft2D for Unity 插件的教程与效果演示场景
+└── Scripts       // Soft2D for Unity 插件的脚本
+```
 
 ## 文档
 
-- [Overview](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/Docs/Simplified_Chinese/Overview.md)
-- [教程](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/Docs/Simplified_Chinese/Tutorials/Tutorial.md)
+- [概述](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/Simplified_Chinese/Overview.md)
+- [教程](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/Simplified_Chinese/Tutorials/Tutorial.md)
 
 ## 许可证
 
 Soft2D 是根据 Apache 许可证（版本2.0）分发的。
 
-查看 [Apache License](https://github.com/taichi-dev/soft2d-unity-urp/blob/main/LICENSE) 以获取细节。
+查看 [Apache License](https://github.com/taichi-dev/soft2d-for-unity/blob/main/LICENSE) 以获取细节。
 
 ## 联系我们
 
-- 如果你在文档和使用过程中发现了困难或错误，欢迎在 [Github Issues](https://github.com/taichi-dev/soft2d-unity-urp/issues) 提出 issue。
+- 如果你在文档和使用过程中发现了困难或错误，欢迎在 [Github Issues](https://github.com/taichi-dev/soft2d-for-unity/issues) 提出 issue。
 - 如果你愿意参与 Soft2D for Unity 的开发，欢迎给我们提出 Pull Request。
 
