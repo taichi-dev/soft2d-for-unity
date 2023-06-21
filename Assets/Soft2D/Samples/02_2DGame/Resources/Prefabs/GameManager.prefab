@@ -52,7 +52,7 @@ MonoBehaviour:
   smoothness: 0
   metallic: 0
   occlusionSize: 0
-  layerIndex: 3
+  layerIndex: 4
   debugQuad: {fileID: 0}
   colliderCol: {r: 0.3647059, g: 0.90588236, b: 0, a: 1}
   triggerCol: {r: 0.9647059, g: 0.93333334, b: 0.023529412, a: 1}
