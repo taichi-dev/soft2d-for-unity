@@ -233,7 +233,6 @@ namespace Taichi.Soft2D.Plugin
                 enableRandomWrite = true,
                 useMipMap = false
             };
-            // outputRT.antiAliasing =1;
             outputRT.Create();
             debugMaterial.SetTexture(MainTex, outputRT);
 

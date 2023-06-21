@@ -14,11 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    renderPassEvent: 500
     blurMaterial: {fileID: 2100000, guid: 25648eedecbf8044bb546f64d3ce04f1, type: 2}
     blurPasses: 2
     downsample: 1
-    copyToFramebuffer: 0
     outputTexture: {fileID: 8400000, guid: 964b3c2d2238578b1910f96eafc84f00, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
