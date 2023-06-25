@@ -1,68 +1,68 @@
 # Body
 
-> Body 是一个可以被模拟的连续体，由一组粒子组成。一个 body 拥有 shape, center, material 等属性。对应代码中的 EBody 类型。
+> Body is a simulated continuum composed of a group of particles. A body has attributes such as shape, center and material. Body corresponds to the EBody class in the code.
 
-## 使用 Body GameObject 的方法
+## How to Use Body GameObject
 
 ![gif](../../GIFs/Body.gif)
 
-## 参数面板
+## Parameter Panel
 
-Body 的参数面板分为 Body 设置、材质设置、颜色设置三个部分。
+The parameter panel for Body consists of three sections: Body Settings, Material Settings, and Color Settings.
 
-### Body 设置
+### Body Settings
 
-- 形状
-  - Body 的初始形状。根据具体的形状，Soft2D 会自动采样生成在其内部的粒子。目前支持 box / circle / ellipse / capsule / polygon 这几种类型。
-  - 形状的详细文档见： [Shape.md](../Concepts/Shape.md)
-- 线速度
-  - Body 的初始线速度。单位为 m/s。
-- 角速度
-  - Body 的初始角速度。单位为角度/s。
-- 生命周期
-  - Body 生成后自动销毁的时长。单位为 s 。小于等于0表示永远不会被自动销毁。
+- Shape
+  - The initial shape of the Body. Depending on the specific shape, Soft2D will automatically sample and generate particles inside it. Currently, it supports several types: box, circle, ellipse, capsule, and polygon.
+  - For detailed documentation on shapes, see: [Shape.md](../Concepts/Shape.md)
+- Linear Velocity
+  - The initial linear velocity of the Body, measured in m/s.
+- Angular Velocity
+  - The initial angular velocity of the Body, measured in s^-1.
+- Life Cycle
+  - The duration from the generation to the automatical destruction of the Body. Measured in seconds. A value less than or equal to 0 means it will never be automatically destroyed.
 
-### 材质设置
+### Material Settings
 
-[详细介绍](../Concepts/Material.md)
+[Detailed Content](../Concepts/Material.md)
 
-### 颜色设置
+### Color Settings
 
-- 基础颜色
-  - 给予 Body 内粒子的颜色。
-- 随机生成颜色
-  - 给予 Body 内粒子随机生成的颜色。
+- Base Color
+  - The color given to the particles inside the Body.
+- Randomize Color
+  - Randomly generated color for the particles inside the Body.
 
-## 内置函数
+## Built-in Functions
 
-[详细介绍]()
+[Detailed Content]()
 
-# 其它类型 Body
+# Other Types of Body
 
 ## CustomBody
 
-CustomBody 是用户指定采样点的 Body。对应代码中的 ECustomBody 类型。
+CustomBody is a Body where the user specifies the sampling points. It corresponds to the ECustomBody class in the code.
 
-### 使用 CustomBody GameObject 的方法
+### How to Use CustomBody GameObject
 
 ![gif](../../GIFs/CustomBody.gif)
 
-### 参数面板
+### Parameter Panel
 
-- 粒子局部空间位置
-  - CustomBody 内粒子在局部空间的位置。
+- Particle Local Space Position
+  - The position of particles inside the CustomBody in local space.
 
 ## MeshBody
 
-MeshBody 是带有拓扑关系的 Body。每个传入网格的顶点位置会生成一个 Soft2D 粒子，它们之间遵循网格内三角形的拓扑关系。对应代码中的 EMeshBody 类型。
+MeshBody is a Body with a topological relationship. Each vertex position in the input mesh generates a Soft2D particle, and they follow the topological relationship of the triangles inside the mesh. It corresponds to the EMeshBody class in the code.
 
-### 使用 MeshBody GameObject 的方法
+### How to Use MeshBody GameObject
 
 ![gif](../../GIFs/MeshBody.gif)
 
-### 参数面板
+### Parameter Panel
 
-- 网格
-  - MeshBody 对应的网格
-- 网格缩放
-  - 对应网格生成 MeshBody 的缩放系数
+- Mesh
+  - The mesh corresponding to the MeshBody.
+- Mesh Scale
+  - The scaling factor for generating the MeshBody from the mesh.
