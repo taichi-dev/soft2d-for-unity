@@ -85,6 +85,11 @@ The directory structure of Soft2D for Unity looks like:
 - [Overview](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/Simplified_Chinese/Overview.md)
 - [Tutorial](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/Simplified_Chinese/Tutorials/Tutorial.md)
 
+## License
+
+Soft2D for Unity is distributed under the terms of Apache License (Version 2.0).
+
+See [Apache License](https://github.com/taichi-dev/soft2d-for-unity/blob/main/LICENSE) for details.
 
 ## Contact Us
 

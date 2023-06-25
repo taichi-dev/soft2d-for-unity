@@ -87,7 +87,7 @@ Soft2D for Unity 插件内的结构如下：
 
 ## 许可证
 
-Soft2D 是根据 Apache 许可证（版本2.0）分发的。
+Soft2D for Unity 是根据 Apache 许可证（版本2.0）分发的。
 
 查看 [Apache License](https://github.com/taichi-dev/soft2d-for-unity/blob/main/LICENSE) 以获取细节。
 
