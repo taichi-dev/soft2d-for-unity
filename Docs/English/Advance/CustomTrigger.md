@@ -1,20 +1,20 @@
 # Custom Trigger
 
-> 用户可以自定义 Trigger 触发的事件来操作 Soft2D 粒子。我们将展开介绍固定函数和自定义委托两种方法。
+> Users can customize the events triggered by Triggers to manipulate Soft2D particles. We will introduce two methods: using built-in functions and custom delegates.
 
-> 本文出现的 Trigger 均表示 Soft2D 内的触发器。
+> The term "Trigger" used in this article refers to the triggers within Soft2D.
 
-## 固定函数
+## Built-in Functions
 
-我们可以使用 Trigger 的[内置函数]()来对粒子进行操作。
+We can use the [built-in functions]() of Triggers to manipulate particles.
 
-## 自定义委托
+## Custom Delegates
 
-> 视频链接：[Tutorial](../../GIFs/TriggerCallback.mp4)
+> Video: [Tutorial](../../GIFs/TriggerCallback.mp4)
 
-### 基本结构
+### Basic Structure
 
-用户可以自己编写一个方法，并将它传至 Soft2D 内调用。这个方法的基本结构如下：
+Users can write their own method and pass it to Soft2D for invocation. The basic structure of this method is as follows:
 ```csharp
 [AOT.MonoPInvokeCallback(typeof(S2ParticleManipulationCallback))]
 public static void ManipulateParticlesInTrigger(IntPtr particles, int size)
@@ -22,11 +22,11 @@ public static void ManipulateParticlesInTrigger(IntPtr particles, int size)
 
 }
 ```
-在这个函数中：
-- particles 是一个指针，它指向一个记录了进入 Trigger 范围的所有粒子信息的数组。
-- size 是进入 Trigger 范围粒子的总数。
+In this function:
+- `particles` is a pointer to an array that contains information about all particles that entered the Trigger's range.
+- `size` is the total number of particles that entered the Trigger's range.
 
-粒子信息被包装在一个叫 **S2Particle** 的结构体内：
+The particle information is encapsulated in a structure called **S2Particle**:
 ```csharp
 public struct S2Particle {
     public uint id;
@@ -36,24 +36,24 @@ public struct S2Particle {
     public uint is_removed;
 }
 ```
-- id 为粒子在 Soft2D 内部的 ID。粒子的 ID 不会随着粒子的增减发生变化。
-- position 为粒子当前所在的位置。
-- velocity 为粒子当前的线速度。
-- tag 为粒子的 tagbuffer 。
-- is_removed 表示粒子是否被移除。大于0表示粒子被移除。
+- `id` represents the particle's ID within Soft2D. The particle's ID remains unchanged even if particles are added or removed.
+- `position` represents the current position of the particle.
+- `velocity` represents the current velocity of the particle.
+- `tag` represents the tag buffer of the particle.
+- `is_removed` indicates whether the particle has been removed. A value greater than 0 indicates that the particle has been removed.
 
-### 函数编写
+### Function Implementation
 
-如果想对单个粒子进行操作，我们需要先获取当前粒子信息所在的内存信息，并把它转换为 S2Particle 结构体：
+To manipulate individual particles, we need to first retrieve the memory information of the current particle and convert it into the `S2Particle` structure:
 ```csharp
 IntPtr particlePtr = IntPtr.Add(particles, i * particleSize);
 S2Particle particle = Marshal.PtrToStructure<S2Particle>(particlePtr);
 ```
-在操作结束后，我们还需要把结构体打包送回原有内存：
+After the manipulations are completed, we need to pack the structure and return it to the original memory:
 ```csharp
 Marshal.StructureToPtr(particle, particlePtr, false);
 ```
-这样我们就完成了逐粒子操作的函数结构：
+In this way, we have completed the function structure for per-particle manipulations:
 ```csharp
 [AOT.MonoPInvokeCallback(typeof(S2ParticleManipulationCallback))]
 public static void ManipulateParticles(IntPtr particles, int size)
@@ -63,12 +63,12 @@ public static void ManipulateParticles(IntPtr particles, int size)
      {
         IntPtr particlePtr = IntPtr.Add(particles, i * particleSize);
         S2Particle particle = Marshal.PtrToStructure<S2Particle>(particlePtr);
-        // 对粒子进行操作...
+        // Manipulation on particles...
         Marshal.StructureToPtr(particle, particlePtr, false);
     }
 }
 ```
-在上述代码的注释部分，我们可以通过修改 S2Particle 内容来操作粒子，比如将进入 Trigger 的粒子移除：
+In the commented section of the code above, we can modify the content of the `S2Particle` structure to manipulate particles, such as removing particles that entered the Trigger:
 ```csharp
 [AOT.MonoPInvokeCallback(typeof(S2ParticleManipulationCallback))]
 public static void ManipulateParticles(IntPtr particles, int size)
@@ -83,13 +83,13 @@ public static void ManipulateParticles(IntPtr particles, int size)
     }
 }
 ```
-如果想在该函数内修改外部的一些变量，请确保变量是静态的。
+If you want to modify external variables within this function, make sure those variables are static.
 
-### 调用函数
+### Function Invocation
 
-通过调用 `void InvokeCallbackAsync(S2ParticleManipulationCallback callback)` 让 Soft2D 执行一次 callback 内的函数。
+You can call `void InvokeCallbackAsync(S2ParticleManipulationCallback callback)` in order to let Soft2D execute the code within the callback.
 
-比如让 Trigger 删除进入其范围内的所有粒子：
+For example, to have a Trigger delete all particles that enter its range:
 ```csharp
 private ETrigger trigger;
 ...
@@ -98,8 +98,8 @@ private void Update(){
     ...
     }
 ```
-- **禁止**使用多播委托（装载多个函数）作为 callback 调用`void InvokeCallbackAsync(S2ParticleManipulationCallback callback)`，这样会导致 Soft2D 程序崩溃。
-- 调用函数后， callback是与后面的代码**同步运行**的。你可以在 callback 函数内部加入一个信号标保证它们的异步进行：
+- **Do not** use multicast delegates (loading multiple functions) as the callback when calling `void InvokeCallbackAsync(S2ParticleManipulationCallback callback)`, as it can cause the Soft2D program to crash.
+- After invoking the function, the callback runs **synchronously** with the subsequent code. To ensure asynchronous execution, you can add a signal flag within the callback:
 ```csharp
 private ETrigger trigger;
 private static bool locked = true;
@@ -118,4 +118,4 @@ private void Update(){
         locked = false;
     }
 ```
-- 调用该函数只会让 Soft2D 执行一次 callback，确保在 Trigger 的工作周期内每帧调用一次该函数。
+- Calling this function only executes the callback once. Make sure to call this function every frame within the Trigger's working cycle to ensure its execution.
