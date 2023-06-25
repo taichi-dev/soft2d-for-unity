@@ -1,25 +1,26 @@
 # Debug Tools
 
-> 本文中出现的 Collider 和 Trigger 均表示 Soft2D 内的碰撞体和触发器。Unity 的碰撞体和触发器会在前面标明。
+> The terms "Collider" and "Trigger" used in this article refer to the collision bodies and triggers within Soft2D. Unity's collision bodies and triggers will be indicated specifically.
 
-> 测试工具可以让用户在场景运行时看到 Collider 和 Trigger 在 Soft2D 内的位置和运动状态。
+> Debug tools provide a way for users to visualize the positions and motion states of Colliders and Triggers within Soft2D during runtime.
 
-## 视频链接
+## Video
 
-[视频链接](../../GIFs/DebugTools.mp4) 
+[Video](../../GIFs/DebugTools.mp4) 
 
-## 参数面板
+## Parameter Panel
 
-- 开启测试工具：打开 Debug Tools 窗口。
-- 碰撞体颜色：在测试工具里表示碰撞体的颜色。
-- 触发器颜色：在测试工具里表示触发器的颜色。
+- Enable Debug Tools: open the Debug Tools window.
+- Collider Color: represents the color of colliders in the Debug Tools.
+- Trigger Color: represents the color of triggers in the Debug Tools.
 
-未开启测试工具的效果：
+Effect without Debug Tools:
 ![img_2.png](img_2.png)
 
-开启测试工具的效果：
+Effect with Debug Tools:
 ![img_1.png](img_1.png)
 
-## 注意事项
-- 测试工具只能在 Unity 编辑器模式下开启。
-- 测试工具开启后会在场景内生成一个与模拟范围位置大小相同的 Quad。它的z轴被设置为 -0.2，用户可以在场景内自由拖动查看。
+## Important Notes
+
+- The Debug Tools can only be enabled in Unity Editor mode.
+- Enabling the Debug Tools will generate a Quad in the scene with the same position and size as the simulation area. Its z-axis is set to -0.2, and users can freely drag and view it in the scene.
