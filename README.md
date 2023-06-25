@@ -19,11 +19,11 @@
     <p>
         <b>English</b> |
         <a href="https://github.com/taichi-dev/soft2d-for-unity/blob/main/README_CN.md">简体中文</a> 
-    <p>
+    </p>
 </h4>
 
 ## What is Soft2D for Unity？
-Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D for Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户方便地在 Unity 中实现各种物理模拟与渲染效果。
+Soft2D is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D for Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling them to easily implement various physical simulations and rendering effects in Unity.
 
 <div align="center">
 <img src="Presentation/FluidRendering.gif" alt="FluidRendering"> <img src="Presentation/Maze.gif" alt="Maze">
@@ -31,21 +31,22 @@ Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可
 
 ## Why Soft2D for Unity？
 
-- 支持**五大主流平台**的运行，全设备覆盖无死角:
+- Universal Deployment, support **five mainstream platforms**:
   ![Windows](http://img.shields.io/badge/-Windows-0078D6?style=flat-square&logo=windows&logoColor=fff)
   ![Linux](http://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=000)
   ![Android](http://img.shields.io/badge/-Android-3DDC84?style=flat-square&logo=android&logoColor=fff)
   ![macOS](http://img.shields.io/badge/-macOS-15171a?style=flat-square&logo=macos&logoColor=fff)
   ![iOS](http://img.shields.io/badge/-iOS-1f1f1f?style=flat-square&logo=ios&logoColor=fff)
-- 支持多种材料多种形状的物理模拟：
-  - 流体
-  - 沙子
-  - 雪
-  - 弹性体
-- 基于 [Taichi 语言](https://github.com/taichi-dev/taichi)的**真实**物理模拟。
-- 适用于**3D场景**，并同时针对2D与3D场景编写了相关材质着色器。
-- 包含了**很多教程和展示场景**供用户了解插件的强劲功能。
-- 与 Unity 内组件**深度绑定**，Soft2D 的粒子可以与 Unity 的碰撞体和触发器产生交互。
+- support multiple materials & shapes: 
+  - fluid
+  - sand
+  - snow
+  - elastic
+- Real-time physics simulation based on [Taichi Lang](https://github.com/taichi-dev/taichi)
+- Powerful and easy-to-use
+- Suitable for 3D scenes, relevant material shaders have been written for both 2D and 3D scenes.
+- Includes **many tutorials and showcase scenes** for users to understand the powerful features of the plugin
+- **Deeply bound** with Unity's internal components, Soft2D's particles can interact with Unity's components.
 
 ## Getting Started
 
