@@ -8,11 +8,18 @@
   <a href="https://assetstore.unity.com/">
     <img src="http://img.shields.io/badge/-Unity%20Asset%20Store-feefff?style=for-the-badge&logo=unity&logoColor=000" height="25px" alt="unity logo" />
   </a>
-  <a href="https://www.taichi-lang.org/">
+  <a href="https://www.youtube.com/channel/UCUweEINecpOaM8HAKLvfBJA">
+    <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="youtube logo"  />
+  </a>
+  <a href=" https://twitter.com/soft2d_official">
+    <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="twitter logo"  />
+  </a>
+  <a href="https://discord.gg/JZwFWsuqKV">
+    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=5865F2&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="discord logo"  />
+  </a>
+  <a href="https://www.soft2d.tech/">
     <img src="http://img.shields.io/badge/-Official%20Website-feefff?style=for-the-badge&logo=taichigraphics&logoColor=000" height="25px" alt="taichi logo" />
   </a>
-  <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="youtube logo"  />
-  <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="twitter logo"  />
 </div>
 
 <h4 align="center">
@@ -59,6 +66,19 @@ Soft2D is a 2D multi-material continuum physics engine designed for real-time ap
 ### Installation
 
 [Download Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity/releases/download/v0.1.0/Soft2D.v0.1.0.7z) and unzip it anywhere in your Unity Assets folder (just not inside the Editor, Plugins or Resources directories).
+
+## Repository Structure
+
+The directory structure of Soft2D for Unity looks like:
+
+```
+.
+├── Core          // Soft2D and Taichi's libraries and packaging script
+├── Materials     // shaders and materials for Soft2D particles and Debug Tools
+├── Prefabs       // Soft2D for Unity objects' prefabs
+├── Samples       // Soft2D for Unity's tutorials and showcase scenes
+└── Scripts       // source code
+```
 
 ## Documentation
 
