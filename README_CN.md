@@ -9,11 +9,18 @@
   <a href="https://assetstore.unity.com/">
     <img src="http://img.shields.io/badge/-Unity%20Asset%20Store-feefff?style=for-the-badge&logo=unity&logoColor=000" height="25px" alt="unity logo" />
   </a>
-  <a href="https://www.taichi-lang.org/">
+  <a href="https://www.youtube.com/channel/UCUweEINecpOaM8HAKLvfBJA">
+    <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="youtube logo"  />
+  </a>
+  <a href=" https://twitter.com/soft2d_official">
+    <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="twitter logo"  />
+  </a>
+  <a href="https://discord.gg/JZwFWsuqKV">
+    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=5865F2&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="discord logo"  />
+  </a>
+  <a href="https://www.soft2d.tech/">
     <img src="http://img.shields.io/badge/-Official%20Website-feefff?style=for-the-badge&logo=taichigraphics&logoColor=000" height="25px" alt="taichi logo" />
   </a>
-  <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="youtube logo"  />
-  <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="25" alt="twitter logo"  />
 </div>
 
 <h4 align="center">
@@ -80,7 +87,7 @@ Soft2D for Unity 插件内的结构如下：
 
 ## 许可证
 
-Soft2D 是根据 Apache 许可证（版本2.0）分发的。
+Soft2D for Unity 是根据 Apache 许可证（版本2.0）分发的。
 
 查看 [Apache License](https://github.com/taichi-dev/soft2d-for-unity/blob/main/LICENSE) 以获取细节。
 
