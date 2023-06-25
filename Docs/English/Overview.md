@@ -44,7 +44,7 @@ A trigger is a spatial area with a specific shape, which is able to detect parti
 
 ## Emitter
 
-Emitter is an object that can continuously emit bodies.
+An emitter is an object that can continuously emit bodies.
 
 [Introduction](BasicComponents/Emitter.md)
 
