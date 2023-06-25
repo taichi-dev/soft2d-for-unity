@@ -7,15 +7,13 @@ public class KawaseBlur : ScriptableRendererFeature
     [System.Serializable]
     public class KawaseBlurSettings
     {
-        public RenderPassEvent renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
-        public Material blurMaterial = null;
+        public Material blurMaterial;
 
         [Range(2,15)]
         public int blurPasses = 2;
 
         [Range(1,4)]
         public int downsample = 1;
-        public bool copyToFramebuffer = true;
         public RenderTexture outputTexture;
     }
 
@@ -26,9 +24,7 @@ public class KawaseBlur : ScriptableRendererFeature
         public Material blurMaterial;
         public int passes;
         public int downsample;
-        public bool copyToFramebuffer;
-        public RenderTexture outputTexture;      
-        string profilerTag;
+        public RenderTexture outputTexture;
 
         int tmpId1;
         int tmpId2;
@@ -37,11 +33,6 @@ public class KawaseBlur : ScriptableRendererFeature
         RenderTargetIdentifier tmpRT2;
 
         RenderTargetIdentifier cameraColorTexture;
-
-        public CustomRenderPass(string profilerTag)
-        {
-            this.profilerTag = profilerTag;
-        }
 
         public override void Configure(CommandBuffer cmd, RenderTextureDescriptor cameraTextureDescriptor)
         {
@@ -63,7 +54,7 @@ public class KawaseBlur : ScriptableRendererFeature
         public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
         {
             cameraColorTexture = renderingData.cameraData.renderer.cameraColorTarget;
-            CommandBuffer cmd = CommandBufferPool.Get(profilerTag);
+            CommandBuffer cmd = CommandBufferPool.Get("KawaseBlur");
 
             RenderTextureDescriptor opaqueDesc = renderingData.cameraData.cameraTargetDescriptor;
             opaqueDesc.depthBufferBits = 0;
@@ -74,18 +65,13 @@ public class KawaseBlur : ScriptableRendererFeature
             for (var i=1; i<passes-1; i++) {
                 cmd.SetGlobalFloat("_offset", 0.5f + i);
                 cmd.Blit(tmpRT1, tmpRT2, blurMaterial);
-
                 (tmpRT1, tmpRT2) = (tmpRT2, tmpRT1);
             }
 
             // final pass
             cmd.SetGlobalFloat("_offset", 0.5f + passes - 1f);
-            if (copyToFramebuffer) {
-                cmd.Blit(tmpRT1, cameraColorTexture, blurMaterial);
-            } else {
-                cmd.Blit(tmpRT1, tmpRT2, blurMaterial);
-                cmd.Blit(tmpRT2, outputTexture);
-            }
+            cmd.Blit(tmpRT1, tmpRT2, blurMaterial);
+            cmd.Blit(tmpRT2, outputTexture);
 
             context.ExecuteCommandBuffer(cmd);
             cmd.Clear();
@@ -100,13 +86,12 @@ public class KawaseBlur : ScriptableRendererFeature
 
     public override void Create()
     {
-        scriptablePass = new CustomRenderPass("KawaseBlur");
+        scriptablePass = new CustomRenderPass();
         scriptablePass.blurMaterial = settings.blurMaterial;
         scriptablePass.passes = settings.blurPasses;
         scriptablePass.downsample = settings.downsample;
-        scriptablePass.copyToFramebuffer = settings.copyToFramebuffer;
         scriptablePass.outputTexture = settings.outputTexture;
-        scriptablePass.renderPassEvent = settings.renderPassEvent;
+        scriptablePass.renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
     }
 
     public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
