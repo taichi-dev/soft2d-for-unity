@@ -1,55 +1,54 @@
 # Emitter
 
-> Emitter 是一个能自由控制发射 Body 的发射器。对应代码中的 EEmitter 类型。 
+> The Emitter is a emitter that allows for the controlled emission of Bodies. It corresponds to the EEmitter class in the code.
 
-## 使用 Emitter GameObject 的方法
+## How to Use Emitter GameObject
 
 ![gif](../../GIFs/Emitter.gif)
 
-## 参数面板
+## Parameter Panel
 
-EEmitter 的参数面板分为 Emitter 设置、材质设置、颜色设置、事件设置四个部分。
+The EEmitter parameter panel is divided into four sections: Emitter Settings, Material Settings, Color Settings, and Event Settings.
 
-### Emitter 设置
+### Emitter Settings
 
-- 是否在开始时发射
-  - 为真时 Emitter 会在 World 生成完毕后就开始发射预设 Body。
-- 发射初的线速度
-  - 发射 Body 的初始线速度。单位为 m/s。
-- 发射初的角速度
-  - 发射 Body 的初始角速度。单位为角度/s。
-- 发射频率
-  - 发射 Body 的频率。单位为 /s。
-- 生命周期
-  - Body 被发射后自动销毁的时长。单位为 s 。小于等于0表示永远不会被自动销毁。
+- Emit on Start
+  - When set to true, the Emitter will start emitting preset Bodies as soon as the World is generated.
+- Initial Linear Velocity
+  - The initial linear velocity of the emitted Bodies. Measured in m/s.
+- Initial Angular Velocity
+  - The initial angular velocity of the emitted Bodies. Measured in s^-1.
+- Emitting Frequency
+  - The frequency at which the Bodies are emitted. Measured in s^-1.
+- Life Cycle
+  - The duration from the moment the Body is emitted until it is automatically destroyed. Measured in seconds. A value less than or equal to 0 means they will never be automatically destroyed.
+- Use MeshBody
+  - Determines whether the Emitter emits the MeshBody. When set to true, the Emitter will emit the MeshBody.
+- Body Shape
+  - See [Shape.md](../Concepts/Shape.md) for detailed information.
+- MeshBody Settings
+  - See [Body.md](Body.md) for detailed information.
 
-- 是否使用 MeshBody
-  - 是否让发射器发射 MeshBody。为真时发射器会发射 MeshBody。
-- Body 形状
-  - 查看[形状的具体介绍](../Concepts/Shape.md)
-- MeshBody 设置
-  - 查看[ MeshBody 具体介绍](Body.md)
+### Material Settings
 
-### 材质设置
+[Detailed Content](../Concepts/Material.md)
 
-[详细内容](../Concepts/Material.md)
+### Color Settings
 
-### 颜色设置
+- Base Color
+  - The color of the particles inside the emitted Bodies. Only available when Random Color is turned off.
+- Random Color
+  - Determines whether colors are randomly selected from the random color list.
+- Random Color List
+  - The collection of all colors that can be randomly selected. Available when Random Color is turned on.
+- Rainbow Mode
+  - Determines whether RGB values are randomly generated as particle colors.
 
-- 基础颜色
-  - 发射的 Body 内粒子颜色。关闭随机颜色后可用。
-- 随机颜色
-  - 是否从随机颜色列表内随机抽取颜色。
-- 随机颜色列表
-  - 可被抽取的所有颜色集合。打开随机颜色后可用。
-- 彩虹模式
-  - 是否随机生成 RGB 值作为粒子颜色。
-
-### 事件设置
+### Event Settings
 
 - OnEmitterOut
-  - 发射粒子时自动调用该事件。
+  - Automatically called when particles are emitted.
 
-## 内置函数
+## Built-in Functions
 
-[详细内容]()
+[Detailed Content]()
