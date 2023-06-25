@@ -1,20 +1,20 @@
 # Custom Shader
 
-> 用户除了使用插件自带的 shader 外，还可以自己编写 shader 代码并在场景内使用。我们将从参数设置、顶点着色器、脚本设置三部分展开介绍。
+> In addition to using the shaders provided by the plugin, users can create their own shader and use it in the scene. We will introduce custom shader from three perspectives: parameter settting, vertex shader and script setting.
 
-## 参数设置
+## Parameter Setting
 
-由于 Soft2D 仅支持 Vulkan 与 Metal 图形 API，我们在编译着色器代码时也可以只为它们编译以节省性能：
+Since Soft2D only supports Vulkan and Metal, we can optimize the performance by compiling shader code tailored to them:
 ``` shaderlab
 #pragma exclude_renderers d3d11
 ```
-同时，我们需要开启 GPU Instancing 功能并将目标设置为 4.5 及以上：
+At the same time, we need to enable GPU instancing and set the target version to 4.5 or higher:
 ```shaderlab
 #pragma multi_compile_instancing
 #pragma UNITY_INSTANCING_ENABLE
 #pragma target 4.5
 ```
-Soft2DManager 会自动获取粒子属性的缓冲并传给 shader，我们只需声明它们即可，**这里不能修改它们的名字和变量类型**：
+Soft2DManager will automatically retrieve the buffer of particle properties and pass them to the shader. We only need to declare them, and **cannot change their names or variable types**:
 ```shaderlab
 #if SHADER_TARGET >= 45
 StructuredBuffer<float2> positionBuffer;
@@ -24,24 +24,24 @@ StructuredBuffer<int> IDBuffer;
 #endif
 ```
 
-- 这些变量分别为：
-  - positionBuffer：记录粒子位置的缓冲。
-  - tagBuffer：记录粒子标签的缓冲，内部包括粒子的逻辑标签和颜色RGB值。
-  - velocityBuffer：记录粒子线速度的缓冲。
-  - IDBuffer：记录粒子在 Soft2D 内 ID 的缓冲。粒子的 ID 不会随着粒子的增减发生变化。
+- The variables are as follows:
+  - positionBuffer: a buffer that stores the positions of the particles.
+  - tagBuffer: a buffer that stores the tags of the particles, including logical tags and RGB values.
+  - velocityBuffer: a buffer that stores the velocities of the particles.
+  - IDBuffer: a buffer that stores the IDs of the particles within Soft2D. As particles are added or destroyed, their IDs remain unchanged.
 
-最后，我们需要在输入顶点着色器的结构体内加上`UNITY_VERTEX_INPUT_INSTANCE_ID`。
+Lastly, we need to add `UNITY_VERTEX_INPUT_INSTANCE_ID` to the struct of the input vertex shader.
 
-## 顶点着色器
+## Vertex Shader
 
-首先我们需要获取当前粒子的 instance_id ，因为 Soft2D 提供的缓冲都以 instance_id 作为索引。
+First, we need to obtain the instance_id of the current particle, since the buffers provided by Soft2D are indexed based on instance_id:
 ```shaderlab
 UNITY_SETUP_INSTANCE_ID(IN);
 UNITY_TRANSFER_INSTANCE_ID(IN, OUT);
 int instance_id = UNITY_GET_INSTANCE_ID(IN);
 ```
 
-因为 Soft2D 当前粒子所在位置是由 Soft2D 提供的，所以我们需要手动为粒子做模型变换操作：
+Since Soft2D provides the position of the particle, we need to manually apply a model transformation to the particle:
 ```shaderlab
 int instance_id = UNITY_GET_INSTANCE_ID(IN);
 float2 center = positionBuffer[instance_id]; 
@@ -49,18 +49,18 @@ float4 data = float4(center, -0.2f, 1.0f);
 float3 localPosition = IN.positionOS.xyz * _InstanceSize * data.w;
 float3 worldPosition = data.xyz + localPosition;
 ```
-再将获得的数据进行 VP 变换，获得正确的齐次坐标系下粒子的位置：
+Next, apply the VP transformation and obtained the correct position of the particle in homogeneous coordinates.
 ```shaderlab
 OUT.positionCS=mul(UNITY_MATRIX_VP, float4(worldPosition, 1.0f));
 ```
 
-除了粒子的位置外，我们还可以获取粒子当前的速度和它的标签：
+In addition to the position of the particle, we can also obtain its current velocity and label:
 ```shaderlab
 OUT.velocity = velocityBuffer[instance_id];
 uint buffer = tagBuffer[instance_id];
 ```
 
-其中 tagBuffer 的高 8 位为粒子的逻辑标签，低 24 位是粒子的颜色RGB值，我们还需要把它们分离：
+The higher 8 bits of the tagBuffer represent the logical label of the particle, while the lower 24 bits represent the RGB value of the particle. We need to separate them:
 ```shaderlab
 uint tag=(buffer >> 24)&0x7;
 float3 baseColor;
@@ -71,16 +71,16 @@ baseColor.g=gbits/255.0;
 uint bbits=buffer & 0xFF;
 baseColor.b=bbits/255.0;
 ```
-获取的RGB值是 0-255 的，我们需要把它转换成 0-1 的 float 格式。
+The obtained RGB values range from 0 to 255, and we need to convert them to floating-point numbers ranging from 0.0 to 1.0.
 
-> 至此，我们已经获得了编写一个普通材质 shader 所需的参数了。
+> Now, we have obtained all the parameters required to write a regular material shader.
 
-## 脚本设置
+## Script Setting
 
-在 Soft2DManager 的 Inspector 窗口内将粒子渲染模式改成 Custom，并将自定义编写的材质拖进 Instance Material 内。
+Change the particle rendering mode to Custom in the inspector window of Soft2DManager, and drag the custom material into the Instance Material slot.
 
 ![img.png](img.png)
 
-你也可以在这里设置粒子渲染所在的层级和网格。具体内容可参考 [Soft2DManager.md]()
+You can also set the rendering layer and the mesh for the particle here. For more details, please refer to [Soft2DManager.md]().
 
-设置好自定义 Material 的相关参数后运行即可。
+Once you have set the parameters for the custom material, you can run the simulation.
