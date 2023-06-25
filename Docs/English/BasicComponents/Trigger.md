@@ -1,17 +1,17 @@
 # Trigger
 
-> Trigger 是一个拥有特定形状的空间区域。它可以检测到经过它的粒子。对应代码中的 ETrigger 类型。 Trigger 的作用范围由它的 BoxCollider2D 组件控制。
+> A Trigger is a spatial region with a specific shape, which can detect particles passing through it. In the corresponding code, it is represented by the ETrigger type. The scope of a Trigger is controlled by its BoxCollider2D component.
 
-> 本文中 Trigger 均表示 Soft2D 内的触发器组件。
+> In this article, Trigger refers to the trigger component within Soft2D.
 
-## 使用 Trigger GameObject 的方法
+## How to Use Trigger GameObject
 
 ![gif](../../GIFs/Trigger.gif)
 
-## 内置函数
+## Built-in Functions
 
-[详细介绍]()
+[Detailed Introduction]()
 
-## 自定义委托
+## Custom Delegates
 
-可以[在这里](../Advance/CustomTrigger.md)查看使用自定义委托对粒子进行操作的教程。
+You can check out the tutorial on using custom delegates to manipulate particles [here](../Advance/CustomTrigger.md).
