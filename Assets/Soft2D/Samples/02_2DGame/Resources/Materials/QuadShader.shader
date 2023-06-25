@@ -62,7 +62,7 @@ Shader "Example/URPUnlitShaderTexture"
                     color = _StrokeColor;
                 else
                 {
-                    color = color.r > 0 ? (color.b > 0 ? float4(162.0/255.0,203.0/255.0,241.0/255.0,1) : float4(80.0/255.0,1,0,1)) : float4(0,129.0/255.0,201.0/255.0,1);
+                    color = color.r > 0 ? (color.b > 0 ? float4(1,1,1,1) : float4(80.0/255.0,1,0,1)) : float4(0,129.0/255.0,201.0/255.0,1);
                 }
                 return color;
             }
