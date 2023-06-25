@@ -1,16 +1,16 @@
 # Material
 
-## 属性
+## Attributes
 
-- 物理材质类型
-  - 支持流体、沙子、弹性体和雪这几种类型。
-- 密度
-  - 物质的[密度](https://en.wikipedia.org/wiki/Density)。单位为 kg/m^3。常见的材料如水的密度为1000。
-- 杨氏模量
-  - 物质的[杨氏模量](https://en.wikipedia.org/wiki/Young%27s_modulus)。单位为 MPa。如类似于果冻的材料，其杨氏模量约为 0.01Mpa ~ 1MPa 之间。
-  - > 较大的杨氏模量会导致模拟爆炸。此时降低 Soft2DManager 中的 时间子步长 ([见 Soft2DManager 文档](../BasicComponents/Soft2DManager.md)) 可以避免模拟爆炸，但是会导致模拟性能显著下降。
-- 泊松比
-  - 物质的[泊松比](https://en.wikipedia.org/wiki/Poisson%27s_ratio)。
-- 标签：
-  - Body 在初始化时将此值赋值给其包含的所有粒子，使得该 Body 包含的每个粒子的标签都是此值。 Soft2D 中，每个粒子都可以有自己独特的标签。
-  - 粒子标签主要用于 Trigger 逻辑事件和渲染，可以通过 `S2Particle.tag` (CPU) 或者 `GetParticleTagBuffer()` (GPU) 进行访问。
+- Types of Physical Materials
+  - Soft2D support types include fluid, sand, elastic, and snow.
+- Density
+  - The object's [density](https://en.wikipedia.org/wiki/Density), which is measured in kilograms per cubic meter (kg/m^3). Common materials such as water have a density of 1000 kg/m^3.
+- Young's Modulus
+  - The object's [Young's Modulus](https://en.wikipedia.org/wiki/Young%27s_modulus), which is measured in MPa (e.g.  A material similar to jelly, with Young's modulus ranging from approximately 0.01 MPa to 1 MPa).
+  - > A larger Young's modulus can cause simulation explosions. In this case, reducing `substep` in Soft2DManager ([Visit Soft2DManager Documentation](../BasicComponents/Soft2DManager.md)) can avoid simulation explosions, but it will significantly reduce simulation performance.
+- Poisson's Ratio
+  - The object's [Poisson's Ratio](https://en.wikipedia.org/wiki/Poisson%27s_ratio).
+- Tag：
+  - During initialization, the Body assigns this value to all the particles it contains, so that each particle contained in this Body has this value as its label. In Soft2D, each particle can have its own unique label.
+  - Particle tags are mainly used for triggering logical events and rendering. It can be accessed through `S2Particle.tag` (CPU) or `GetParticleTagBuffer()` (GPU).

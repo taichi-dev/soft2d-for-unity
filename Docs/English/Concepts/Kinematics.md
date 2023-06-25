@@ -1,16 +1,16 @@
 # Kinematics
 
-Kinematics 是描述一个 Soft2D 物体的初始运动状态的结构。
+Kinematics is a structure specifying the initial motion state of a Soft2D object.
 
-## 属性
+## Attributes
 
-- 中心位置
-  - 物体中心的位置坐标。
-- 旋转
-  - 物体的旋转角度，单位为 角度。
-- 线速度
-  - 物体的线速度，单位为 m/s。
-- 角速度
-  - 物体的角速度，单位为 角度/s。
-- 运动状态
-  - 物体的运动状态（静态或动态）。
+- Center
+  - The position coordinates of the center of the object.
+- Rotation
+  - The rotation angle of the object, which is measured in degrees.
+- Linear Velocity
+  - The linear velocity of the object, which is measured in meters per second.
+- Angular Velocity
+  - The angular velocity of the object, which is measured in degrees per second.
+- Motion State
+  - The motion state of the object (dynamic or static).

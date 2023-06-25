@@ -1,34 +1,34 @@
 # Shape
 
-> Soft2D中用于描述形状的设置，主要用于 Soft2D 物体（Collider、Trigger 和 Body）的创建。
+> The structure specifies shapes in Soft2D, which is mainly used for creating Soft2D objects (Collider, Trigger, and Body).
 
-### Box 属性
+### Attributes of the Box
 
-- 宽度：长方形中心点到垂直边的距离。
-- 高度：长方形中心点到水平边的距离。
+- Width: The distance from the center point of the rectangle to its vertical edge.
+- Height: The distance from the center point of a rectangle to its horizontal edge.
 
 ![box](box.png)
 
-### Circle 属性
+### Attributes of the Circle
 
-- 半径：圆的半径。
+- Radius: The radius of the circle.
 
 ![circle](circle.png)
 
-### Ellipse 属性
+### Attributes of the Ellipse
 
-- 水平半径：椭圆在水平方向上的半径。
-- 垂直半径：椭圆在垂直方向上的半径。
+- Horizontal Radius: The radius of the ellipse in the horizontal direction.
+- Vertical Radius: The radius of the ellipse in the vertical direction.
 
 ![ellipse](ellipse.png)
 
-### Capsule 属性
+### Attributes of the Capsule
 
-- 长方形半长度：胶囊体中间长方形与胶囊体平行的边长一半长度。
-- 局部半径：胶囊体局部宽度的半径。
+- Half Rect Length: The half rect length of the ellipse.
+- Cap Radius: The cap radius of the ellipse.
 
 ![capsule](capsule.png)
 
-### Polygon 属性
+### Attributes of the Polygon
 
-- 端点位置：多边形所有端点**沿逆时针**排序在局部空间中的位置。
+- Points Position: The position of all vertices of a polygon sorted **counterclockwise** in local space.
