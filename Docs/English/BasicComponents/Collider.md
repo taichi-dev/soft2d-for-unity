@@ -1,35 +1,35 @@
 # Collider
 
-> Collider 是一个障碍物，会阻挡 body 的运动。对应代码中的 ECollider 类型。
+> A Collider is an obstacle that obstructs the movement of a body. It corresponds to the `ECollider` type in the code.
 
-> 本文中 Collider 均表示 Soft2D 内的 Collider 组件。
+> In this article, Collider refers to the collider component within Soft2D.
 
-## 使用 Collider GameObject 的方法
+## How to Use Collider GameObject
 
 ![gif](../../GIFs/Collider.gif)
 
-## 参数面板
+## Parameter Panel
 
-- Unity 2D 碰撞体
-  - Collider 的 Unity 2D Collider 组件，目前支持Box / Circle / Capsule / Polygon / Composite 类型。
-  - Collider 的类型和大小均由它的 Collider2D 组件控制。
-- 运动状态
-  - Collider 为静态还是动态，为真时物体为动态。
-- 线速度
-  - Collider 的线速度。单位为 m/s。
-- 角速度
-  - Collider 的角速度。单位为角度/s。
-- 自动更新位置和角度
-  - 是否自动更新碰撞体的位置和角度。为真时插件会每帧将碰撞体在 Unity 的状态与 Soft2D 同步。
-  - > 由于 Soft2D 与 Unity 间的时间间隔存在差别，Collider 可能在两边的运动状态并不一致。开启这项功能的碰撞体过多可能导致模拟出现卡顿。
-- 碰撞类型
-  - Soft2D 粒子与 Collider 碰撞后的类型，主要有三种类型可选：
-  - **Separate**：粒子与 Collider 碰撞后会直接分开
-  - **Slip**：粒子与 Collider 碰撞后会在上面滑行一会儿
-  - **Sticky**：粒子与 Collider 碰撞后会黏附在 Collider 上
-- 摩擦系数：Soft2D 粒子在 Collider 上的摩擦系数
-- 反弹系数：Soft2D 粒子在 Collider 上的反弹系数
+- Unity 2D Collider
+  - The Unity 2D Collider component of the Collider, currently supporting Box / Circle / Capsule / Polygon / Composite types.
+  - The type and size of the Collider are controlled by its Collider2D component.
+- Motion State
+  - Whether the Collider is static or dynamic. When true, the object is dynamic.
+- Linear Velocity
+  - The linear velocity of the Collider. Measured in m/s.
+- Angular Velocity
+  - The angular velocity of the Collider. Measured in s^-1.
+- Update Position and Rotation Automatically
+  - Whether to automatically update the position and rotation of the collider. When true, the plugin synchronizes the collider's state with Soft2D every frame.
+  - > Due to the time interval difference between Soft2D and Unity, the Collider's motion state may not be consistent on both sides. Enabling this feature for too many colliders may cause simulation lag.
+- Collision Type
+  - The collision type between Soft2D particles and the Collider. There are three types:
+  - **Separate**: Particles separate from the Collider immediately after collision.
+  - **Slip**: Particles slide on the Collider for a while after collision.
+  - **Sticky**: Particles stick to the Collider after collision.
+- Friction Coefficient: The friction coefficient between Soft2D particles and the Collider.
+- Restitution Coefficient: The restitution coefficient (bounciness) of Soft2D particles on the Collider.
 
-## 内置函数
+## Built-in Functions
 
-[详细内容]()
+[Detailed Content]()
