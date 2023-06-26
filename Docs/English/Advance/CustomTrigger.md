@@ -6,7 +6,7 @@
 
 ## Built-in Functions
 
-We can use the [built-in functions]() of Triggers to manipulate particles.
+We can use the [built-in functions](../BasicComponents/Trigger.md) of Triggers to manipulate particles.
 
 ## Custom Delegates
 
@@ -14,7 +14,7 @@ We can use the [built-in functions]() of Triggers to manipulate particles.
 
 ### Basic Structure
 
-Users can write their own method and pass it to Soft2D for invocation. The basic structure of this method is as follows:
+Users can write their own method and pass it to Soft2D for invocation. The basic structure of this method is as follow:
 ```csharp
 [AOT.MonoPInvokeCallback(typeof(S2ParticleManipulationCallback))]
 public static void ManipulateParticlesInTrigger(IntPtr particles, int size)
@@ -23,7 +23,7 @@ public static void ManipulateParticlesInTrigger(IntPtr particles, int size)
 }
 ```
 In this function:
-- `particles` is a pointer to an array that contains information about all particles that entered the Trigger's range.
+- `particles` is a pointer to an array which contains information about all particles entered the Trigger's range.
 - `size` is the total number of particles that entered the Trigger's range.
 
 The particle information is encapsulated in a structure called **S2Particle**:
@@ -44,16 +44,16 @@ public struct S2Particle {
 
 ### Function Implementation
 
-To manipulate individual particles, we need to first retrieve the memory information of the current particle and convert it into the `S2Particle` structure:
+To manipulate individual particle, we need to first retrieve the memory information of the current particle and convert it into the `S2Particle` structure:
 ```csharp
 IntPtr particlePtr = IntPtr.Add(particles, i * particleSize);
 S2Particle particle = Marshal.PtrToStructure<S2Particle>(particlePtr);
 ```
-After the manipulations are completed, we need to pack the structure and return it to the original memory:
+After the manipulation is completed, we need to pack the structure and return it to the original memory:
 ```csharp
 Marshal.StructureToPtr(particle, particlePtr, false);
 ```
-In this way, we have completed the function structure for per-particle manipulations:
+In this way, we have completed the function structure for per-particle manipulation:
 ```csharp
 [AOT.MonoPInvokeCallback(typeof(S2ParticleManipulationCallback))]
 public static void ManipulateParticles(IntPtr particles, int size)
@@ -98,7 +98,7 @@ private void Update(){
     ...
     }
 ```
-- **Do not** use multicast delegates (loading multiple functions) as the callback when calling `void InvokeCallbackAsync(S2ParticleManipulationCallback callback)`, as it can cause the Soft2D program to crash.
+- **Do not** use multicast delegates (loading multiple functions) as the callback when calling `void InvokeCallbackAsync(S2ParticleManipulationCallback callback)`, which can cause the Soft2D program to crash.
 - After invoking the function, the callback runs **synchronously** with the subsequent code. To ensure asynchronous execution, you can add a signal flag within the callback:
 ```csharp
 private ETrigger trigger;
