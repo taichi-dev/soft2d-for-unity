@@ -62,10 +62,19 @@ Soft2D is a 2D multi-material continuum physics engine designed for real-time ap
 - Graphics API: Vulkan or Metal
 - Unity version: 2021.3.22f1 or higher
 - Render Pipeline: built-in or URP 
+- Scripting Backend: IL2CPP
 
 ### Installation
 
-[Download Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity/releases/download/v0.1.0/Soft2D.v0.1.0.7z) and unzip it anywhere in your Unity Assets folder (just not inside the Editor, Plugins or Resources directories).
+- [Download Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity/releases/download/v0.1.0/Soft2D.v0.1.0.7z) and unzip it anywhere in your Unity Assets folder (just not inside the Editor, Plugins or Resources directories);
+- Click **Run and Restart** button, meanwhile the program will perform the following procedures:
+  - Change graphics API to Vulkan or Metal;
+  - Change scripting backend to IL2CPP;
+  - If the current pipeline is not Universal Render Pipeline, delete files related to it (URP);
+  - Restart this project.
+
+
+- Extra: Since 02_2DGame has 
 
 ## Repository Structure
 
@@ -82,8 +91,8 @@ The directory structure of Soft2D for Unity looks like:
 
 ## Documentation
 
-- [Overview](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/Simplified_Chinese/Overview.md)
-- [Tutorial](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/Simplified_Chinese/Tutorials/Tutorial.md)
+- [Overview](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/English/Overview.md)
+- [Tutorial](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/English/Tutorials/Tutorial.md)
 
 ## License
 

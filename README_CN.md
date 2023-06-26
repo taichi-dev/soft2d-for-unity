@@ -19,7 +19,7 @@
     <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=5865F2&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="discord logo"  />
   </a>
   <a href="https://www.soft2d.tech/">
-    <img src="http://img.shields.io/badge/-Official%20Website-feefff?style=for-the-badge" height="25px" alt="taichi logo" />
+    <img src="https://img.shields.io/static/v1?message=Official%20Website&label=&color=FFC93C&style=for-the-badge" height="25px" alt="taichi logo" />
   </a>
 </div>
 
@@ -31,7 +31,7 @@
 </h4>
 
 ## Soft2D for Unity 是什么？
-Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D for Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户方便地在 Unity 中实现各种物理模拟与渲染效果。
+Soft2D 是一个基于 Taichi AOT 系统的 实时 2D 多材料连续体物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D for Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户方便地在 Unity 中实现各种物理模拟与渲染效果。
 
 <div align="center">
 <img src="Presentation/FluidRendering.gif" alt="FluidRendering"> <img src="Presentation/Maze.gif" alt="Maze">
@@ -39,7 +39,7 @@ Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可
 
 ## 为什么使用 Soft2D for Unity？
 
-- 支持**五大主流平台**的运行，全设备覆盖无死角:
+- 全平台部署，支持**五大主流平台**的运行:
   ![Windows](http://img.shields.io/badge/-Windows-0078D6?style=flat-square&logo=windows&logoColor=fff)
   ![Linux](http://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=000)
   ![Android](http://img.shields.io/badge/-Android-3DDC84?style=flat-square&logo=android&logoColor=fff)
@@ -62,10 +62,21 @@ Soft2D 是一个基于 Taichi AOT 系统的 2D 实时多材料物理引擎，可
 - 图形 API: Vulkan 或 Metal
 - Unity 版本：2021.3.15 或更高
 - 渲染管线：built-in 或 URP 管线
+- 脚本后端：IL2CPP
 
 ### 安装
 
-[下载 Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity/releases/download/v0.1.0/Soft2D.v0.1.0.7z) 并在 Unity Assets 文件夹下的任何位置打开它 (除了 Editor, Plugins 或 Resources 文件夹下)。
+- [下载 Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity/releases/download/v0.1.0/Soft2D.v0.1.0.7z) 并在 Unity Assets 文件夹下的任何位置打开它 (除了 Editor, Plugins 或 Resources 文件夹下)；
+- 点击弹出的启动窗口中的 **Run and Restart** 按钮，此时启动窗口会执行以下操作：
+  - 将图形 API 修改为 Vulkan 或 Metal；
+  - 将脚本后端修改为 IL2CPP；
+  - 如果当前渲染管线不是 URP 管线，删除和 URP 有关的后处理文件；
+  - 重启当前项目。
+
+
+- 当你导入的项目的渲染管线是 URP 时：因为 02_2DGame 场景采用了 Renderer Feature 的方式实现后处理效果，你还需要以下步骤以正常运行场景：
+  - 在 Project Settings -> Rendering -> Render Pipeline Asset 下找到当前项目使用的 **Render Pipeline Asset**；
+  - 在 **Render Pipeline Asset** 下的 RendererList 下点击 “+” 新增一个 Renderer Data，选择 **Kawase Blur Data** 作为新增的 Renderer Data.
 
 ## 内容结构
 

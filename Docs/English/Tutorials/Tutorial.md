@@ -1,4 +1,4 @@
-# Soft2D-Tutorial
+# Soft2D for Unity's Tutorial
 
 > This is a tutorial for Soft2D for Unity, which can help you quickly get started with it.
 
@@ -19,9 +19,18 @@ You can import Soft2D for Unity through Unity Asset Store and Github.
    - Get the appropriate version of the plugin on the **Release** page and download it;
    - Unzip it anywhere in your Unity Assets folder (except the Editor, Plugins or Resources directories).
 
-After the import is complete, the plugin will automatically display a startup window. Please follow the window process to set up the current project.
+After the import is complete, the plugin will automatically display a startup window. The program will perform the following procedures:
 
-Video: [BasicSetup]()
+- Change graphics API to Vulkan or Metal;
+- Change scripting backend to IL2CPP;
+- If the current pipeline is not Universal Render Pipeline, delete files related to it (URP);
+- Restart.
+
+
+- When the rendering pipeline of the imported project is URP: you also need the following steps to run 02_2DGame normally, for the scenes use **Renderer Feature** to achieve post-processing effects:
+  - Find the **Render Pipeline Asset** used by the project under Project Settings -> Rendering -> Render Pipeline Asset;
+  - Find **Renderer List** in **Render Pipeline Asset**'s Inspector window;
+  - Click “+” button to add a Renderer Data, and choose **Kawase Blur Data** as this new Renderer Data.
 
 ## Quick Start
 
