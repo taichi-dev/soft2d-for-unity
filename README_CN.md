@@ -19,7 +19,7 @@
     <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=5865F2&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="discord logo"  />
   </a>
   <a href="https://www.soft2d.tech/">
-    <img src="http://img.shields.io/badge/-Official%20Website-feefff?style=for-the-badge&logo=taichigraphics&logoColor=000" height="25px" alt="taichi logo" />
+    <img src="http://img.shields.io/badge/-Official%20Website-feefff?style=for-the-badge" height="25px" alt="taichi logo" />
   </a>
 </div>
 
