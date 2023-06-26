@@ -10,7 +10,7 @@
 
 ## Built-in Functions
 
-[Detailed Introduction]()
+[Detailed Content]()
 
 ## Custom Delegates
 
