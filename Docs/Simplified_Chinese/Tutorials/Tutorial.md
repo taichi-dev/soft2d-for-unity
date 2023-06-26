@@ -9,13 +9,13 @@
 Soft2D 插件支持两种方式导入 Unity 项目中，它们分别是 Unity Asset Store 和 Github 页面。
 
 - Unity Asset Store
-   - 在 Unity Asset Store 页面访问 Soft2D 插件： [Soft2D for Unity](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041)；
+   - 在 [Unity Asset Store 页面](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041)访问 Soft2D 插件；
    - 点击 **Add to My Assets** 将插件添加到你的Unity账号中；
    - 返回 Unity 编辑器，通过 Windows->Package Manager 打开 **Package Manager** 窗口;
    - 在 Package Manager 窗口选择 **My Assets** 选项卡，找到 Soft2D 插件，并点击 **Download** 按钮将其下载到本地。
 
 - Github 
-   - 在 Github 仓库页面访问 Soft2D 插件： [Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity)；
+   - 在 [Github 仓库页面](https://github.com/taichi-dev/soft2d-for-unity)访问 Soft2D 插件；
    - 在 **Releases** 页面获取适当版本的插件文件并下载下来；
    - 直接将下载下来的 **Soft2D.unitypackage** 文件拖拽到编辑器的 **Project** 视图中；
    - Unity 编辑器会弹出一个导入设置窗口，确认无误后点击 **Import** 按钮。

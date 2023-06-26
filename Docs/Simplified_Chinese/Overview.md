@@ -1,4 +1,4 @@
-# Overview
+# 概述
 
 # 介绍
 
@@ -6,11 +6,10 @@
 
 # 前置要求
 
-图形 API: Vulkan 或 Metal
-
-Unity 版本：2021.3.22f1 或更高
-
-图形管线：built-in 或 URP 管线
+- 图形 API: Vulkan 或 Metal
+- Unity 版本：2021.3.22f1 或更高
+- 图形管线：built-in 或 URP 管线
+- 脚本后端：IL2CPP
 
 # 教程
 

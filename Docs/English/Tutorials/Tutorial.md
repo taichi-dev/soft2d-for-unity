@@ -9,13 +9,13 @@
 You can import Soft2D for Unity through Unity Asset Store and Github.
 
 - Unity Asset Store
-   - Visit Soft2D for Unity in Unity Asset Store: [Soft2D for Unity](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041);
+   - Visit [Soft2D for Unity in Unity Asset Store](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041);
    - Click the **Add to My Assets** to add the plugin to your Unity account;
    - Return to the Unity Editor and open the **PackageManager** window by selecting Windows->Package Manager.
    - Select the **My Assets** tab in the **PackageManager** window, locate the Soft2D plugin, and click the **Download** button.
 
 - Github 
-   - Visit Soft2D for Unity in Github: [Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity);
+   - Visit [Soft2D for Unity in Github](https://github.com/taichi-dev/soft2d-for-unity);
    - Get the appropriate version of the plugin on the **Release** page and download it;
    - Unzip it anywhere in your Unity Assets folder (except the Editor, Plugins or Resources directories).
 
