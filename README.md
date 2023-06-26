@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=5865F2&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="discord logo"  />
   </a>
   <a href="https://www.soft2d.tech/">
-    <img src="http://img.shields.io/badge/-Official%20Website-feefff?style=for-the-badge" height="25px" alt="taichi logo" />
+    <img src="https://img.shields.io/static/v1?message=Official%20Website&label=&color=FFC93C&style=for-the-badge" height="25px" alt="soft2d logo" />
   </a>
 </div>
 
@@ -45,10 +45,10 @@ Soft2D is a 2D multi-material continuum physics engine designed for real-time ap
   ![macOS](http://img.shields.io/badge/-macOS-15171a?style=flat-square&logo=macos&logoColor=fff)
   ![iOS](http://img.shields.io/badge/-iOS-1f1f1f?style=flat-square&logo=ios&logoColor=fff)
 - Support multiple materials & shapes: 
-  - fluid
-  - sand
-  - snow
-  - elastic
+  - Fluid
+  - Sand
+  - Snow
+  - Elastic
 - Real-time physics simulation based on [Taichi Lang](https://github.com/taichi-dev/taichi)
 - Powerful and easy-to-use
 - Suitable for 3D scenes, relevant material shaders have been written for both 2D and 3D scenes.
