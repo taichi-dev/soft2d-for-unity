@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=5865F2&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="discord logo"  />
   </a>
   <a href="https://www.soft2d.tech/">
-    <img src="https://img.shields.io/static/v1?message=Official%20Website&label=&color=FFC93C&style=for-the-badge" height="25px" alt="soft2d logo" />
+    <img src="https://img.shields.io/static/v1?message=Official%20Website&label=&color=FFC93C&style=for-the-badge" height="25px" alt="logo" />
   </a>
 </div>
 
@@ -60,8 +60,8 @@ Soft2D is a 2D multi-material continuum physics engine designed for real-time ap
 ### Environment Requirements
 
 - Graphics API: Vulkan or Metal
-- Unity version：2021.3.22f1 or higher
-- Render Pipeline：built-in or URP 
+- Unity version: 2021.3.22f1 or higher
+- Render Pipeline: built-in or URP 
 
 ### Installation
 
