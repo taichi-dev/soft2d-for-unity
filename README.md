@@ -74,7 +74,9 @@ Soft2D is a 2D multi-material continuum physics engine designed for real-time ap
   - Restart this project.
 
 
-- Extra: Since 02_2DGame has 
+- When the rendering pipeline of the imported project is URP: Since the 02_2DGame scene uses Renderer Feature to achieve post-processing effects, you also need the following steps to run the scene normally:
+  - Find the **Render Pipeline Asset** currently used by the project under Project Settings -> Rendering -> Render Pipeline Asset.
+  - Find RendererList under **Render Pipeline Asset's** Inspector window, click “+” to add a Renderer Data，select **Kawase Blur Data** as new Renderer Data.
 
 ## Repository Structure
 
