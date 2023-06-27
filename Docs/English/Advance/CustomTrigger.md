@@ -6,7 +6,7 @@
 
 ## Built-in Functions
 
-We can use the [built-in functions](../BasicComponents/Trigger.md) of Triggers to manipulate particles.
+We can use the built-in functions of Triggers to manipulate particles.
 
 ## Custom Delegates
 

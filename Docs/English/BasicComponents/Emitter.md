@@ -48,7 +48,3 @@ The EEmitter parameter panel is divided into four sections: Emitter Settings, Ma
 
 - OnEmitterOut
   - Automatically called when particles are emitted.
-
-## Built-in Functions
-
-[Detailed Content](../Functions/)

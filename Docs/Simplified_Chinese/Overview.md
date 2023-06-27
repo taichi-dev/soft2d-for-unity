@@ -54,15 +54,3 @@ Emitter 是可以持续发射 Body 的物体。
 [自定义 Trigger 功能](Advance/CustomTrigger.md)
 
 [测试工具](Advance/DebugTools.md)
-
-## API References
-
-[Soft2DManager]()
-
-[Body]()
-
-[Collider]()
-
-[Trigger]()
-
-[Emitter]()

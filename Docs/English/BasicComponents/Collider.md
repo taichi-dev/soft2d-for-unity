@@ -30,6 +30,3 @@
 - Friction Coefficient: The friction coefficient between Soft2D particles and the Collider.
 - Restitution Coefficient: The restitution coefficient (bounciness) of Soft2D particles on the Collider.
 
-## Built-in Functions
-
-[Detailed Content]()

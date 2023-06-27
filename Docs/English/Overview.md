@@ -54,15 +54,3 @@ An emitter is an object that can continuously emit bodies.
 [Custom Trigger Function](Advance/CustomTrigger.md)
 
 [Debug Tools](Advance/DebugTools.md)
-
-## API References
-
-[Soft2DManager]()
-
-[Body]()
-
-[Collider]()
-
-[Trigger]()
-
-[Emitter]()
