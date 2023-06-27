@@ -1,6 +1,6 @@
 # Custom Shader
 
-> In addition to using the shaders provided by the plugin, users can create their own shader and use it in the scene. We will introduce custom shader from three perspectives: parameter settting, vertex shader and script setting.
+> In addition to using the shaders provided by the plugin, users can create their own shader and use it in the scene. We will introduce custom shader from three perspectives: parameter settings, vertex shader and script settings.
 
 ## Parameter Setting
 
@@ -30,7 +30,7 @@ StructuredBuffer<int> IDBuffer;
   - velocityBuffer: a buffer that stores the velocities of the particles.
   - IDBuffer: a buffer that stores the IDs of the particles within Soft2D. As particles are added or destroyed, their IDs remain unchanged.
 
-Lastly, we need to add `UNITY_VERTEX_INPUT_INSTANCE_ID` to the struct of the input vertex shader.
+Finally, we need to add `UNITY_VERTEX_INPUT_INSTANCE_ID` to the struct of the input vertex shader.
 
 ## Vertex Shader
 
@@ -54,7 +54,7 @@ Next, apply the VP transformation and obtained the correct position of the parti
 OUT.positionCS=mul(UNITY_MATRIX_VP, float4(worldPosition, 1.0f));
 ```
 
-In addition to the position of the particle, we can also obtain its current velocity and label:
+In addition to the position of the particle, we can also obtain its current velocity and tag:
 ```shaderlab
 OUT.velocity = velocityBuffer[instance_id];
 uint buffer = tagBuffer[instance_id];
@@ -81,6 +81,6 @@ Change the particle rendering mode to Custom in the inspector window of Soft2DMa
 
 ![img.png](img.png)
 
-You can also set the rendering layer and the mesh for the particle here. For more details, please refer to [Soft2DManager.md]().
+You can also set the rendering layer and the mesh for the particle here. For more details, please refer to [Soft2DManager.md](../BasicComponents/Soft2DManager.md).
 
 Once you have set the parameters for the custom material, you can run the simulation.

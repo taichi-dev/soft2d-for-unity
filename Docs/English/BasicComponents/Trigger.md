@@ -8,10 +8,6 @@
 
 ![gif](../../GIFs/Trigger.gif)
 
-## Built-in Functions
-
-[Detailed Introduction]()
-
 ## Custom Delegates
 
 You can check out the tutorial on using custom delegates to manipulate particles [here](../Advance/CustomTrigger.md).

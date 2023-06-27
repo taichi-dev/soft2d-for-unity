@@ -33,10 +33,6 @@ The parameter panel for Body consists of three sections: Body Settings, Material
 - Randomize Color
   - Randomly generated color for the particles inside the Body.
 
-## Built-in Functions
-
-[Detailed Content]()
-
 # Other Types of Body
 
 ## CustomBody

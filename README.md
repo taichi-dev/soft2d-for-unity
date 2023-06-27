@@ -30,7 +30,7 @@
 </h4>
 
 ## What is Soft2D for Unity？
-Soft2D is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D for Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling them to easily implement various physical simulations and rendering effects in Unity.
+[Soft2D](https://github.com/taichi-dev/soft2d-release) is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D for Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling them to easily implement various physical simulations and rendering effects in Unity.
 
 <div align="center">
 <img src="Presentation/FluidRendering.gif" alt="FluidRendering"> <img src="Presentation/Maze.gif" alt="Maze">
@@ -62,10 +62,21 @@ Soft2D is a 2D multi-material continuum physics engine designed for real-time ap
 - Graphics API: Vulkan or Metal
 - Unity version: 2021.3.22f1 or higher
 - Render Pipeline: built-in or URP 
+- Scripting Backend: IL2CPP
 
 ### Installation
 
-[Download Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity/releases/download/v0.1.0/Soft2D.v0.1.0.7z) and unzip it anywhere in your Unity Assets folder (just not inside the Editor, Plugins or Resources directories).
+- [Download Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity/releases/download/v0.1.0/Soft2D.v0.1.0.7z) and unzip it anywhere in your Unity Assets folder (just not inside the Editor, Plugins or Resources directories);
+- Click **Run and Restart** button, meanwhile the program will perform the following procedures:
+  - Change graphics API to Vulkan or Metal;
+  - Change scripting backend to IL2CPP;
+  - If the current pipeline is not Universal Render Pipeline, delete files related to it (URP);
+  - Restart this project.
+
+
+- When the rendering pipeline of the imported project is URP: Since the 02_2DGame scene uses Renderer Feature to achieve post-processing effects, you also need the following steps to run the scene normally:
+  - Find the **Render Pipeline Asset** currently used by the project under Project Settings -> Rendering -> Render Pipeline Asset.
+  - Find RendererList under **Render Pipeline Asset's** Inspector window, click “+” to add a Renderer Data，select **Kawase Blur Data** as new Renderer Data.
 
 ## Repository Structure
 
@@ -82,8 +93,8 @@ The directory structure of Soft2D for Unity looks like:
 
 ## Documentation
 
-- [Overview](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/Simplified_Chinese/Overview.md)
-- [Tutorial](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/Simplified_Chinese/Tutorials/Tutorial.md)
+- [Overview](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/English/Overview.md)
+- [Tutorial](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/English/Tutorials/Tutorial.md)
 
 ## License
 

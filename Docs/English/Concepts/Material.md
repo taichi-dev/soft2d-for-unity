@@ -3,7 +3,7 @@
 ## Attributes
 
 - Types of Physical Materials
-  - Soft2D support types include fluid, sand, elastic, and snow.
+  - Soft2D support types including fluid, sand, elastic and snow.
 - Density
   - The object's [density](https://en.wikipedia.org/wiki/Density), which is measured in kilograms per cubic meter (kg/m^3). Common materials such as water have a density of 1000 kg/m^3.
 - Young's Modulus
