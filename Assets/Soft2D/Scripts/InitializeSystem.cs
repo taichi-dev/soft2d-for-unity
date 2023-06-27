@@ -48,6 +48,8 @@ public class Soft2DLauncherWindow : EditorWindow
     {
         // Set Graphics APIs
         PlayerSettings.SetGraphicsAPIs(BuildTarget.Android,new [] { GraphicsDeviceType.Vulkan });
+        PlayerSettings.SetGraphicsAPIs(BuildTarget.StandaloneWindows,new [] { GraphicsDeviceType.Vulkan });
+        PlayerSettings.SetGraphicsAPIs(BuildTarget.StandaloneLinux64,new [] { GraphicsDeviceType.Vulkan });
         PlayerSettings.SetGraphicsAPIs(BuildTarget.StandaloneWindows64,new [] { GraphicsDeviceType.Vulkan });
         PlayerSettings.SetGraphicsAPIs(BuildTarget.iOS, new [] { GraphicsDeviceType.Metal });
         
