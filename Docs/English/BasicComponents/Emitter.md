@@ -51,4 +51,4 @@ The EEmitter parameter panel is divided into four sections: Emitter Settings, Ma
 
 ## Built-in Functions
 
-[Detailed Content]()
+[Detailed Content](../Functions/)
