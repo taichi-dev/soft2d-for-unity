@@ -73,7 +73,7 @@ MeshBody 也属于 Soft2D 的 `S2Body` 类型。我们可以将一张带有网�
 
 视频链接：[MeshBody](../../images/MeshBody.mp4)
 
-<video width="630" height="300" src="../../images/MeshBody.mp4"></video>
+<video width="630" src="../../images/MeshBody.mp4" />
 
 ## Emitter
 
