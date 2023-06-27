@@ -52,7 +52,7 @@ CustomBody 和上一章的 Body 都属于 Soft2D 的 `S2Body` 类型。但 Body 
   - 在 `E Custom Body` 脚本下找到 Points Positions 选项，向里面输入三个粒子位置数据：(0,0),(0.05,0),(0.025,0.05);
 - 把 CustomBody 物体移动到模拟范围内（比如(0.5,0.8)）。
 
-视频链接：[CustomBody](../../images/CustomBody.mp4)
+视频链接：![CustomBody](../../images/CustomBody.mp4)
 
 ## MeshBody
 
@@ -72,6 +72,8 @@ MeshBody 也属于 Soft2D 的 `S2Body` 类型。我们可以将一张带有网�
 - 把 MeshBody 物体移动到模拟范围内（比如(0.5,0.8)）。
 
 视频链接：[MeshBody](../../images/MeshBody.mp4)
+
+<video width="630" height="300" src="../../images/MeshBody.mp4"></video>
 
 ## Emitter
 
