@@ -6,7 +6,7 @@
 
 ## How to Use Collider GameObject
 
-![gif](../../GIFs/Collider.gif)
+![gif](../../images/Collider.gif)
 
 ## Parameter Panel
 

@@ -6,7 +6,7 @@
 
 ## How to Use Trigger GameObject
 
-![gif](../../GIFs/Trigger.gif)
+![gif](../../images/Trigger.gif)
 
 ## Custom Delegates
 

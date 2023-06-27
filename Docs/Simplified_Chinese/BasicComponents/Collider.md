@@ -6,7 +6,7 @@
 
 ## 使用 Collider GameObject 的方法
 
-![gif](../../GIFs/Collider.gif)
+![gif](../../images/Collider.gif)
 
 ## 参数面板
 

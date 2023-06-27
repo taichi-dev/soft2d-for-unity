@@ -4,7 +4,7 @@
 
 ## How to Use Emitter GameObject
 
-![gif](../../GIFs/Emitter.gif)
+![gif](../../images/Emitter.gif)
 
 ## Parameter Panel
 

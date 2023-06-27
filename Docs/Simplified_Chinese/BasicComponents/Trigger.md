@@ -6,7 +6,7 @@
 
 ## 使用 Trigger GameObject 的方法
 
-![gif](../../GIFs/Trigger.gif)
+![gif](../../images/Trigger.gif)
 
 ## 自定义委托
 

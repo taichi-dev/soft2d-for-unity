@@ -1,12 +1,8 @@
-<div align="center">
-  <!-- <img height="150" src="https://github.com/taichi-dev/soft2d/blob/main/docs/images/logo_large.png"  /> -->
-</div>
-
 
 <h1 align="center">Soft2D for Unity</h1>
 
 <div align="center">
-  <a href="https://assetstore.unity.com/">
+  <a href="https://assetstore.unity.com/packages/slug/256549">
     <img src="http://img.shields.io/badge/-Unity%20Asset%20Store-feefff?style=for-the-badge&logo=unity&logoColor=000" height="25px" alt="unity logo" />
   </a>
   <a href="https://www.youtube.com/channel/UCUweEINecpOaM8HAKLvfBJA">
@@ -31,25 +27,27 @@
 </h4>
 
 ## Soft2D for Unity 是什么？
-[Soft2D](https://github.com/taichi-dev/soft2d-release) 是一个基于 Taichi AOT 系统的 实时 2D 多材料连续体物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D for Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户方便地在 Unity 中实现各种物理模拟与渲染效果。
+[Soft2D](https://www.soft2d.tech/) 是一个实时的 2D 多材料连续体物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D for Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户方便地在 Unity 中实现各种物理模拟与渲染效果。
 
 <div align="center">
-<img src="Presentation/FluidRendering.gif" alt="FluidRendering"> <img src="Presentation/Maze.gif" alt="Maze">
+<img src="images/FluidRendering.gif" alt="FluidRendering" width="300px"> <img src="images/Maze.gif" alt="Maze" width="300px">
 </div>
+<div align="center">
+<img src="images/android.gif" alt="FluidRendering" width="300px"> <img src="images/ipad.gif" alt="Maze" width="300px">
+</div>
+
 
 ## 为什么使用 Soft2D for Unity？
 
-- 全平台部署，支持**五大主流平台**的运行:
+- 功能强大且易用：
+  - 支持多材料模拟：弹性体、流体、沙子、雪。
+  - 高层次抽象：world, body, emitter, collider, trigger。
+- 全平台部署：Linux, Windows, MacOS/iOS, Android
   ![Windows](http://img.shields.io/badge/-Windows-0078D6?style=flat-square&logo=windows&logoColor=fff)
   ![Linux](http://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=000)
   ![Android](http://img.shields.io/badge/-Android-3DDC84?style=flat-square&logo=android&logoColor=fff)
   ![macOS](http://img.shields.io/badge/-macOS-15171a?style=flat-square&logo=macos&logoColor=fff)
   ![iOS](http://img.shields.io/badge/-iOS-1f1f1f?style=flat-square&logo=ios&logoColor=fff)
-- 支持多种材料多种形状的物理模拟：
-  - 流体
-  - 沙子
-  - 雪
-  - 弹性体
 - 基于 [Taichi 语言](https://github.com/taichi-dev/taichi)的**真实**物理模拟。
 - 适用于**3D场景**，并同时针对2D与3D场景编写了相关材质着色器。
 - 包含了**很多教程和展示场景**供用户了解插件的强劲功能。
@@ -60,7 +58,7 @@
 ### 环境要求
 
 - 图形 API: Vulkan 或 Metal
-- Unity 版本：2021.3.15 或更高
+- Unity 版本：2021.3.22f1 或更高
 - 渲染管线：built-in 或 URP 管线
 - 脚本后端：IL2CPP
 
@@ -78,29 +76,10 @@
   - 在 Project Settings -> Rendering -> Render Pipeline Asset 下找到当前项目使用的 **Render Pipeline Asset**；
   - 在 **Render Pipeline Asset** 下的 RendererList 下点击 “+” 新增一个 Renderer Data，选择 **Kawase Blur Data** 作为新增的 Renderer Data.
 
-## 内容结构
-
-Soft2D for Unity 插件内的结构如下：
-
-```
-.
-├── Core          // Soft2D 和 Taichi 的库文件与包装脚本
-├── Materials     // Soft2D 粒子的着色器和材质
-├── Prefabs       // Soft2D for Unity 插件的预制体
-├── Samples       // Soft2D for Unity 插件的教程与效果演示场景
-└── Scripts       // Soft2D for Unity 插件的脚本
-```
-
 ## 文档
 
 - [概述](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/Simplified_Chinese/Overview.md)
 - [教程](https://github.com/taichi-dev/soft2d-for-unity/blob/main/Docs/Simplified_Chinese/Tutorials/Tutorial.md)
-
-## 许可证
-
-Soft2D for Unity 是根据 Apache 许可证（版本2.0）分发的。
-
-查看 [Apache License](https://github.com/taichi-dev/soft2d-for-unity/blob/main/LICENSE) 以获取细节。
 
 ## 联系我们
 

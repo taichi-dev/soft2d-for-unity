@@ -4,7 +4,7 @@
 
 ## How to Use Soft2DManager GameObject
 
-![gif](../../GIFs/Soft2DManager.gif)
+![gif](../../images/Soft2DManager.gif)
 
 ## Parameter Panel
 

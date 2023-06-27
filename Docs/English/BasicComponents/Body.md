@@ -4,7 +4,7 @@
 
 ## How to Use Body GameObject
 
-![gif](../../GIFs/Body.gif)
+![gif](../../images/Body.gif)
 
 ## Parameter Panel
 
@@ -41,7 +41,7 @@ CustomBody is a Body where the user specifies the sampling points. It correspond
 
 ### How to Use CustomBody GameObject
 
-![gif](../../GIFs/CustomBody.gif)
+![gif](../../images/CustomBody.gif)
 
 ### Parameter Panel
 
@@ -54,7 +54,7 @@ MeshBody is a Body with a topological relationship. Each vertex position in the 
 
 ### How to Use MeshBody GameObject
 
-![gif](../../GIFs/MeshBody.gif)
+![gif](../../images/MeshBody.gif)
 
 ### Parameter Panel
 

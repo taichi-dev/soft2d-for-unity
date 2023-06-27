@@ -6,7 +6,7 @@
 
 ## 视频链接
 
-[视频链接](../../GIFs/DebugTools.mp4) 
+[视频链接](../../images/DebugTools.mp4) 
 
 ## 参数面板
 
