@@ -10,7 +10,7 @@
 
 ## 自定义委托
 
-> 视频链接：[Tutorial](../../GIFs/TriggerCallback.mp4)
+> 视频链接：[Tutorial](../../images/TriggerCallback.mp4)
 
 ### 基本结构
 

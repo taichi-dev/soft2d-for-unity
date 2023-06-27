@@ -6,7 +6,7 @@
 
 ## Video
 
-[Video](../../GIFs/DebugTools.mp4) 
+[Video](../../images/DebugTools.mp4) 
 
 ## Parameter Panel
 

@@ -10,7 +10,7 @@ We can use the built-in functions of Triggers to manipulate particles.
 
 ## Custom Delegates
 
-> Video: [Tutorial](../../GIFs/TriggerCallback.mp4)
+> Video: [Tutorial](../../images/TriggerCallback.mp4)
 
 ### Basic Structure
 
