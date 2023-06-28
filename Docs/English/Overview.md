@@ -2,14 +2,14 @@
 
 ## Introduction
 
-Soft2D is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D for Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling them to easily implement various physical simulations and rendering effects in Unity.
+Soft2D is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D for Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling users to easily implement various physical simulations and rendering effects in Unity.
 
-## Prerequisite
+## Prerequisites
 
-- Graphics API: Vulkan or Metal
-- Unity version: 2021.3.22f1 or higher
-- Render Pipeline: built-in or URP
-- Scripting Backend: IL2CPP
+|     Unity version    |Graphics API    |   Render Pipeline    | Scripting Backend |
+|----------------------|----------------|----------------------|-------------------|
+|2021.3.22f1 or higher |Vulkan or Metal |3D built-in or 3D URP |IL2CPP             |
+
 
 ## Installation
 

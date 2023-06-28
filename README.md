@@ -48,11 +48,9 @@
 
 ## Prerequisites
 
-- Unity version: 2021.3.22f1 or higher.
-- Graphics API: Vulkan or Metal.
-- Render Pipeline: 3D built-in or 3D URP.
-- Scripting Backend: IL2CPP.
-
+|     Unity version    |Graphics API    |   Render Pipeline    | Scripting Backend |
+|----------------------|----------------|----------------------|-------------------|
+|2021.3.22f1 or higher |Vulkan or Metal |3D built-in or 3D URP |IL2CPP             |
 
 ## Contact Us
 If you spot an technical or documentation issue, please file an issue at [Github Issues](https://github.com/taichi-dev/soft2d-for-unity/issues). If you want to contribute to Soft2D for Unity, please file a Pull Request.
