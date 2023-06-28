@@ -1,6 +1,6 @@
 # Body
 
-> Body 是一个可以被模拟的连续体，由一组粒子组成。一个 body 拥有 shape, center, material 等属性。对应代码中的 EBody 类型。
+Body 是一个可以被模拟的连续体，由一组粒子组成。一个 body 拥有 shape, center, material 等属性。对应代码中的 EBody 类型。
 
 ## 使用 Body GameObject 的方法
 
@@ -24,7 +24,7 @@ Body 的参数面板分为 Body 设置、材质设置、颜色设置三个部分
 
 ### 材质设置
 
-[详细介绍](./Material.md)
+[Material](./Material.md)
 
 ### 颜色设置
 
