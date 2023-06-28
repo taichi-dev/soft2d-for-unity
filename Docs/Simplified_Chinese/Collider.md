@@ -4,10 +4,6 @@
 
 > 本文中 Collider 均表示 Soft2D 内的 Collider 组件。
 
-## 使用 Collider GameObject 的方法
-
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed-915d-3ca825e6ef97
-
 ## 参数面板
 
 - Unity 2D 碰撞体

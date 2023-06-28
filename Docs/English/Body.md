@@ -2,9 +2,6 @@
 
 > Body is a simulated continuum composed of a group of particles. A body has attributes such as shape, center and material. Body corresponds to the EBody class in the code.
 
-## How to Use Body GameObject
-
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118-97e9-0baa2d80e945
 
 ## Parameter Panel
 

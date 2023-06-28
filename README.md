@@ -26,7 +26,7 @@
     </p>
 </h4>
 
-[Soft2D](https://www.soft2d.tech/) is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D-for-Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling users to easily implement various physical simulations in Unity. The user documentation of Soft2D-for-Unity can be found [here](./Docs/English/Overview.md).
+[Soft2D](https://www.soft2d.tech/) is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D-for-Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling users to easily implement various physical simulations in Unity. The user documentation of Soft2D-for-Unity can be found [here](./Docs/English/Tutorial.md).
 
 <div align="center">
 <img src="images/WaterWheel.gif" alt="WaterWheel" width="300px"> <img src="images/Maze.gif" alt="Maze" width="300px">

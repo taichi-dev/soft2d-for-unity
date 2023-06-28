@@ -1,11 +1,6 @@
 # Emitter
 
 > The Emitter is a emitter that allows for the controlled emission of Bodies. It corresponds to the EEmitter class in the code.
-
-## How to Use Emitter GameObject
-
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/444ce93b-6727-4edb-80c2-81954cc613da
-
 ## Parameter Panel
 
 The EEmitter parameter panel is divided into four sections: Emitter Settings, Material Settings, Color Settings, and Event Settings.

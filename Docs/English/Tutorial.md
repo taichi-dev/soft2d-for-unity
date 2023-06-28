@@ -2,6 +2,32 @@
 
 > This is a tutorial for Soft2D for Unity, which can help you quickly get started with it.
 
+## Introduction
+
+Soft2D is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D for Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling users to easily implement various physical simulations and rendering effects in Unity.
+
+## Prerequisites
+
+|     Unity Version    |Graphics API    | Rendering Pipeline   | Scripting Backend |
+|----------------------|----------------|----------------------|-------------------|
+|2021.3.22f1 or higher |Vulkan or Metal |2D built-in or 3D URP |IL2CPP             |
+
+
+## Installation
+
+- [Download Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity/releases/download/v0.1.0/Soft2D.v0.1.0.7z) and unzip it anywhere in your Unity Assets folder (just not inside the Editor, Plugins or Resources directories);
+- Click **Run and Restart** button, meanwhile the program will perform the following procedures:
+  - Change graphics API to Vulkan or Metal;
+  - Change scripting backend to IL2CPP;
+  - If the current pipeline is not Universal Render Pipeline, delete files related to it (URP);
+  - Restart this project.
+
+
+- When the rendering pipeline of the imported project is URP: Since the 02_2DGame scene uses Renderer Feature to achieve post-processing effects, you also need the following steps to run the scene normally:
+  - Find the **Render Pipeline Asset** currently used by the project under Project Settings -> Rendering -> Render Pipeline Asset.
+  - Find RendererList under **Render Pipeline Asset's** Inspector window, click “+” to add a Renderer Data，select **Kawase Blur Data** as new Renderer Data.
+
+
 ## Basic Settings
 
 > In this tutorial, we will introduce how to import Soft2D for Unity into a Unity project and complete the basic setup.
@@ -32,7 +58,16 @@ After the import is completed, the plugin will automatically display a startup w
   - Find **Renderer List** in **Render Pipeline Asset**'s Inspector window.
   - Click the "+" button to add a Renderer Data, and choose **Kawase Blur Data** as this new Renderer Data.
 
-## Quick Start
+## 核心概念
+
+* Soft2DManager: Soft2DManager is used for creating Soft2D objects and adjusting simulation environment parameters.
+* Body: A body is a continuum to be simulated, which is composed of a group of particles or a 2D mesh.
+* Collider: A collider is an obstacle within the world that blocks the motion of bodies.
+* Trigger: A trigger is a spatial area with a specific shape, which is able to detect particles passing through it.
+* Emitter: An emitter is an object that can continuously emit bodies.
+
+
+## Using Soft2DManager && Creating a Body
 
 > In this tutorial, we will introduce how to create a simple scene by Soft2D for Unity and implement Soft2D simulation features.
 
@@ -44,7 +79,7 @@ After the import is completed, the plugin will automatically display a startup w
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118-97e9-0baa2d80e945
 
 
-## CustomBody
+## Creating a Custom Body
 
 > In this tutorial, we will introduce how to create a CustomBody, as well as its features and functions.
 
@@ -61,7 +96,7 @@ The following is the process of creating and using **CustomBody**:
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33-832a-618c5eb4dff6
 
 
-## MeshBody
+## Creating a Mesh Body
 
 > In this tutorial, we will introduce how to create a MeshBody, as well as its features and functions.
 
@@ -83,7 +118,7 @@ The following is the process of creating and using **MeshBody**:
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927-96e4-c20d4e9b1d6c
 
 
-## Emitter
+## Creating an Emitter
 
 > In this tutorial, we will introduce how to create an Emitter, as well as its features and functions.
 
@@ -103,7 +138,7 @@ The following is the process of creating and using **Emitter**:
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/444ce93b-6727-4edb-80c2-81954cc613da
 
 
-## Collider
+## Creating a Collider
 
 > In this tutorial, we will introduce how to create a Collider, as well as its features and functions.
 
@@ -117,7 +152,7 @@ We will use the scene from the Emitter chapter to introduce the process of creat
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed-915d-3ca825e6ef97
 
-## Trigger
+## Creating a Trigger
 
 > In this tutorial, we will introduce how to create a Trigger, as well as its features and functions.
 
@@ -159,3 +194,11 @@ public class TriggerExample : MonoBehaviour
 > You can use [Debug Tools](./DebugTools.md) to check Trigger's position in Soft2D.
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302-96a5-02fbfcff12fa
+
+
+## Using Debugging Tools
+[Debug Tools](./DebugTools.md)
+
+## Using Custom Shaders
+[Custom Soft2D Shader](./CustomShader.md)
+
