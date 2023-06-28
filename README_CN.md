@@ -34,7 +34,7 @@
 <img src="images/WaterWheel.gif" alt="WaterWheel" width="300px"> <img src="images/Maze.gif" alt="Maze" width="300px">
 </div>
 <div align="center">
-<img src="images/android.gif" alt="FluidRendering" width="300px"> <img src="images/ipad.gif" alt="Maze" width="300px">
+<img src="images/android.gif" alt="Android" width="300px"> <img src="images/ipad.gif" alt="ipad" width="300px">
 </div>
 
 
