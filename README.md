@@ -40,7 +40,7 @@
 
 - Powerful and Easy-to-Use:
   - Multi-material: Elastic bodies, fluid, sand, snow.
-  - High-level abstractions: world, body, emitter, collider, trigger.
+  - High-level abstraction: world, body, emitter, collider, trigger.
 - Universal Deployment: Linux, Windows, MacOS/iOS, Android.
   ![Windows](http://img.shields.io/badge/-Windows-0078D6?style=flat-square&logo=windows&logoColor=fff)
   ![Linux](http://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=000)

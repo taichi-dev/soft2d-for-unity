@@ -10,10 +10,7 @@ We can use the built-in functions of Triggers to manipulate particles.
 
 ## Custom Delegates
 
-> Video: [Tutorial](../../images/TriggerCallback.mp4)
-
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a5d525dd-c056-4340-b6b4-3f31c86c3918
-
 
 
 ### Basic Structure

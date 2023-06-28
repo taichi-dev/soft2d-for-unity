@@ -6,9 +6,6 @@
 
 ## Video
 
-[Video](../../images/DebugTools.mp4) 
-
-
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/026ecf9b-a9bd-4b98-847d-d41d1d371671
 
 

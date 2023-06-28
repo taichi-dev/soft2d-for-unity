@@ -36,7 +36,8 @@ Soft2D 插件支持两种方式导入 Unity 项目中，它们分别是 Unity As
 - 最后，因为创建的 Body 物体并不在 Soft2D 的模拟范围内（初始设置是左下角在原点的 1x1 正方形），我们需要把物体移动到模拟范围内（比如(0.5,0.8)）。
 - 为了在运行后有较好的视觉体验，你可以调整摄像头至相应的大小和位置。
 
-视频链接：[QuickStart](../../images/Body.mp4)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118-97e9-0baa2d80e945
+
 
 ## CustomBody
 
@@ -52,7 +53,9 @@ CustomBody 和上一章的 Body 都属于 Soft2D 的 `S2Body` 类型。但 Body 
   - 在 `E Custom Body` 脚本下找到 Points Positions 选项，向里面输入三个粒子位置数据：(0,0),(0.05,0),(0.025,0.05);
 - 把 CustomBody 物体移动到模拟范围内（比如(0.5,0.8)）。
 
-视频链接：![CustomBody](../../images/CustomBody.mp4)
+
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33-832a-618c5eb4dff6
+
 
 ## MeshBody
 
@@ -71,7 +74,7 @@ MeshBody 也属于 Soft2D 的 `S2Body` 类型。我们可以将一张带有网�
 - 在 MeshBody 物体下找到 `E Mesh Body` 脚本，把 2D 贴图挂载至 **Mesh Sprite** 下，并通过 **Mesh Scale** 调整它的大小；
 - 把 MeshBody 物体移动到模拟范围内（比如(0.5,0.8)）。
 
-视频链接：[MeshBody](../../images/MeshBody.mp4)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927-96e4-c20d4e9b1d6c
 
 ## Emitter
 
@@ -88,7 +91,7 @@ Emitter 是一个能自由控制发射 Body 的发射器。它的具体介绍和
   - 将 Shape Type 修改为 **Box**，把 Half Width 和 Half Height 改成 0.05；
   - 把 Base Color 换个颜色（比如橙色）。
 
-视频链接：[Emitter](../../images/Emitter.mp4)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/444ce93b-6727-4edb-80c2-81954cc613da
 
 ## Collider
 
@@ -103,7 +106,7 @@ Collider 与 Unity 的 Collider2D 绑定在了一起。它的具体介绍和参�
 
 > 你可以使用 [测试工具](../Advance/DebugTools.md) 来查看 Collider 在 Soft2D 内的位置和状态。
 
-视频链接：[Collider](../../images/Collider.mp4)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed-915d-3ca825e6ef97
 
 ## Trigger
 
@@ -147,4 +150,4 @@ public class TriggerExample : MonoBehaviour
 
 > 自定义编写触发器修改粒子的教程可以在[这里](../Advance/CustomTrigger.md)看到。
 
-视频链接：[Trigger](../../images/Trigger.mp4)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302-96a5-02fbfcff12fa

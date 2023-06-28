@@ -41,12 +41,7 @@ After the import is completed, the plugin will automatically display a startup w
 - Finally, since the created Body object is not within the simulation range of Soft2D (the initial setting is a 1x1 square with the bottom left corner at the origin), we need to move the object into the simulation range (e.g., (0.5, 0.8)).
 - To have a better visual experience after running, you can adjust the camera to the appropriate size and position.
 
-Video: [Quick Start](../../images/Body.mp4)
-
-
-
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118-97e9-0baa2d80e945
-
 
 
 ## CustomBody
@@ -62,12 +57,8 @@ The following is the process of creating and using **CustomBody**:
   - Locate the **Points Positions** option and input three `Vector2` into it: (0,0), (0.05,0), (0.025,0.05).
 - Move the **CustomBody** object into the simulation range (e.g., (0.5,0.8)).
 
-Video: [CustomBody](../../images/CustomBody.mp4)
-
-
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33-832a-618c5eb4dff6
-
 
 
 ## MeshBody
@@ -88,12 +79,8 @@ The following is the process of creating and using **MeshBody**:
 - Find the EMeshBody script under the MeshBody object and attach the 2D texture to the **Mesh Sprite**. Adjust its scale by **Mesh Scale**.
 - Move the **MeshBody** object into the simulation range (e.g., (0.5,0.8)).
 
-Video: [MeshBody](../../images/MeshBody.mp4)
-
-
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927-96e4-c20d4e9b1d6c
-
 
 
 ## Emitter
@@ -113,12 +100,7 @@ The following is the process of creating and using **Emitter**:
   - Change Half Width and Half Height to 0.05.
   - Change **Base Color** (such as orange).
 
-Video: [Emitter](../../images/Emitter.mp4)
-
-
-
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/444ce93b-6727-4edb-80c2-81954cc613da
-
 
 
 ## Collider
@@ -133,13 +115,7 @@ We will use the scene from the Emitter chapter to introduce the process of creat
 
 > You can use [Debug Tools](../Advance/DebugTools.md) to check Collider's position in Soft2D.
 
-Video: [Collider](../../images/Collider.mp4)
-
-
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed-915d-3ca825e6ef97
-
-
-
 
 ## Trigger
 
@@ -184,11 +160,4 @@ public class TriggerExample : MonoBehaviour
 
 > You can [click here](../Advance/CustomTrigger.md) to view the tutorial about the Soft2D custom shader.
 
-Video: [Trigger](../../images/Trigger.mp4)
-
-
-
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302-96a5-02fbfcff12fa
-
-
-

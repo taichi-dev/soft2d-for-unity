@@ -10,7 +10,8 @@
 
 ## 自定义委托
 
-> 视频链接：[Tutorial](../../images/TriggerCallback.mp4)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a5d525dd-c056-4340-b6b4-3f31c86c3918
+
 
 ### 基本结构
 
