@@ -36,25 +36,18 @@
 </div>
 
 
-## 功能特性
+## 插件特性
 
-- 功能强大且易用：
-  - 支持多材料物理模拟：弹性体、流体、沙子、雪。
-  - 高层次抽象：world, body, emitter, collider, trigger。
+- 多材料物理模拟：弹性体、流体、沙子、雪。
+- 高层次抽象：world, body, emitter, collider, trigger。
 - 全平台部署：Linux, Windows, MacOS/iOS, Android。
-- 适用于**3D场景**，并同时针对2D与3D场景编写了相关材质着色器。
-- 包含了**很多教程和展示场景**供用户了解插件的强劲功能。
-- 与 Unity 内组件**深度绑定**，Soft2D 的粒子可以与 Unity 的碰撞体和触发器产生交互。
+- 易用的编辑器工具，几秒钟之内创建物理模拟场景。
+- 支持 2D 和 3D 渲染，一键修改渲染效果。
+- 包含丰富全面的教程和示例场景。
+
 
 ## 环境要求
 
 |       Unity 版本    |   图形 API    |       渲染管线            | 脚本后端 |
 |--------------------|---------------|-------------------------|---------|
-|2021.3.22f1 或更高   |Vulkan 或 Metal|3D built-in 或 3D URP 管线|IL2CPP   |
-
-
-## 联系我们
-
-- 如果你在文档和使用过程中发现了困难或错误，欢迎在 [Github Issues](https://github.com/taichi-dev/soft2d-for-unity/issues) 提出 issue。
-- 如果你愿意参与 Soft2D for Unity 的开发，欢迎给我们提出 Pull Request。
-
+|2021.3.22f1 或更高   |Vulkan 或 Metal|2D built-in 或 3D URP     |IL2CPP   |

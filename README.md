@@ -37,20 +37,15 @@
 
 ## Features
 
-- Powerful and Easy-to-Use.
-  - Multi-material: Elastic bodies, fluid, sand, snow.
-  - High-level abstraction: world, body, emitter, collider, trigger.
-- Universal Deployment.
-  - Linux, Windows, MacOS/iOS, Android.
-- Suitable for 3D scenes, relevant material shaders have been written for both 2D and 3D scenes.
-- Includes **many tutorials and showcase scenes** for users to understand the powerful features of the plugin.
-- **Deeply bound** with Unity's internal components, Soft2D's particles can interact with Unity's components.
+- Multi-material: Elastic bodies, fluid, sand, snow.
+- High-level abstraction: world, body, emitter, collider, trigger.
+- Universal Deployment: Linux, Windows, MacOS/iOS, Android.
+- Easy-to-use editor tools, enabling users to create a simulation scene in seconds.
+- Support 2D and 3D rendering. Modify rendering effects need only a few clicks.
+- Contain rich and comprehensive tutorial and sample scenes.
 
 ## Prerequisites
 
-|     Unity version    |Graphics API    |   Render Pipeline    | Scripting Backend |
+|     Unity Version    |Graphics API    | Rendering Pipeline   | Scripting Backend |
 |----------------------|----------------|----------------------|-------------------|
-|2021.3.22f1 or higher |Vulkan or Metal |3D built-in or 3D URP |IL2CPP             |
-
-## Contact Us
-If you spot an technical or documentation issue, please file an issue at [Github Issues](https://github.com/taichi-dev/soft2d-for-unity/issues). If you want to contribute to Soft2D for Unity, please file a Pull Request.
+|2021.3.22f1 or higher |Vulkan or Metal |2D built-in or 3D URP |IL2CPP             |
