@@ -81,6 +81,6 @@ Change the particle rendering mode to Custom in the inspector window of Soft2DMa
 
 ![img.png](img.png)
 
-You can also set the rendering layer and the mesh for the particle here. For more details, please refer to [Soft2DManager.md](../BasicComponents/Soft2DManager.md).
+You can also set the rendering layer and the mesh for the particle here. For more details, please refer to [Soft2DManager.md](./Soft2DManager.md).
 
 Once you have set the parameters for the custom material, you can run the simulation.

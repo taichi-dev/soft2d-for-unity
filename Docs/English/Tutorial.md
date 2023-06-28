@@ -36,8 +36,8 @@ After the import is completed, the plugin will automatically display a startup w
 
 > In this tutorial, we will introduce how to create a simple scene by Soft2D for Unity and implement Soft2D simulation features.
 
-- Create a new Unity scene. Right-click in the Hierarchy window and create a **Soft2DManager** object through Soft2D -> Soft2DManager. Soft2DManager is a script used to control and render Soft2D particles in the current scene. You can [click here](../BasicComponents/Soft2DManager.md) to view its detailed introduction. 
-- Create a **Body** object through Soft2D -> Body -> Body. A body is a continuum to be simulated, which is composed of a group of particles. You can [click here](../BasicComponents/Body.md) to see its detailed introduction.
+- Create a new Unity scene. Right-click in the Hierarchy window and create a **Soft2DManager** object through Soft2D -> Soft2DManager. Soft2DManager is a script used to control and render Soft2D particles in the current scene. You can [click here](./Soft2DManager.md) to view its detailed introduction. 
+- Create a **Body** object through Soft2D -> Body -> Body. A body is a continuum to be simulated, which is composed of a group of particles. You can [click here](./Body.md) to see its detailed introduction.
 - Finally, since the created Body object is not within the simulation range of Soft2D (the initial setting is a 1x1 square with the bottom left corner at the origin), we need to move the object into the simulation range (e.g., (0.5, 0.8)).
 - To have a better visual experience after running, you can adjust the camera to the appropriate size and position.
 
@@ -48,7 +48,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118
 
 > In this tutorial, we will introduce how to create a CustomBody, as well as its features and functions.
 
-Both CustomBody and Body belong to the `S2Body` type in Soft2D. However, Body can only be set to fixed shapes (e.g., Box/Circle/Capsule), while in CustomBody, users can customize the number of particles and the position of each particle. You can [click here](../BasicComponents/Body.md) to view its detailed introduction.
+Both CustomBody and Body belong to the `S2Body` type in Soft2D. However, Body can only be set to fixed shapes (e.g., Box/Circle/Capsule), while in CustomBody, users can customize the number of particles and the position of each particle. You can [click here](./Body.md) to view its detailed introduction.
 
 The following is the process of creating and using **CustomBody**:
 - Create a **Soft2DManager** object through Soft2D -> Soft2DManager in a new Unity scene.
@@ -65,7 +65,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33
 
 > In this tutorial, we will introduce how to create a MeshBody, as well as its features and functions.
 
-MeshBody also belongs to the S2Body type of Soft2D. We can input a 2D texture with a mesh into MeshBody. MeshBody will generate a particle for each vertex, and the particles will have the same topology as the mesh. You can [click here](../BasicComponents/Body.md) to view its detailed introduction.
+MeshBody also belongs to the S2Body type of Soft2D. We can input a 2D texture with a mesh into MeshBody. MeshBody will generate a particle for each vertex, and the particles will have the same topology as the mesh. You can [click here](./Body.md) to view its detailed introduction.
 
 The following is the process of creating and using **MeshBody**:
 - Create a **Soft2DManager** object through Soft2D -> Soft2DManager in a new Unity scene.
@@ -87,7 +87,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927
 
 > In this tutorial, we will introduce how to create an Emitter, as well as its features and functions.
 
-An emitter is an object that can continuously emit bodies. You can [click here](../BasicComponents/Emitter.md) to view its detailed introduction.
+An emitter is an object that can continuously emit bodies. You can [click here](./Emitter.md) to view its detailed introduction.
 
 The following is the process of creating and using **Emitter**:
 - Create a **Soft2DManager** object through Soft2D -> Soft2DManager in a new Unity scene.
@@ -107,13 +107,13 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/444ce93b-6727-4edb
 
 > In this tutorial, we will introduce how to create a Collider, as well as its features and functions.
 
-A collider is an obstacle within the world that blocks the motion of bodies. Since **Collider** in Soft2D cannot interact with Unity objects, we have bound Soft2D's Collider with Unity's Collider2D. You can [click here](../BasicComponents/Collider.md) to view its detailed introduction.
+A collider is an obstacle within the world that blocks the motion of bodies. Since **Collider** in Soft2D cannot interact with Unity objects, we have bound Soft2D's Collider with Unity's Collider2D. You can [click here](./Collider.md) to view its detailed introduction.
 
 We will use the scene from the Emitter chapter to introduce the process of creating and using Collider:
 - Create a **Collider** object through Soft2D -> Collider.
 - Move the **Collider** object into the simulation range (e.g., (0.5,0.8)).
 
-> You can use [Debug Tools](../Advance/DebugTools.md) to check Collider's position in Soft2D.
+> You can use [Debug Tools](./DebugTools.md) to check Collider's position in Soft2D.
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed-915d-3ca825e6ef97
 
@@ -121,7 +121,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed
 
 > In this tutorial, we will introduce how to create a Trigger, as well as its features and functions.
 
-A trigger is a spatial area with a specific shape, which is able to detect particles passing through it. You can [click here](../BasicComponents/Trigger.md) to view its detailed introduction.
+A trigger is a spatial area with a specific shape, which is able to detect particles passing through it. You can [click here](./Trigger.md) to view its detailed introduction.
 
 We will use the scene from the Collider chapter to introduce the process of creating and using Trigger:
 - Remove the **Collider** object.
@@ -156,8 +156,6 @@ public class TriggerExample : MonoBehaviour
 - Create an empty GameObject, load `TriggerExample.cs` into this GameObject.
 - Attach the **Trigger** object to the variable named "Trigger" in the `TriggerExample.cs` script.
 
-> You can use [Debug Tools](../Advance/DebugTools.md) to check Trigger's position in Soft2D.
-
-> You can [click here](../Advance/CustomTrigger.md) to view the tutorial about the Soft2D custom shader.
+> You can use [Debug Tools](./DebugTools.md) to check Trigger's position in Soft2D.
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302-96a5-02fbfcff12fa

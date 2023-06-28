@@ -14,7 +14,7 @@ The parameter panel for Body consists of three sections: Body Settings, Material
 
 - Shape
   - The initial shape of the Body. Depending on the specific shape, Soft2D will automatically sample and generate particles inside it. Currently, it supports several types: box, circle, ellipse, capsule, and polygon.
-  - For detailed documentation on shapes, see: [Shape.md](../Concepts/Shape.md)
+  - For detailed documentation on shapes, see: [Shape.md](./Shape.md)
 - Linear Velocity
   - The initial linear velocity of the Body, measured in m/s.
 - Angular Velocity
@@ -24,7 +24,7 @@ The parameter panel for Body consists of three sections: Body Settings, Material
 
 ### Material Settings
 
-[Detailed Content](../Concepts/Material.md)
+[Detailed Content](./Material.md)
 
 ### Color Settings
 

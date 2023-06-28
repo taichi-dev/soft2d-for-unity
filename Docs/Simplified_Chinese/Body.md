@@ -14,7 +14,7 @@ Body 的参数面板分为 Body 设置、材质设置、颜色设置三个部分
 
 - 形状
   - Body 的初始形状。根据具体的形状，Soft2D 会自动采样生成在其内部的粒子。目前支持 box / circle / ellipse / capsule / polygon 这几种类型。
-  - 形状的详细文档见： [Shape.md](../Concepts/Shape.md)
+  - 形状的详细文档见： [Shape.md](./Shape.md)
 - 线速度
   - Body 的初始线速度。单位为 m/s。
 - 角速度
@@ -24,7 +24,7 @@ Body 的参数面板分为 Body 设置、材质设置、颜色设置三个部分
 
 ### 材质设置
 
-[详细介绍](../Concepts/Material.md)
+[详细介绍](./Material.md)
 
 ### 颜色设置
 

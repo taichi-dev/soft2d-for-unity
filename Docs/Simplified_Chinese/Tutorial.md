@@ -31,8 +31,8 @@ Soft2D 插件支持两种方式导入 Unity 项目中，它们分别是 Unity As
 > 在本节教程中，我们会介绍如何使用 Soft2D 插件创建一个简单的场景，实现 Soft2D 的模拟功能。
 
 - 创建一个新的场景。在 Hierarchy 窗口右键，通过 Soft2D->Soft2DManager 创建一个 **Soft2DManager** 物体。Soft2DManager 是用来控制并渲染
-当前场景的 Soft2D 粒子的脚本。 它的具体介绍和参数内容可以[点击这里](../BasicComponents/Soft2DManager.md)查看。
-- 通过 Soft2D->Body->Body 创建一个 **Body** 物体。Body 是用由一组内部粒子组成的一个物体。它的具体介绍和参数内容可以[点击这里](../BasicComponents/Body.md)查看。
+当前场景的 Soft2D 粒子的脚本。 它的具体介绍和参数内容可以[点击这里](./Soft2DManager.md)查看。
+- 通过 Soft2D->Body->Body 创建一个 **Body** 物体。Body 是用由一组内部粒子组成的一个物体。它的具体介绍和参数内容可以[点击这里](./Body.md)查看。
 - 最后，因为创建的 Body 物体并不在 Soft2D 的模拟范围内（初始设置是左下角在原点的 1x1 正方形），我们需要把物体移动到模拟范围内（比如(0.5,0.8)）。
 - 为了在运行后有较好的视觉体验，你可以调整摄像头至相应的大小和位置。
 
@@ -44,7 +44,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118
 > 在本节教程中，我们会介绍如何创建一个 CustomBody，以及它的特性和功能。
 
 CustomBody 和上一章的 Body 都属于 Soft2D 的 `S2Body` 类型。但 Body 只能设置成 Box/Circle/Capsule 等固定的形状，而在 CustomBody 中，
-用户可以自定义粒子的数量和每个粒子的位置。它的具体介绍和参数内容可以[点击这里](../BasicComponents/Body.md)查看。
+用户可以自定义粒子的数量和每个粒子的位置。它的具体介绍和参数内容可以[点击这里](./Body.md)查看。
 
 下面是 CustomBody 的创建和使用流程：
 - 创建一个新的场景并通过 Soft2D->Soft2DManager 创建一个 **Soft2DManager** 物体；
@@ -62,7 +62,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33
 > 在本节教程中，我们会介绍如何创建一个 MeshBody，以及它的特性和功能。
 
 MeshBody 也属于 Soft2D 的 `S2Body` 类型。我们可以将一张带有网格的 2D 贴图输入至 MeshBody 内，而 MeshBody 会为网格上的每个顶点生成一个粒子，
-而且粒子之间也有着网格那样的拓扑关系。它的具体介绍和参数内容可以[点击这里](../BasicComponents/Body.md)查看。下面是 MeshBody 的创建和使用流程：
+而且粒子之间也有着网格那样的拓扑关系。它的具体介绍和参数内容可以[点击这里](./Body.md)查看。下面是 MeshBody 的创建和使用流程：
 
 - 创建一个新的场景并通过 Soft2D->Soft2DManager 创建一个 **Soft2DManager** 物体；
 - 通过 Soft2D->Body->CustomBody 创建一个 **MeshBody** 物体；
@@ -80,7 +80,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927
 
 > 在本节教程中，我们会介绍 Emitter 的创建方法和功能。
 
-Emitter 是一个能自由控制发射 Body 的发射器。它的具体介绍和参数内容可以[点击这里](../BasicComponents/Emitter.md)查看。下面是 Emitter 的创建和使用流程：
+Emitter 是一个能自由控制发射 Body 的发射器。它的具体介绍和参数内容可以[点击这里](./Emitter.md)查看。下面是 Emitter 的创建和使用流程：
 
 - 创建一个新的场景并通过 Soft2D->Soft2DManager 创建一个 **Soft2DManager** 物体；
 - 通过 Soft2D->Emitter 创建一个 **Emitter** 物体；
@@ -98,13 +98,13 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/444ce93b-6727-4edb
 > 在本节教程中，我们会介绍 Collider 的创建方法和功能。
 
 Collider 是一个可以与 Soft2D 粒子产生碰撞的物体。因为在 Soft2D 内创建的 Collider 无法与 Unity 的物体发生交互，所以我们将 Soft2D 的
-Collider 与 Unity 的 Collider2D 绑定在了一起。它的具体介绍和参数内容可以[点击这里](../BasicComponents/Collider.md)查看。
+Collider 与 Unity 的 Collider2D 绑定在了一起。它的具体介绍和参数内容可以[点击这里](./Collider.md)查看。
 我们将使用上一章创建 Emitter 的场景来介绍 Collider 的创建和使用流程：
 
 - 通过 Soft2D->Collider 创建一个 **Collider** 物体；
 - 把 Collider 物体移动到模拟范围内（比如(0.5,0.8)）。
 
-> 你可以使用 [测试工具](../Advance/DebugTools.md) 来查看 Collider 在 Soft2D 内的位置和状态。
+> 你可以使用 [测试工具](./DebugTools.md) 来查看 Collider 在 Soft2D 内的位置和状态。
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed-915d-3ca825e6ef97
 
@@ -112,7 +112,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed
 
 > 在本节教程中，我们会介绍 Trigger 的创建方法和功能。
 
-Trigger 是一个可以与 Soft2D 粒子产生交互的触发器。它可以被进入 Trigger 作用范围的粒子触发，并对粒子做出相应修改。它的具体介绍和参数内容可以[点击这里](../BasicComponents/Trigger.md)查看。
+Trigger 是一个可以与 Soft2D 粒子产生交互的触发器。它可以被进入 Trigger 作用范围的粒子触发，并对粒子做出相应修改。它的具体介绍和参数内容可以[点击这里](./Trigger.md)查看。
 我们将使用上一章创建 Collider 的场景来介绍 Trigger 的创建和使用流程：
 
 - 为了演示方便，我们先把 Collider 物体移除；
@@ -146,8 +146,8 @@ public class TriggerExample : MonoBehaviour
 - 在场景内新建一个空物体，将 `TriggerExample.cs` 挂载在该空物体上；
 - 将 Trigger 物体挂载在 `TriggerExample.cs` 的 **Trigger** 变量上。
 
-> 你可以使用 [Debug Tools 工具](../Advance/DebugTools.md) 来查看 Trigger 在 Soft2D 内的位置和状态。
+> 你可以使用 [Debug Tools 工具](./DebugTools.md) 来查看 Trigger 在 Soft2D 内的位置和状态。
 
-> 自定义编写触发器修改粒子的教程可以在[这里](../Advance/CustomTrigger.md)看到。
+> 自定义编写触发器修改粒子的教程可以在[这里](./CustomTrigger.md)看到。
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302-96a5-02fbfcff12fa

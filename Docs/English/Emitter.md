@@ -25,13 +25,13 @@ The EEmitter parameter panel is divided into four sections: Emitter Settings, Ma
 - Use MeshBody
   - Determines whether the Emitter emits the MeshBody. When set to true, the Emitter will emit the MeshBody.
 - Body Shape
-  - See [Shape.md](../Concepts/Shape.md) for detailed information.
+  - See [Shape.md](./Shape.md) for detailed information.
 - MeshBody Settings
   - See [Body.md](Body.md) for detailed information.
 
 ### Material Settings
 
-[Detailed Content](../Concepts/Material.md)
+[Detailed Content](./Material.md)
 
 ### Color Settings
 
