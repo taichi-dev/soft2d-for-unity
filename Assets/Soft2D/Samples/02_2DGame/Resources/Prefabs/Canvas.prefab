@@ -2353,6 +2353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9192996155849261702}
   - component: {fileID: 5407209875399646832}
+  - component: {fileID: 9222811082264902438}
   m_Layer: 5
   m_Name: UIManager
   m_TagString: Untagged
@@ -2398,7 +2399,6 @@ MonoBehaviour:
   skipButton: {fileID: 8594498805408145871}
   nextStageButton: {fileID: 7523725021141704292}
   settingPanel: {fileID: 4981097013851134409}
-  warningText: {fileID: 6020688668772917787}
   slotGroup:
   - {fileID: 7871777604380830688}
   - {fileID: 1161309370944379864}
@@ -2413,6 +2413,19 @@ MonoBehaviour:
   - {fileID: 1161309370844998910}
   - {fileID: 1161309370352737605}
   currData: {fileID: 11400000, guid: 9dc069a831f953a4e91c625d23366d93, type: 2}
+--- !u!114 &9222811082264902438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337722115049233467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37501e7c1cda75a42a3131d06afd808d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warningText: {fileID: 6020688668772917787}
 --- !u!1 &6537989445531765752
 GameObject:
   m_ObjectHideFlags: 0

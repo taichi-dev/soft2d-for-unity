@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WarningLog : MonoBehaviour
+public class RendererDataWarning : MonoBehaviour
 {
     public GameObject warningText;
 
