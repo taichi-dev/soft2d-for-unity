@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public Button skipButton;
     public Button nextStageButton;
     public GameObject settingPanel;
+    public GameObject warningText;
     
     [Tooltip("UI Slot Group")] public List<GameObject> slotGroup;
     
@@ -21,6 +22,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         string sceneName = SceneManager.GetActiveScene().name;
+        warningText.SetActive(false);
 
         settingsButton?.onClick.AddListener(PauseLevel);
         backButton?.onClick.AddListener(PauseLevel);
