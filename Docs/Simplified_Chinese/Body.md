@@ -1,10 +1,6 @@
 # Body
 
-> Body 是一个可以被模拟的连续体，由一组粒子组成。一个 body 拥有 shape, center, material 等属性。对应代码中的 EBody 类型。
-
-## 使用 Body GameObject 的方法
-
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118-97e9-0baa2d80e945
+Body 是一个可以被模拟的连续体，由一组粒子组成。一个 body 拥有 shape, center, material 等属性。对应代码中的 EBody 类型。
 
 ## 参数面板
 
@@ -14,7 +10,7 @@ Body 的参数面板分为 Body 设置、材质设置、颜色设置三个部分
 
 - 形状
   - Body 的初始形状。根据具体的形状，Soft2D 会自动采样生成在其内部的粒子。目前支持 box / circle / ellipse / capsule / polygon 这几种类型。
-  - 形状的详细文档见： [Shape.md](../Concepts/Shape.md)
+  - 形状的详细文档见： [Shape.md](./Shape.md)
 - 线速度
   - Body 的初始线速度。单位为 m/s。
 - 角速度
@@ -24,7 +20,7 @@ Body 的参数面板分为 Body 设置、材质设置、颜色设置三个部分
 
 ### 材质设置
 
-[详细介绍](../Concepts/Material.md)
+[Material](./Material.md)
 
 ### 颜色设置
 
@@ -39,10 +35,6 @@ Body 的参数面板分为 Body 设置、材质设置、颜色设置三个部分
 
 CustomBody 是用户指定采样点的 Body。对应代码中的 ECustomBody 类型。
 
-### 使用 CustomBody GameObject 的方法
-
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33-832a-618c5eb4dff6
-
 ### 参数面板
 
 - 粒子局部空间位置
@@ -51,10 +43,6 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33
 ## MeshBody
 
 MeshBody 是带有拓扑关系的 Body。每个传入网格的顶点位置会生成一个 Soft2D 粒子，它们之间遵循网格内三角形的拓扑关系。对应代码中的 EMeshBody 类型。
-
-### 使用 MeshBody GameObject 的方法
-
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927-96e4-c20d4e9b1d6c
 
 ### 参数面板
 

@@ -4,10 +4,6 @@
 
 > 测试工具可以让用户在场景运行时看到 Collider 和 Trigger 在 Soft2D 内的位置和运动状态。
 
-## 视频链接
-
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/026ecf9b-a9bd-4b98-847d-d41d1d371671
-
 
 ## 参数面板
 

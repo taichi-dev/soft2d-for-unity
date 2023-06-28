@@ -51,7 +51,7 @@ Soft2DManager 的参数面板分为渲染设置， World 设置，测试工具�
   - **Unlit** ：只显示颜色，没有光照和其它因素；
   - **Blinn-Phong**：根据 Blinn-Phong 公式制作的简单光照模型，仅支持 URP 管线；
   - **PBR**：根据 PBR 制作的简单物理渲染模型，仅支持 URP 管线；
-  - **Custom**：用户自定义的材质，可以[在这里](../Advance/CustomShader.md)看到相关教程。
+  - **Custom**：用户自定义的材质，可以[在这里](./CustomShader.md)看到相关教程。
 
 ### 时间设置
 

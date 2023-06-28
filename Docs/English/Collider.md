@@ -4,9 +4,6 @@
 
 > In this article, Collider refers to the collider component within Soft2D.
 
-## How to Use Collider GameObject
-
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed-915d-3ca825e6ef97
 
 ## Parameter Panel
 

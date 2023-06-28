@@ -51,7 +51,7 @@ The parameter panel of Soft2DManager is divided into six sections: World Setting
   - **Unlit**: Displays only color without lighting or other factors.
   - **Blinn-Phong**: A simple lighting model based on the Blinn-Phong formula, only supports URP pipeline.
   - **PBR**: A simple physically-based rendering model, only supports URP pipeline.
-  - **Custom**: User-defined material. You can find relevant tutorials [here](../Advance/CustomShader.md).
+  - **Custom**: User-defined material. You can find relevant tutorials [here](./CustomShader.md).
 
 ### Time Settings
 

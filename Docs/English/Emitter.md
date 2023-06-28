@@ -1,11 +1,6 @@
 # Emitter
 
 > The Emitter is a emitter that allows for the controlled emission of Bodies. It corresponds to the EEmitter class in the code.
-
-## How to Use Emitter GameObject
-
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/444ce93b-6727-4edb-80c2-81954cc613da
-
 ## Parameter Panel
 
 The EEmitter parameter panel is divided into four sections: Emitter Settings, Material Settings, Color Settings, and Event Settings.
@@ -25,13 +20,13 @@ The EEmitter parameter panel is divided into four sections: Emitter Settings, Ma
 - Use MeshBody
   - Determines whether the Emitter emits the MeshBody. When set to true, the Emitter will emit the MeshBody.
 - Body Shape
-  - See [Shape.md](../Concepts/Shape.md) for detailed information.
+  - See [Shape.md](./Shape.md) for detailed information.
 - MeshBody Settings
   - See [Body.md](Body.md) for detailed information.
 
 ### Material Settings
 
-[Detailed Content](../Concepts/Material.md)
+[Detailed Content](./Material.md)
 
 ### Color Settings
 

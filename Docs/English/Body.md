@@ -2,9 +2,6 @@
 
 > Body is a simulated continuum composed of a group of particles. A body has attributes such as shape, center and material. Body corresponds to the EBody class in the code.
 
-## How to Use Body GameObject
-
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118-97e9-0baa2d80e945
 
 ## Parameter Panel
 
@@ -14,7 +11,7 @@ The parameter panel for Body consists of three sections: Body Settings, Material
 
 - Shape
   - The initial shape of the Body. Depending on the specific shape, Soft2D will automatically sample and generate particles inside it. Currently, it supports several types: box, circle, ellipse, capsule, and polygon.
-  - For detailed documentation on shapes, see: [Shape.md](../Concepts/Shape.md)
+  - For detailed documentation on shapes, see: [Shape.md](./Shape.md)
 - Linear Velocity
   - The initial linear velocity of the Body, measured in m/s.
 - Angular Velocity
@@ -24,7 +21,7 @@ The parameter panel for Body consists of three sections: Body Settings, Material
 
 ### Material Settings
 
-[Detailed Content](../Concepts/Material.md)
+[Detailed Content](./Material.md)
 
 ### Color Settings
 
