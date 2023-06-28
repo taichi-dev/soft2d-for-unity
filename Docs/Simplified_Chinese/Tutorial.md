@@ -1,9 +1,13 @@
-# Soft2D for Unity's Tutorial
+# Soft2D-for-Unity's Tutorial
 
-> 这是 Soft2D for Unity 的教程，它可以帮助你快速上手 Soft2D 插件。
+> 这是 Soft2D-for-Unity 的教程，它可以帮助你快速上手 Soft2D 插件。
 
 ## 基础设置
 
+### 使用 Github Unity 项目
+下载使用即可。
+
+### 安装插件
 > 在本节教程中，我们会介绍如何导入 Soft2D 插件至 Unity 项目中，并完成 Soft2D 的基础设置。
 
 Soft2D 插件支持两种方式导入 Unity 项目中，它们分别是 Unity Asset Store 和 Github 页面。
@@ -13,12 +17,6 @@ Soft2D 插件支持两种方式导入 Unity 项目中，它们分别是 Unity As
    - 点击 **Add to My Assets** 将插件添加到你的Unity账号中；
    - 返回 Unity 编辑器，通过 Windows->Package Manager 打开 **Package Manager** 窗口;
    - 在 Package Manager 窗口选择 **My Assets** 选项卡，找到 Soft2D 插件，并点击 **Download** 按钮将其下载到本地。
-
-- Github 
-   - 在 [Github 仓库页面](https://github.com/taichi-dev/soft2d-for-unity)访问 Soft2D 插件；
-   - 在 **Releases** 页面获取适当版本的插件文件并下载下来；
-   - 直接将下载下来的 **Soft2D.unitypackage** 文件拖拽到编辑器的 **Project** 视图中；
-   - Unity 编辑器会弹出一个导入设置窗口，确认无误后点击 **Import** 按钮。
 
 当你导入完成后，插件会自动弹出一个启动窗口。启动窗口会执行以下操作：
 
