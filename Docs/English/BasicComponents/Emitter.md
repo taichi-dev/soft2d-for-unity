@@ -4,7 +4,7 @@
 
 ## How to Use Emitter GameObject
 
-![gif](../../images/Emitter.gif)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/444ce93b-6727-4edb-80c2-81954cc613da
 
 ## Parameter Panel
 

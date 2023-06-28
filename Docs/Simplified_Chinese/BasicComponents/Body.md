@@ -4,7 +4,7 @@
 
 ## 使用 Body GameObject 的方法
 
-![gif](../../images/Body.gif)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118-97e9-0baa2d80e945
 
 ## 参数面板
 
@@ -41,7 +41,7 @@ CustomBody 是用户指定采样点的 Body。对应代码中的 ECustomBody 类
 
 ### 使用 CustomBody GameObject 的方法
 
-![gif](../../images/CustomBody.gif)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33-832a-618c5eb4dff6
 
 ### 参数面板
 
@@ -54,7 +54,7 @@ MeshBody 是带有拓扑关系的 Body。每个传入网格的顶点位置会生
 
 ### 使用 MeshBody GameObject 的方法
 
-![gif](../../images/MeshBody.gif)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927-96e4-c20d4e9b1d6c
 
 ### 参数面板
 

@@ -6,7 +6,7 @@
 
 ## 使用 Collider GameObject 的方法
 
-![gif](../../images/Collider.gif)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed-915d-3ca825e6ef97
 
 ## 参数面板
 

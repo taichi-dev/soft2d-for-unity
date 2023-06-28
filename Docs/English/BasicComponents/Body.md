@@ -4,7 +4,7 @@
 
 ## How to Use Body GameObject
 
-![gif](../../images/Body.gif)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118-97e9-0baa2d80e945
 
 ## Parameter Panel
 
@@ -41,7 +41,7 @@ CustomBody is a Body where the user specifies the sampling points. It correspond
 
 ### How to Use CustomBody GameObject
 
-![gif](../../images/CustomBody.gif)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33-832a-618c5eb4dff6
 
 ### Parameter Panel
 
@@ -54,7 +54,7 @@ MeshBody is a Body with a topological relationship. Each vertex position in the 
 
 ### How to Use MeshBody GameObject
 
-![gif](../../images/MeshBody.gif)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927-96e4-c20d4e9b1d6c
 
 ### Parameter Panel
 

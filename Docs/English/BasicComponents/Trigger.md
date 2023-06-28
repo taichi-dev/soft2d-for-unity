@@ -6,7 +6,7 @@
 
 ## How to Use Trigger GameObject
 
-![gif](../../images/Trigger.gif)
+https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302-96a5-02fbfcff12fa
 
 ## Custom Delegates
 
