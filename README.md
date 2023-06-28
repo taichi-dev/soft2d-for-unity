@@ -30,10 +30,10 @@
 [Soft2D](https://www.soft2d.tech/) is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D for Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling them to easily implement various physical simulations and rendering effects in Unity.
 
 <div align="center">
-<img src="images/FluidRendering.gif" alt="FluidRendering" width="300px"> <img src="images/Maze.gif" alt="Maze" width="300px">
+<img src="images/WaterWheel.gif" alt="WaterWheel" width="300px"> <img src="images/Maze.gif" alt="Maze" width="300px">
 </div>
 <div align="center">
-<img src="images/android.gif" alt="FluidRendering" width="300px"> <img src="images/ipad.gif" alt="Maze" width="300px">
+<img src="images/android.gif" alt="Android" width="300px"> <img src="images/ipad.gif" alt="Maze" width="300px">
 </div>
 
 ## Why Soft2D for Unity?
