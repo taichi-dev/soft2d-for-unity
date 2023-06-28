@@ -1,4 +1,4 @@
-# Soft2D for Unity's Tutorial
+# Tutorial
 
 > This is a tutorial for Soft2D for Unity, which can help you quickly get started with it.
 
@@ -15,56 +15,20 @@ Soft2D is a 2D multi-material continuum physics engine designed for real-time ap
 
 ## Installation
 
-- [Download Soft2D for Unity](https://github.com/taichi-dev/soft2d-for-unity/releases/download/v0.1.0/Soft2D.v0.1.0.7z) and unzip it anywhere in your Unity Assets folder (just not inside the Editor, Plugins or Resources directories);
-- Click **Run and Restart** button, meanwhile the program will perform the following procedures:
-  - Change graphics API to Vulkan or Metal;
-  - Change scripting backend to IL2CPP;
-  - If the current pipeline is not Universal Render Pipeline, delete files related to it (URP);
-  - Restart this project.
+Users can have 2 ways to use Soft2D: 1. Download this github repository and open as a Unity project. 2. Download Soft2D-for-Unity Plugin from Unity Asset Store and import it into existing projects.
 
-
-- When the rendering pipeline of the imported project is URP: Since the 02_2DGame scene uses Renderer Feature to achieve post-processing effects, you also need the following steps to run the scene normally:
-  - Find the **Render Pipeline Asset** currently used by the project under Project Settings -> Rendering -> Render Pipeline Asset.
-  - Find RendererList under **Render Pipeline Asset's** Inspector window, click “+” to add a Renderer Data，select **Kawase Blur Data** as new Renderer Data.
-
-
-## Basic Settings
-
-> In this tutorial, we will introduce how to import Soft2D for Unity into a Unity project and complete the basic setup.
-
-You can import Soft2D for Unity through Unity Asset Store and Github.
-
-- Unity Asset Store
-   - Visit [Soft2D for Unity in Unity Asset Store](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041).
-   - Click the **Add to My Assets** to add the plugin to your Unity account.
-   - Return to the Unity Editor and open the **Package Manager** window by selecting Windows -> Package Manager.
-   - Select the **My Assets** tab in the **Package Manager** window, locate the Soft2D plugin, and click the **Download** button.
-
-- Github 
-   - Visit [Soft2D for Unity in Github](https://github.com/taichi-dev/soft2d-for-unity).
-   - Get the appropriate version of the plugin on the **Release** page and download it.
-   - Unzip it anywhere in your Unity Assets folder (except the Editor, Plugins or Resources directories).
-
-After the import is completed, the plugin will automatically display a startup window. The program will perform the following procedures:
-
+### Use Github Project
+If users are using `git` to clone this project, please use `git-lfs` to ensure pulling binary files correctly.
+### Import Soft2D-for-Unity plugin into existing projects
+Download the plugin from [Asset Store](https://assetstore.unity.com/packages/slug/256549) and import it into an existing project. After the import is completed, the plugin will automatically display a startup window. The program will perform the following procedures:
 - Change graphics API to Vulkan or Metal.
 - Change scripting backend to IL2CPP.
 - If the current pipeline is not Universal Render Pipeline, delete files related to it (URP).
 - Restart.
-
-
-- When the rendering pipeline of the imported project is URP: you also need the following steps to run 02_2DGame normally, for the scenes use **Renderer Feature** to achieve post-processing effects:
+If users are importing this plugin into a URP project: you also need the following steps to run 02_2DGame normally, for the scenes use **Renderer Feature** to achieve post-processing effects:
   - Find the **Render Pipeline Asset** used by the project under Project Settings -> Rendering -> Render Pipeline Asset.
   - Find **Renderer List** in **Render Pipeline Asset**'s Inspector window.
   - Click the "+" button to add a Renderer Data, and choose **Kawase Blur Data** as this new Renderer Data.
-
-## 核心概念
-
-* Soft2DManager: Soft2DManager is used for creating Soft2D objects and adjusting simulation environment parameters.
-* Body: A body is a continuum to be simulated, which is composed of a group of particles or a 2D mesh.
-* Collider: A collider is an obstacle within the world that blocks the motion of bodies.
-* Trigger: A trigger is a spatial area with a specific shape, which is able to detect particles passing through it.
-* Emitter: An emitter is an object that can continuously emit bodies.
 
 
 ## Using Soft2DManager && Creating a Body

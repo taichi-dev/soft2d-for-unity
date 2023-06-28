@@ -42,7 +42,7 @@
 - High-level abstraction: world, body, emitter, collider, trigger.
 - Universal Deployment: Linux, Windows, MacOS/iOS, Android.
 - Easy-to-use editor tools, enabling users to create a simulation scene in seconds.
-- Support 2D and 3D rendering. Modify rendering effects need only a few clicks.
+- Support 2D and 3D rendering. To modify rendering effects only requires a few clicks.
 - Contain rich and comprehensive tutorial and sample scenes.
 
 ## Prerequisites

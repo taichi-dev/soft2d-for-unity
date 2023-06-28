@@ -1,10 +1,10 @@
-# Soft2D-for-Unity's Tutorial
+# Tutorial
 
 > 这是 Soft2D-for-Unity 的教程，它可以帮助你快速上手 Soft2D 插件。
 
 ## 介绍
 
-- Soft2D 是一个实时 2D 多材料连续体物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D for Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户方便地在 Unity 中实现各种物理模拟和渲染效果。
+Soft2D 是一个实时 2D 多材料连续体物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D for Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户方便地在 Unity 中实现各种物理模拟和渲染效果。
 
 ## 环境要求
 
@@ -12,20 +12,17 @@
 |--------------------|---------------|-------------------------|---------|
 |2021.3.22f1 或更高   |Vulkan 或 Metal|2D built-in 或 3D URP     |IL2CPP   |
 
+## 使用方法
+用户可以通过两种方法使用 Soft2D：1. 下载本仓库到本地，并在 Unity 中作为一个项目打开。2. 在 Asset Store 中下载插件文件，导入到用户自己的项目中。
 
+### 使用 Github 项目
+如果用户使用 `git` 克隆本项目，注意需要使用 `git-lfs` 来正确获取项目中的二进制文件。
 
-## 基础设置
-
-### 使用 Github Unity 项目
-下载使用即可。
-
-### 安装插件
-> 在本节教程中，我们会介绍如何导入 Soft2D 插件至 Unity 项目中，并完成 Soft2D 的基础设置。
+### 从 Asset Store 下载插件并导入已有项目
 
 Soft2D 插件支持两种方式导入 Unity 项目中，它们分别是 Unity Asset Store 和 Github 页面。
 
-- Unity Asset Store
-   - 在 [Unity Asset Store 页面](https://assetstore.unity.com/packages/tools/utilities/odin-inspector-and-serializer-89041)访问 Soft2D 插件；
+   - 在 [Unity Asset Store 页面](https://assetstore.unity.com/packages/slug/256549)访问 Soft2D 插件；
    - 点击 **Add to My Assets** 将插件添加到你的Unity账号中；
    - 返回 Unity 编辑器，通过 Windows->Package Manager 打开 **Package Manager** 窗口;
    - 在 Package Manager 窗口选择 **My Assets** 选项卡，找到 Soft2D 插件，并点击 **Download** 按钮将其下载到本地。
@@ -41,13 +38,6 @@ Soft2D 插件支持两种方式导入 Unity 项目中，它们分别是 Unity As
   - 在 **Render Pipeline Asset** 下的 RendererList 下点击 “+” 新增一个 Renderer Data，选择 **Kawase Blur Data** 作为新增的 Renderer Data.
 
 
-## 核心概念
-
-* Soft2DManager：Soft2D 的核心管理器。负责 Soft2D 物体创建和调整模拟环境参数。
-* Body：一个可以进行模拟的物体。它可以由一组粒子组成，也可以是一个 2D 网格。
-* Collider：场景中的障碍物。
-* Trigger：可以检测、操作粒子的区域。
-* Emitter：可以持续发射 Body 的物体。
 
 ## 使用 Soft2DManager 并创建一个 Body
 
