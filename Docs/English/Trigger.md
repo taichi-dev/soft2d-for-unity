@@ -1,39 +1,46 @@
 # Trigger
+> Users must enable the World Query option in Soft2DManager for the trigger to function properly. See [World Query Settings]().
 
-> A Trigger is a spatial region with a specific shape, which can detect particles passing through it. In the corresponding code, it is represented by the ETrigger type. The scope of a Trigger is controlled by its BoxCollider2D component.
+> In this document, 'trigger' refers to the trigger within Soft2D, not the built-in trigger in Unity.
 
-> In this article, Trigger refers to the trigger component within Soft2D.
+A Trigger is a spatial region with a specific shape that can detect particles passing through it. It corresponds to the `ETrigger` type in the code. The scope of the Trigger is controlled by its Collider2D component.
 
-# Custom Trigger
+## Trigger Events
+Trigger provides multiple interfaces that allow users to query and operate on the particles within the trigger.
 
-> Users can customize the events triggered by Triggers to manipulate Soft2D particles. We will introduce two methods: using built-in functions and custom delegates.
+* `QueryParticleOverlapping()`: Check if there are any particles within the trigger area.
+* `QueryParticleOverlappingByTag()`: Check if there are particles that meet the tag conditions within the trigger area.
+* `QueryParticleNum()`: Check the number of particles in the trigger area.
+* `QueryParticleNumByTag()`: Check the number of particles that meet the tag conditions in the trigger area.
+* `DestroyParticles()`: Remove all particles in the trigger area.
+* `DestroyParticlesByTag()`: Remove all particles that meet the tag conditions in the trigger area.
 
-> The term "Trigger" used in this article refers to the triggers within Soft2D.
-
-## Built-in Functions
-
-We can use the built-in functions of Triggers to manipulate particles.
-
-## Custom Delegates
+## Custom Callback Functions
+In addition to trigger events, users can also pass in custom callback functions to query and operate on the particles within the trigger. This section will introduce how to use custom callback functions. The video below provides an intuitive demonstration of how to use them:
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a5d525dd-c056-4340-b6b4-3f31c86c3918
 
+> Currently, custom callback functions support two types of operations on particle data: deleting particles and modifying particle tags.
 
-### Basic Structure
 
-Users can write their own method and pass it to Soft2D for invocation. The basic structure of this method is as follow:
+### Callback Function Requirements
+In C#, users need to define a callback function of type `S2ParticleManipulationCallback`. An example of a compliant callback function is as follows:
 ```csharp
 [AOT.MonoPInvokeCallback(typeof(S2ParticleManipulationCallback))]
-public static void ManipulateParticlesInTrigger(IntPtr particles, int size)
-{ 
+public static void ManipulateParticlesInTrigger(IntPtr particles, int size) { 
 
 }
 ```
-In this function:
-- `particles` is a pointer to an array which contains information about all particles entered the Trigger's range.
-- `size` is the total number of particles that entered the Trigger's range.
+This callback function accepts two parameters:
+* `particles`: An array pointer provided by Soft2D, this array contains all the particle data within the trigger.
+* `size`: The number of particles in the array.
 
-The particle information is encapsulated in a structure called **S2Particle**:
+> Currently, the trigger delegate does not support using multicast delegates as callback functions. Using multicast delegates may cause the project to crash.
+
+
+### Particle Structure
+
+The data of each particle is stored in the form of the `S2Particle` structure:
 ```csharp
 public struct S2Particle {
     public uint id;
@@ -43,46 +50,44 @@ public struct S2Particle {
     public uint is_removed;
 }
 ```
-- `id` represents the particle's ID within Soft2D. The particle's ID remains unchanged even if particles are added or removed.
-- `position` represents the current position of the particle.
-- `velocity` represents the current velocity of the particle.
-- `tag` represents the tag buffer of the particle.
-- `is_removed` indicates whether the particle has been removed. A value greater than 0 indicates that the particle has been removed.
+- `id`: The internal ID of the particle in Soft2D. The ID of the particle does not change with the increase or decrease of particles.
+- `position`: The current position of the particle.
+- `velocity`: The current velocity of the particle.
+- `tag`: The tag of the particle.
+- `is_remove`: Indicates whether the particle has been removed. A value greater than 0 indicates that the particle has been removed. This value defaults to 0.
 
-### Function Implementation
+### Writing Callback Functions
+If you want to operate on a single particle, you need to get the array position of the current particle information and convert it to an `S2Particle` structure:
 
-To manipulate individual particle, we need to first retrieve the memory information of the current particle and convert it into the `S2Particle` structure:
 ```csharp
 IntPtr particlePtr = IntPtr.Add(particles, i * particleSize);
 S2Particle particle = Marshal.PtrToStructure<S2Particle>(particlePtr);
 ```
-After the manipulation is completed, we need to pack the structure and return it to the original memory:
+After the operation is completed, release the structure into non-managed memory:
 ```csharp
 Marshal.StructureToPtr(particle, particlePtr, false);
 ```
-In this way, we have completed the function structure for per-particle manipulation:
+The overall code is as follows:
 ```csharp
 [AOT.MonoPInvokeCallback(typeof(S2ParticleManipulationCallback))]
 public static void ManipulateParticles(IntPtr particles, int size)
 {
-     int particleSize = Marshal.SizeOf<S2Particle>();
-     for (int i = 0; i < size; i++)
-     {
+    int particleSize = Marshal.SizeOf<S2Particle>();
+    for (int i = 0; i < size; i++) {
         IntPtr particlePtr = IntPtr.Add(particles, i * particleSize);
         S2Particle particle = Marshal.PtrToStructure<S2Particle>(particlePtr);
-        // Manipulation on particles...
+        // 对粒子进行操作...
         Marshal.StructureToPtr(particle, particlePtr, false);
     }
 }
 ```
-In the commented section of the code above, we can modify the content of the `S2Particle` structure to manipulate particles, such as removing particles that entered the Trigger:
+A callback function that can delete all particles in the trigger is shown below:
+
 ```csharp
 [AOT.MonoPInvokeCallback(typeof(S2ParticleManipulationCallback))]
-public static void ManipulateParticles(IntPtr particles, int size)
-{
-     int particleSize = Marshal.SizeOf<S2Particle>();
-     for (int i = 0; i < size; i++)
-     {
+public static void ManipulateParticles(IntPtr particles, int size) {
+    int particleSize = Marshal.SizeOf<S2Particle>();
+    for (int i = 0; i < size; i++) {
         IntPtr particlePtr = IntPtr.Add(particles, i * particleSize);
         S2Particle particle = Marshal.PtrToStructure<S2Particle>(particlePtr);
         particle.is_removed = 1;
@@ -90,39 +95,34 @@ public static void ManipulateParticles(IntPtr particles, int size)
     }
 }
 ```
-If you want to modify external variables within this function, make sure those variables are static.
 
-### Function Invocation
+### Passing Callback Function to Soft2D
+Users need to use `InvokeCallbackAsync()` in `ETrigger` class to pass their own callback function to Soft2D and execute it automatically:
 
-You can call `void InvokeCallbackAsync(S2ParticleManipulationCallback callback)` in order to let Soft2D execute the code within the callback.
-
-For example, to have a Trigger delete all particles that enter its range:
 ```csharp
 private ETrigger trigger;
-...
-private void Update(){
+private void Update() {
     trigger.InvokeCallbackAsync(ManipulateParticles);
-    ...
-    }
+}
 ```
-- **Do not** use multicast delegates (loading multiple functions) as the callback when calling `void InvokeCallbackAsync(S2ParticleManipulationCallback callback)`, which can cause the Soft2D program to crash.
-- After invoking the function, the callback runs **synchronously** with the subsequent code. To ensure asynchronous execution, you can add a signal flag within the callback:
+
+### Thread Safety
+`InvokeCallbackAsync()` will pass the user-defined callback function into Soft2D and execute it on the rendering thread. Therefore, the callback function will be executed asynchronously with the logic thread (`Update()`). Below is a method to ensure the completion of the callback function in the logic thread:
+
 ```csharp
 private ETrigger trigger;
-private static bool locked = true;
-...
-private void Update(){
-    trigger.InvokeCallbackAsync(ManipulateParticles);
-    if (!locked){
-        ...
-        }
-    }
+private static int callback_finished = 0;
 
 [AOT.MonoPInvokeCallback(typeof(S2ParticleManipulationCallback))]
-    public static void ManipulateParticles(IntPtr particles, int size)
-    {
-        ...
-        locked = false;
+public static void ManipulateParticles(IntPtr particles, int size) {
+    // ...
+    callback_finished = 1;
+}
+
+private void Update() {
+    trigger.InvokeCallbackAsync(ManipulateParticles);
+    if (callback_finished) {
+        // ...
     }
+}
 ```
-- Calling this function only executes the callback once. Make sure to call this function every frame within the Trigger's working cycle to ensure its execution.

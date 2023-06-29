@@ -3,7 +3,7 @@
 
 > 本文中 `trigger` 均表示 Soft2D 内的 trigger，而非 Unity 自带的 trigger。
 
-Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。对应代码中的 `ETrigger` 类型。 Trigger 的作用范围由它的 BoxCollider2D 组件控制。
+Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。对应代码中的 `ETrigger` 类型。 Trigger 的作用范围由它的 Collider2D 组件控制。
 
 
 ## Trigger 事件
@@ -31,8 +31,8 @@ public static void ManipulateParticlesInTrigger(IntPtr particles, int size) {
 }
 ```
 此回调函数接受两个参数：
-- particles： Soft2D 提供的一个数组指针，这个数组包含了所有 trigger 内的粒子数据。
-- size：数组中粒子的数量。
+- `particles`：Soft2D 提供的一个数组指针，这个数组包含了所有 trigger 内的粒子数据。
+- `size`：数组中粒子的数量。
 
 > 目前 trigger delegate 不支持使用多播委托作为回调函数，使用多播委托可能会导致项目崩溃。
 
@@ -105,7 +105,7 @@ private void Update() {
 ```
 
 ### 线程安全
-`InvokeCallbackAsync()`会将用户自定义的回调函数传入 Soft2D 并在渲染线程上执行。因此回调函数会和逻辑线程（Update()）异步执行。下面是一个方法在逻辑线程中确保回调函数执行完毕：
+`InvokeCallbackAsync()`会将用户自定义的回调函数传入 Soft2D 并在渲染线程上执行。因此回调函数会和逻辑线程（`Update()`）异步执行。下面是一个方法在逻辑线程中确保回调函数执行完毕：
 ```csharp
 private ETrigger trigger;
 private static int callback_finished = 0;
@@ -122,6 +122,4 @@ private void Update() {
         // ...
     }
 }
-
-
 ```
