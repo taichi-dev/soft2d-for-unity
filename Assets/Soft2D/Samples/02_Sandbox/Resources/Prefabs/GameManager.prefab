@@ -80,6 +80,7 @@ MonoBehaviour:
   S2NormalForceScale: 0.1
   S2VelocityForceScale: 0.1
   S2FineGridScale: 4
+  S2EnableWorldQuery: 1
 --- !u!114 &3785404050484907312
 MonoBehaviour:
   m_ObjectHideFlags: 0
