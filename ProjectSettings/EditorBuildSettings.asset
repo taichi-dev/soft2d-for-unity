@@ -9,33 +9,33 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Soft2D/Samples/02_2DGame/Level 1.unity
+    path: Assets/Soft2D/Samples/02_Sandbox/Level 1.unity
     guid: 5dab5f20953d7e249ba014ab208c413c
   - enabled: 1
-    path: Assets/Soft2D/Samples/02_2DGame/Level 2.unity
+    path: Assets/Soft2D/Samples/02_Sandbox/Level 2.unity
     guid: a60e8a5244b793542a1d38da56008f5c
   - enabled: 1
-    path: Assets/Soft2D/Samples/02_2DGame/Level 3.unity
+    path: Assets/Soft2D/Samples/02_Sandbox/Level 3.unity
     guid: 71b48504feaccb14295d402382176c12
   - enabled: 1
-    path: Assets/Soft2D/Samples/02_2DGame/Level 4.unity
+    path: Assets/Soft2D/Samples/02_Sandbox/Level 4.unity
     guid: 10b70ba008738724aa06039bc42fc29a
   - enabled: 1
-    path: Assets/Soft2D/Samples/02_2DGame/Level 5.unity
+    path: Assets/Soft2D/Samples/02_Sandbox/Level 5.unity
     guid: 97762011b1dd9ed30923c7f80be3b7c9
   - enabled: 1
-    path: Assets/Soft2D/Samples/02_2DGame/Level 6.unity
+    path: Assets/Soft2D/Samples/02_Sandbox/Level 6.unity
     guid: 52b44b76ee7151cef876f837c79c71be
   - enabled: 1
-    path: Assets/Soft2D/Samples/02_2DGame/Level 7.unity
+    path: Assets/Soft2D/Samples/02_Sandbox/Level 7.unity
     guid: 3a7a1eb8d3c23adf6b7dfc10eae1993e
   - enabled: 1
-    path: Assets/Soft2D/Samples/02_2DGame/Level 8.unity
+    path: Assets/Soft2D/Samples/02_Sandbox/Level 8.unity
     guid: 8b3aea0bea8b7e54dbaefa5e59c23d66
   - enabled: 1
-    path: Assets/Soft2D/Samples/02_2DGame/Level 9.unity
+    path: Assets/Soft2D/Samples/02_Sandbox/Level 9.unity
     guid: 691700903e0967b4eac90587f299e8c0
   - enabled: 1
-    path: Assets/Soft2D/Samples/02_2DGame/Level 10.unity
+    path: Assets/Soft2D/Samples/02_Sandbox/Level 10.unity
     guid: 2b15233bfe55dac45ac7f4180a631b43
   m_configObjects: {}

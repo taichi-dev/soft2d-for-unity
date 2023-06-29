@@ -49,7 +49,7 @@ namespace Taichi.Soft2D.Plugin
             }
             else
             {
-                EditorGUILayout.PropertyField(isDynamic, new GUIContent("Dynamic", "This collider is dynamic or not"));
+                EditorGUILayout.PropertyField(isDynamic, new GUIContent("Dynamic", "Moving by user-specified velocity or auto-simulating"));
                 if (eCollider.isDynamic)
                 {
                     EditorGUI.BeginChangeCheck();
@@ -61,7 +61,7 @@ namespace Taichi.Soft2D.Plugin
                         eCollider.angularVelocity = newAnVel;
                         EditorUtility.SetDirty(eCollider);
                     }
-                    EditorGUILayout.PropertyField(autoUpdate, new GUIContent("Auto Update Position & Rotation", "Auto update collider's position and rotation on Unity and Soft2D each frame"));
+                    EditorGUILayout.PropertyField(autoUpdate, new GUIContent("Auto Simulate", "Auto simulate Unity colliders and sync data to Soft2D every frame"));
                     if (eCollider.autoUpdate)
                     {
                         EditorGUILayout.HelpBox("Turning this on may cause performance overhead.",MessageType.Warning);
