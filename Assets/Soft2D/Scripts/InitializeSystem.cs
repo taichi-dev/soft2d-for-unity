@@ -67,17 +67,44 @@ public class Soft2DLauncherWindow : EditorWindow
         // Check Render Pipeline
         if (GraphicsSettings.defaultRenderPipeline == null)
         {
-            string filePath = PathInitializer.MainPath + "/Samples/02_Sandbox/Resources/Materials";
-            DirectoryInfo directory = new DirectoryInfo(filePath);
-            foreach (FileInfo file in directory.GetFiles())
+            string filePath = PathInitializer.MainPath + "/Samples/02_Sandbox/Resources/Materials/KawaseBlur.cs";
+            if (File.Exists(filePath))
             {
-                file.Delete();
+                File.Delete(filePath);
             }
-            directory.Delete();
+        }
+        else
+        {
+            CreateNewLayer("Soft2D");
         }
         
         // Restart this project
         EditorApplication.OpenProject(Application.dataPath.Substring(0, Application.dataPath.Length - "Assets".Length));
+    }
+    
+    public static void CreateNewLayer(string layerName)
+    {
+        SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
+        SerializedProperty layersProperty = tagManager.FindProperty("layers");
+        
+        int emptyLayerIndex = -1;
+        for (int i = 8; i < layersProperty.arraySize; i++)
+        {
+            SerializedProperty layerProperty = layersProperty.GetArrayElementAtIndex(i);
+            if (string.IsNullOrEmpty(layerProperty.stringValue))
+            {
+                emptyLayerIndex = i;
+                break;
+            }
+        }
+        
+        if (emptyLayerIndex != -1)
+        {
+            SerializedProperty newLayerProperty = layersProperty.GetArrayElementAtIndex(emptyLayerIndex);
+            newLayerProperty.stringValue = layerName;
+        }
+
+        tagManager.ApplyModifiedProperties();
     }
 }
 #endif

@@ -45,12 +45,13 @@ namespace Taichi.Soft2D.Plugin
         private SerializedProperty S2NormalForceScale;
         private SerializedProperty S2VelocityForceScale;
         private SerializedProperty S2FineGridResolution;
+        private SerializedProperty S2EnableWorldQuery;
 
         private void OnEnable()
         {
             Tools.current = Tool.None;
             Soft2DManager = target as Soft2DManager;
-            materialPath = PathInitializer.MainPath + "Materials/Prototype";
+            materialPath = PathInitializer.MainPath + "Materials";
             
             shaderType = serializedObject.FindProperty("shaderType");
             instanceMaterial = serializedObject.FindProperty("instanceMaterial");
@@ -85,6 +86,7 @@ namespace Taichi.Soft2D.Plugin
             S2NormalForceScale = serializedObject.FindProperty("S2NormalForceScale");
             S2VelocityForceScale = serializedObject.FindProperty("S2VelocityForceScale");
             S2FineGridResolution = serializedObject.FindProperty("S2FineGridScale");
+            S2EnableWorldQuery = serializedObject.FindProperty("S2EnableWorldQuery");
         }
 
         #endregion
@@ -98,11 +100,11 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.BeginVertical("box");
             EditorGUILayout.PropertyField(WorldExtent, new GUIContent("World Extent","Simulated area of scale"));
             EditorGUILayout.PropertyField(WorldOffset, new GUIContent("World Offset","Simulated area of position"));
-            if (Soft2DManager.enableGyro)
-                EditorGUILayout.PropertyField(gyroScale, new GUIContent("Gyro Scale","Gyroscope's gravity scale"));
-            else
+            if (!Soft2DManager.enableGyro)
                 EditorGUILayout.PropertyField(gravity, new GUIContent("Gravity","Gravity's scale & direction"));
             EditorGUILayout.PropertyField(enableGyro, new GUIContent("Enable Gyro","Enable Gyro Scope as gravity"));
+            if (Soft2DManager.enableGyro)
+                EditorGUILayout.PropertyField(gyroScale, new GUIContent("Gyro Scale","Gyroscope's gravity scale"));
             EditorGUILayout.PropertyField(enableForceField, new GUIContent("Enable Force Field","Enable force field"));
             if (Soft2DManager.enableForceField)
                 EditorGUILayout.PropertyField(forceFieldScale, new GUIContent("Force Field Scale","Force field scale"));
@@ -203,6 +205,10 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.PropertyField(S2VelocityForceScale, new GUIContent("Velocity Force Scale", "Collision penalty force scale along velocity direction"));
             EditorGUILayout.PropertyField(S2MeshBodyForceScale, new GUIContent("Mesh Body Force Scale", ""));
             EditorGUILayout.EndVertical();
+            
+            EditorGUILayout.Space(10);
+            EditorGUILayout.LabelField("Query Settings", EditorStyles.boldLabel);
+            EditorGUILayout.PropertyField(S2EnableWorldQuery, new GUIContent("Enable World Query", "Whether enable world query"));
 
             serializedObject.ApplyModifiedProperties();
         }

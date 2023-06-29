@@ -108,7 +108,7 @@ namespace Taichi.Soft2D.Plugin
         /// </summary>
         /// <param name="tag">specific tag(above 0)</param>
         /// <returns>if there are particles with specific tag inside the trigger area</returns>
-        public bool QueryParticlesByTag(int tag)
+        public bool QueryParticleOverlappingByTag(int tag)
         {
             if (isInitialized)
                 return Soft2D.World.QueryTriggerOverlappedByTag(this.trigger, (uint)tag << 24);
@@ -119,11 +119,22 @@ namespace Taichi.Soft2D.Plugin
         /// Query if there are particles inside the trigger area.
         /// </summary>
         /// <returns>if there are particles inside the trigger area</returns>
-        public bool QueryParticles()
+        public bool QueryParticleOverlapping()
         {
             if (isInitialized)
                 return Soft2D.World.QueryTriggerOverlapped(this.trigger);
             return false;
+        }
+
+        /// <summary>
+        /// Query the number of particles in the trigger area.
+        /// </summary>
+        /// <returns></returns>
+        public uint QueryParticleNum()
+        {
+            if (isInitialized)
+                return Soft2D.World.QueryParticleNumInTrigger(this.trigger);
+            return 0;
         }
 
         /// <summary>

@@ -65,11 +65,11 @@ namespace Taichi.Soft2D.Plugin
         [HideInInspector] [Tooltip("Moving by user-specified velocity or auto-simulating")] public bool isDynamic;
         [SerializeField] [Tooltip("Collider's linear velocity")] private Vector2 linear_velocity;
         [SerializeField] [Tooltip("Collider's angular velocity (degree)")] private float angular_velocity;
-        [HideInInspector] [Tooltip("Auto simulate Unity colliders and sync data to Soft2D every frame")] public bool autoUpdate;
+        [HideInInspector] [Tooltip("Automatically sync the position and velocity data of unity colliders to soft2d each frame")] public bool autoCorrection;
         
         /// <summary>
         /// Set collider's position on both Unity and Soft2D side.
-        /// This function will be invoked in Update() if autoUpdate is true.
+        /// This function will be invoked in Update() if autoCorrection is true.
         /// </summary>
         /// <param name="pos">collider's position</param>
         public void SetUnityAndSoft2DPosition(Vector2 pos)
@@ -108,7 +108,7 @@ namespace Taichi.Soft2D.Plugin
 
         /// <summary>
         /// Set collider's position on both Unity and Soft2D side.
-        /// This function will be invoked in Update() if autoUpdate is true.
+        /// This function will be invoked in Update() if autoCorrection is true.
         /// </summary>
         /// <param name="rotation">trigger's rotation (degree)</param>
         public void SetUnityAndSoft2DRotation(float rotation)
@@ -306,7 +306,7 @@ namespace Taichi.Soft2D.Plugin
 
         private void Update()
         {
-            if (autoUpdate)
+            if (autoCorrection)
             {
                 SetSoft2DPosition(transform.position);
                 eCollider.SetColliderLinearVelocity(rb.velocity / stepProportion);

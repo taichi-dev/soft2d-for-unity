@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
+using UnityEngine.Serialization;
 
 namespace Taichi.Soft2D.Plugin
 {
@@ -110,6 +111,7 @@ namespace Taichi.Soft2D.Plugin
         [HideInInspector] public float S2NormalForceScale;
         [HideInInspector] public float S2VelocityForceScale;
         [HideInInspector] public int S2FineGridScale;
+        [FormerlySerializedAs("S2EnableTrigger")] [HideInInspector] public bool S2EnableWorldQuery = true;
 
         #endregion
 
@@ -266,7 +268,6 @@ namespace Taichi.Soft2D.Plugin
             Application.targetFrameRate = (int)(1.0f / timeStep);
             UpdateWorldConfig();
             World.Reset();
-            World.SetWorldQueryEnabled(true);
             World.SetWorldExtent(worldExtent);
             World.SetSubstepTimeStep(1.6e-4f);
 
@@ -328,6 +329,14 @@ namespace Taichi.Soft2D.Plugin
         {
             if (enableWorldBoundary)
                 colliderAction += AddWorldBoundary;
+            
+            SerializedObject tagManager =
+                new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
+            SerializedProperty layers = tagManager.FindProperty("layers");
+            if (string.IsNullOrEmpty(layers.GetArrayElementAtIndex(layerIndex).stringValue))
+            {
+                layerIndex = 0;
+            }
         }
 
         private void FixedUpdate()
@@ -423,6 +432,7 @@ namespace Taichi.Soft2D.Plugin
             WorldConfig.config.mesh_body_force_scale = S2MeshBodyForceScale;
             WorldConfig.config.collision_penalty_force_scale_along_normal_dir = S2NormalForceScale;
             WorldConfig.config.collision_penalty_force_scale_along_velocity_dir = S2VelocityForceScale;
+            WorldConfig.config.enable_world_query = S2EnableWorldQuery ? (uint)1 : 0;
 
             if (S2FineGridScale <= 0)
                 Utils.Assert("Fine Grid Scale should above 0!");

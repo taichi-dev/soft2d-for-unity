@@ -24,7 +24,7 @@ namespace Taichi.Soft2D.Plugin
             
             uColl = serializedObject.FindProperty("uCollider");
             isDynamic = serializedObject.FindProperty("isDynamic");
-            autoUpdate = serializedObject.FindProperty("autoUpdate");
+            autoUpdate = serializedObject.FindProperty("autoCorrection");
             collisionType = serializedObject.FindProperty("collisionType");
             frictionCoefficient = serializedObject.FindProperty("frictionCoefficient");
             restitutionCoefficient = serializedObject.FindProperty("restitutionCoefficient");
@@ -61,8 +61,8 @@ namespace Taichi.Soft2D.Plugin
                         eCollider.angularVelocity = newAnVel;
                         EditorUtility.SetDirty(eCollider);
                     }
-                    EditorGUILayout.PropertyField(autoUpdate, new GUIContent("Auto Simulate", "Auto simulate Unity colliders and sync data to Soft2D every frame"));
-                    if (eCollider.autoUpdate)
+                    EditorGUILayout.PropertyField(autoUpdate, new GUIContent("Auto Correction", "Automatically sync the position and velocity data of unity colliders to soft2d each frame"));
+                    if (eCollider.autoCorrection)
                     {
                         EditorGUILayout.HelpBox("Turning this on may cause performance overhead.",MessageType.Warning);
                     }

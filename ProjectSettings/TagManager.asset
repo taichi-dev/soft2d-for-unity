@@ -3,17 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Static
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Soft2D
+  - 
   - Water
   - UI
   - 
   - 
-  - 
+  - Soft2D
   - 
   - 
   - 
