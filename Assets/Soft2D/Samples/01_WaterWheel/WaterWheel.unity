@@ -1477,23 +1477,24 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Since this scene uses Renderer Feature to achieve post-processing effects,
-    you also need the following steps to run the scene normally:\r\n\r\nFind the
-    Render Pipeline Asset currently used by the project under Project Settings ->
-    Rendering -> Render Pipeline Asset.\r\nFind RendererList under Render Pipeline
-    Asset's Inspector window, click \u201C+\u201D to add a Renderer Data\uFF0Cselect
-    Kawase Blur Data as new Renderer Data."
+  m_Text: "Please configure the renderer data correctly before running this scene:\n\n1.
+    Find the file location of 'Render Pipeline Asset' currently used by this project:
+    Project Settings ->Quality -> Rendering -> Render Pipeline Asset.\n\n2. Click
+    that 'Render Pipline Asset' asset file and click \u201C+\u201D to add a renderer
+    data into its  'Renderer List' in its Inspector window, select 'Kawase Blur Data'
+    as the new renderer data.\n\n(Disable the 'WarningCanvas' object in the scene
+    to close this message.)"
 --- !u!1 &4273716359832056907
 GameObject:
   m_ObjectHideFlags: 0
