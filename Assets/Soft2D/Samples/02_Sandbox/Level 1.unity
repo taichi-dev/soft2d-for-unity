@@ -1908,7 +1908,7 @@ MonoBehaviour:
   m_RendererIndex: 1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 4294967295
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
@@ -1952,7 +1952,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 16
+    m_Bits: 256
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 4464763efa2a71845b5091474e900b86, type: 2}
   m_TargetDisplay: 0
@@ -35624,11 +35624,16 @@ PrefabInstance:
     - target: {fileID: 3785404050484907311, guid: 3fdcf0379bda1bb42a480291814196e0,
         type: 3}
       propertyPath: layerIndex
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3785404050484907311, guid: 3fdcf0379bda1bb42a480291814196e0,
         type: 3}
       propertyPath: selectType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3785404050484907311, guid: 3fdcf0379bda1bb42a480291814196e0,
+        type: 3}
+      propertyPath: shaderType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3785404050484907311, guid: 3fdcf0379bda1bb42a480291814196e0,
@@ -35803,12 +35808,12 @@ PrefabInstance:
     - target: {fileID: 3949743919671436436, guid: dcf12b49f3b24a84abf5c8e11c6156d8,
         type: 3}
       propertyPath: orthographic size
-      value: 1.1844481
+      value: 1.265625
       objectReference: {fileID: 0}
     - target: {fileID: 3949743919671436436, guid: dcf12b49f3b24a84abf5c8e11c6156d8,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 39
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 3949743919671436438, guid: dcf12b49f3b24a84abf5c8e11c6156d8,
         type: 3}

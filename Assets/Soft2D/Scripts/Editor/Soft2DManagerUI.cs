@@ -50,7 +50,7 @@ namespace Taichi.Soft2D.Plugin
         {
             Tools.current = Tool.None;
             Soft2DManager = target as Soft2DManager;
-            materialPath = PathInitializer.MainPath + "Materials/Prototype";
+            materialPath = PathInitializer.MainPath + "Materials";
             
             shaderType = serializedObject.FindProperty("shaderType");
             instanceMaterial = serializedObject.FindProperty("instanceMaterial");
@@ -98,11 +98,11 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.BeginVertical("box");
             EditorGUILayout.PropertyField(WorldExtent, new GUIContent("World Extent","Simulated area of scale"));
             EditorGUILayout.PropertyField(WorldOffset, new GUIContent("World Offset","Simulated area of position"));
-            if (Soft2DManager.enableGyro)
-                EditorGUILayout.PropertyField(gyroScale, new GUIContent("Gyro Scale","Gyroscope's gravity scale"));
-            else
+            if (!Soft2DManager.enableGyro)
                 EditorGUILayout.PropertyField(gravity, new GUIContent("Gravity","Gravity's scale & direction"));
             EditorGUILayout.PropertyField(enableGyro, new GUIContent("Enable Gyro","Enable Gyro Scope as gravity"));
+            if (Soft2DManager.enableGyro)
+                EditorGUILayout.PropertyField(gyroScale, new GUIContent("Gyro Scale","Gyroscope's gravity scale"));
             EditorGUILayout.PropertyField(enableForceField, new GUIContent("Enable Force Field","Enable force field"));
             if (Soft2DManager.enableForceField)
                 EditorGUILayout.PropertyField(forceFieldScale, new GUIContent("Force Field Scale","Force field scale"));

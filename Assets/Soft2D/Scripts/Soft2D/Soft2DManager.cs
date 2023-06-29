@@ -328,6 +328,14 @@ namespace Taichi.Soft2D.Plugin
         {
             if (enableWorldBoundary)
                 colliderAction += AddWorldBoundary;
+            
+            SerializedObject tagManager =
+                new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
+            SerializedProperty layers = tagManager.FindProperty("layers");
+            if (string.IsNullOrEmpty(layers.GetArrayElementAtIndex(layerIndex).stringValue))
+            {
+                layerIndex = 0;
+            }
         }
 
         private void FixedUpdate()
