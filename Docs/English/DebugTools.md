@@ -1,23 +1,24 @@
-# Debug Tools
+# Debugging Tools
+> Unless specifically stated, the terms 'collider' and 'trigger' in this document refer to the collider and trigger within Soft2D, not the built-in collider and trigger in Unity.
 
-> The terms "Collider" and "Trigger" used in this article refer to the collision bodies and triggers within Soft2D. Unity's collision bodies and triggers will be indicated specifically.
-
-> Debug tools provide a way for users to visualize the positions and motion states of Colliders and Triggers within Soft2D during runtime.
+Debugging tools can visualize the colliders and triggers in the scene.
 
 
 ## Parameter Panel
+- Enable Debugging Tools
+  - Enabble the Debugging Tools.
+- Collider Color
+  - The color of colliders.
+- Trigger Color
+  - The color of triggers.
 
-- Enable Debug Tools: activate Debug Tools.
-- Collider Color: represents the color of colliders in Debug Tools.
-- Trigger Color: represents the color of triggers in Debug Tools.
 
-Effect without Debug Tools:
+The effect without enabling the debugging tools:
 ![](../images/disable_debugging_tools.png)
 
-Effect with Debug Tools:
+The effect after enabling the debugging tools:
 ![](../images/enable_debugging_tools.png)
 
-## Important Notes
-
-- Debug Tools can only be enabled in Unity Editor mode.
-- Enabling Debug Tools will generate a Quad in the scene with the same position and size as the simulation area. Its Z-axis is set to -0.2, and users can freely drag and view it in the Scene window.
+## Notes
+- Debugging tools can only be enabled in Unity Editor mode.
+- After the debugging tools are enabled, a `Quad` with the same position and size as the simulation area will be generated in the scene. Its z-axis is set to -0.2, which users can freely drag to view within the scene.

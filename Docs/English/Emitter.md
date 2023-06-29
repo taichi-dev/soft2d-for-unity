@@ -1,45 +1,40 @@
 # Emitter
+An emitter is an object that can freely control the emission of bodies. Corresponds to the `EEmitter` type in the code.
 
-> The Emitter is a emitter that allows for the controlled emission of Bodies. It corresponds to the EEmitter class in the code.
 ## Parameter Panel
-
-The EEmitter parameter panel is divided into four sections: Emitter Settings, Material Settings, Color Settings, and Event Settings.
+The parameter panel of EEmitter is divided into four parts: emitter settings, material settings, color settings, and event settings.
 
 ### Emitter Settings
-
 - Emit on Start
-  - When set to true, the Emitter will start emitting preset Bodies as soon as the World is generated.
+  - If true, the emitter will start emitting preset bodies after the world is generated.
 - Initial Linear Velocity
-  - The initial linear velocity of the emitted Bodies. Measured in m/s.
+  - The initial linear velocity of the emitted body. The unit is `meters per second`.
 - Initial Angular Velocity
-  - The initial angular velocity of the emitted Bodies. Measured in s^-1.
+  - The initial angular velocity of the emitted body. The unit is `degrees per second`.
 - Emitting Frequency
-  - The frequency at which the Bodies are emitted. Measured in s^-1.
-- Life Cycle
-  - The duration from the moment the Body is emitted until it is automatically destroyed. Measured in seconds. A value less than or equal to 0 means they will never be automatically destroyed.
+  - The frequency of body emission. The unit is `quantity per second`.
+- Lifetime
+  - The duration for which a body is automatically destroyed after being emitted. The unit is `seconds`. Less than or equal to 0 means it will never be automatically destroyed.
 - Use MeshBody
-  - Determines whether the Emitter emits the MeshBody. When set to true, the Emitter will emit the MeshBody.
+  - Whether to let the emitter emit mesh bodies. When true, the emitter will emit mesh bodies.
 - Body Shape
-  - See [Shape.md](./Shape.md) for detailed information.
+  - See [Shape](./Shape.md).
 - MeshBody Settings
-  - See [Body.md](Body.md) for detailed information.
-
+  - See [Mesh Body](Body.md#Mesh-Body).
+  
 ### Material Settings
-
-[Detailed Content](./Material.md)
+See [Material](./Material.md).
 
 ### Color Settings
-
 - Base Color
-  - The color of the particles inside the emitted Bodies. Only available when Random Color is turned off.
+  - The color of the particles inside the emitted bodies. Only available when `Random Color` is turned off.
 - Random Color
   - Determines whether colors are randomly selected from the random color list.
 - Random Color List
-  - The collection of all colors that can be randomly selected. Available when Random Color is turned on.
+  - The collection of all colors that can be randomly selected. Available when `Random Color` is turned on.
 - Rainbow Mode
   - Determines whether RGB values are randomly generated as particle colors.
 
 ### Event Settings
-
 - OnEmitterOut
-  - Automatically called when particles are emitted.
+  - This event is automatically called when particles are emitted.

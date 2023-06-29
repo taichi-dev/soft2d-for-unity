@@ -1,29 +1,27 @@
 # Collider
+> Unless specifically stated, the term 'collider' in this document refers to the collider within Soft2D, not the Unity built-in collider.
 
-> A Collider is an obstacle that obstructs the movement of a body. It corresponds to the `ECollider` type in the code.
-
-> In this article, Collider refers to the collider component within Soft2D.
-
+A collider is an obstacle that blocks the movement of bodies. In the code, it corresponds to the `ECollider` type.
 
 ## Parameter Panel
-
 - Unity 2D Collider
-  - The Unity 2D Collider component of the Collider, currently supporting Box / Circle / Capsule / Polygon / Composite types.
+  - The Unity 2D collider component of the Collider, currently supports Box / Circle / Capsule / Polygon / Composite types.
   - The type and size of the Collider are controlled by its Collider2D component.
-- Motion State
-  - Whether the Collider is static or dynamic. When true, the object is dynamic.
+- Is it Dynamic
+  - No: Static. Not moving.
+  - Yes: Dynamic. Moves at the user-specified speed or simulates automatically.
 - Linear Velocity
-  - The linear velocity of the Collider. Measured in m/s.
+  - The user-specified linear velocity, measured in `meters per second`.
 - Angular Velocity
-  - The angular velocity of the Collider. Measured in s^-1.
-- Update Position and Rotation Automatically
-  - Whether to automatically update the position and rotation of the collider. When true, the plugin synchronizes the collider's state with Soft2D every frame.
-  - > Due to the time interval difference between Soft2D and Unity, the Collider's motion state may not be consistent on both sides. Enabling this feature for too many colliders may cause simulation lag.
+  - The user-specified angular velocity, measured in `degrees per second`.
+- Auto correction
+  - When set to true, it will automatically synchronize the position and speed of the Unity collider to Soft2D every frame.
 - Collision Type
-  - The collision type between Soft2D particles and the Collider. There are three types:
-  - **Separate**: Particles separate from the Collider immediately after collision.
-  - **Slip**: Particles slide on the Collider for a while after collision.
-  - **Sticky**: Particles stick to the Collider after collision.
-- Friction Coefficient: The friction coefficient between Soft2D particles and the Collider.
-- Restitution Coefficient: The restitution coefficient (bounciness) of Soft2D particles on the Collider.
+  - `Separate`: Particles will leave the collider after colliding with the collider.
+  - `Slip`: Particles will slide along the edge after colliding with the collider.
+  - `Sticky`:  Particles will stick to the collider after collision.
+- Friction Coefficient
+  - The friction coefficient when particles move along the edge of the collider.
+- Restitution Coefficient
+  - The bounce coefficient when particles collide with the collider.
 

@@ -1,16 +1,15 @@
 # Material
 
-## Attributes
-
-- Types of Physical Materials
-  - Soft2D support types including fluid, sand, elastic and snow.
+- Physical Material Types
+  - Fluid, sand, elastic body, or snow.
 - Density
-  - The object's [density](https://en.wikipedia.org/wiki/Density), which is measured in kilograms per cubic meter (kg/m^3). Common materials such as water have a density of 1000 kg/m^3.
+  - The [density](https://en.wikipedia.org/wiki/Density) of the material, measured in `kg/m^3`. Common materials such as water have a density of 1000.
 - Young's Modulus
-  - The object's [Young's Modulus](https://en.wikipedia.org/wiki/Young%27s_modulus), which is measured in MPa (e.g.  A material similar to jelly, with Young's modulus ranging from approximately 0.01 MPa to 1 MPa).
-  - > A larger Young's modulus can cause simulation explosions. In this case, reducing `substep` in Soft2DManager ([Visit Soft2DManager Documentation](./Soft2DManager.md)) can avoid simulation explosions, but it will significantly reduce simulation performance.
+  - The [Young's Modulus](https://en.wikipedia.org/wiki/Young%27s_modulus) of the material. Measured in `MPa`. For materials similar to jelly, the Young's modulus is usually between 0.01Mpa ~ 1MPa.
+  
+  > A higher Young's modulus may cause simulation explosion. In such cases, reducing the time step of sub-steps in Soft2DManager (see [Soft2DManager](./Soft2DManager.md)) can prevent simulation explosion. However, please note that a very small time step of sub-steps could lead to performance reduction.
+
+  > Fluid itself does not possess a Young's modulus property. In this plugin, the Young's modulus of fluid is used to indicate the incompressibility of the fluid.
+
 - Poisson's Ratio
-  - The object's [Poisson's Ratio](https://en.wikipedia.org/wiki/Poisson%27s_ratio).
-- Tag：
-  - During initialization, the Body assigns this value to all the particles it contains, so that each particle contained in this Body has this value as its label. In Soft2D, each particle can have its own unique label.
-  - Particle tags are mainly used for triggering logical events and rendering. It can be accessed through `S2Particle.tag` (CPU) or `GetParticleTagBuffer()` (GPU).
+  - The [Poisson's Ratio](https://en.wikipedia.org/wiki/Poisson%27s_ratio) of the material.

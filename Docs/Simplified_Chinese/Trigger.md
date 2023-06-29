@@ -1,7 +1,10 @@
 # Trigger
-Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。对应代码中的 `ETrigger` 类型。 Trigger 的作用范围由它的 BoxCollider2D 组件控制。
+> 用户必须启用 Soft2DManager 中的`世界查询`选项，trigger 才能正常工作。见 [世界查询设置](Soft2DManager.md#世界查询设置)。
 
-> 本文中 trigger 均表示 Soft2D 内的 trigger，而非 unity 自带的 rrigger。
+> 本文中提及的 `trigger` 均表示 Soft2D 内的 trigger，而非 Unity 自带的 trigger。
+
+Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。对应代码中的 `ETrigger` 类型。 Trigger 的作用范围由它的 Collider2D 组件控制。
+
 
 ## Trigger 事件
 Trigger 提供了多个接口允许用户对 trigger 内的粒子进行查询和操作。
@@ -28,8 +31,8 @@ public static void ManipulateParticlesInTrigger(IntPtr particles, int size) {
 }
 ```
 此回调函数接受两个参数：
-- particles： Soft2D 提供的一个数组指针，这个数组包含了所有 trigger 内的粒子数据。
-- size：数组中粒子的数量。
+- `particles`：Soft2D 提供的一个数组指针，这个数组包含了所有 trigger 内的粒子数据。
+- `size`：数组中粒子的数量。
 
 > 目前 trigger delegate 不支持使用多播委托作为回调函数，使用多播委托可能会导致项目崩溃。
 
@@ -45,11 +48,11 @@ public struct S2Particle {
     public uint is_removed;
 }
 ```
-- `id`：粒子在 Soft2D 内部的 ID。粒子的 ID 不会随着粒子的增减发生变化。
+- `id`：粒子在 Soft2D 内部的 ID。一个粒子的 ID 在整个模拟过程中不会改变。
 - `position`：粒子当前的位置。
 - `velocity`：粒子当前的速度。
 - `tag`：粒子的tag。
-- `is_remove`：表示粒子是否被移除。大于0表示粒子被移除。该值默认为0。
+- `is_remove`：表示是否（在下一个 step 之前）删除当前粒子。大于0则粒子将被删除。该值默认为0。
 
 ### 回调函数的编写
 
@@ -102,7 +105,7 @@ private void Update() {
 ```
 
 ### 线程安全
-`InvokeCallbackAsync()`会将用户自定义的回调函数传入 Soft2D 并在渲染线程上执行。因此回调函数会和逻辑线程（Update()）异步执行。下面是一个方法在逻辑线程中确保回调函数执行完毕：
+`InvokeCallbackAsync()`会将用户自定义的回调函数传入 Soft2D 并在渲染线程上执行。因此回调函数会和逻辑线程（`Update()`）异步执行。下面是一个方法在逻辑线程中确保回调函数执行完毕：
 ```csharp
 private ETrigger trigger;
 private static int callback_finished = 0;
@@ -119,6 +122,4 @@ private void Update() {
         // ...
     }
 }
-
-
 ```
