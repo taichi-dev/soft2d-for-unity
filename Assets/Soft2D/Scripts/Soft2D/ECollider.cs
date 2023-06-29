@@ -62,10 +62,10 @@ namespace Taichi.Soft2D.Plugin
             }
         }
         [HideInInspector] [Tooltip("Unity's collider")] public Collider2D uCollider;
-        [HideInInspector] [Tooltip("Is dynamic or not")] public bool isDynamic;
+        [HideInInspector] [Tooltip("Moving by user-specified velocity or auto-simulating")] public bool isDynamic;
         [SerializeField] [Tooltip("Collider's linear velocity")] private Vector2 linear_velocity;
         [SerializeField] [Tooltip("Collider's angular velocity (degree)")] private float angular_velocity;
-        [HideInInspector] [Tooltip("Auto Sync Unity colliders' position and velocity to Soft2D colliders every frame")] public bool autoUpdate;
+        [HideInInspector] [Tooltip("Auto simulate Unity colliders and sync data to Soft2D every frame")] public bool autoUpdate;
         
         /// <summary>
         /// Set collider's position on both Unity and Soft2D side.
