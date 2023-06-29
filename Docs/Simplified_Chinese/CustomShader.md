@@ -79,7 +79,7 @@ baseColor.b=bbits/255.0;
 
 在 Soft2DManager 的 Inspector 窗口内将粒子渲染模式改成 Custom，并将自定义编写的材质拖进 Instance Material 内。
 
-![img.png](img.png)
+![](../images/custom_rendering.png)
 
 你也可以在这里设置粒子渲染所在的层级和网格。具体内容可参考 [Soft2DManager.md]()
 

@@ -79,7 +79,7 @@ The obtained RGB values range from 0 to 255, and we need to convert them to floa
 
 Change the particle rendering mode to Custom in the inspector window of Soft2DManager, and drag the custom material into the Instance Material slot.
 
-![img.png](img.png)
+![](../images/custom_rendering.png)
 
 You can also set the rendering layer and the mesh for the particle here. For more details, please refer to [Soft2DManager.md](./Soft2DManager.md).
 
