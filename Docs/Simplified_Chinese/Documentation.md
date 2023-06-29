@@ -28,7 +28,7 @@ Soft2D 是一个实时 2D 多材料连续体物理引擎，可以模拟流体、
 本章节介绍如何在 Unity 编辑器中使用 Soft2D-for-Unity 插件。本章节用到的所有教程场景均可以在 `Soft2D/Samples/Tutorial/` 中找到。
 
 ## 使用 Soft2DManager 并创建一个 Body
-Soft2DManager 是核心的场景管理器，它负责管理场景的参数配置、渲染和管理各个物体（Body, Collider, Trigger）。场景里必须放置一个 Soft2DManager 才能使用插件的相关功能。详细介绍见 [Soft2DManager](./Soft2DManager.md)。
+Soft2DManager 是核心的场景管理器，它负责管理场景的参数配置、渲染和管理各个物体（body、 collider 和 trigger）。场景里必须放置一个 Soft2DManager 才能使用插件的相关功能。详细介绍见 [Soft2DManager](./Soft2DManager.md)。
 
 Body 是一个可以被模拟的连续体，由一组粒子组成。是 Soft2D-for-Unity 最基础的模拟单位。详细介绍见 [Body](./Body.md)。下面的视频展示了如何在编辑器中创建一个 body：
 
@@ -36,13 +36,13 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118
 
 
 ## 创建 Custom Body
-Custom Body 是用户指定采样点的 body。用户可以自定义 body 内部的粒子位置。详细介绍见 [Custom Body](./Body.md#custom-body)。
+Custom body 是用户指定采样点的 body。用户可以自定义 body 内部的粒子位置。详细介绍见 [Custom Body](./Body.md#custom-body)。
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33-832a-618c5eb4dff6
 
 
 ## 创建 Mesh Body
-Mesh Body 是带有拓扑关系的 Body。每个传入网格的顶点位置会生成一个粒子，它们之间遵循网格内三角形的拓扑关系。详细介绍见 [Mesh Body](./Body.md#mesh-body)。
+Mesh body 是带有拓扑关系的 Body。每个传入网格的顶点位置会生成一个粒子，它们之间遵循网格内三角形的拓扑关系。详细介绍见 [Mesh Body](./Body.md#mesh-body)。
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927-96e4-c20d4e9b1d6c
 

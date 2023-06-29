@@ -15,4 +15,4 @@
 - 标签：
   -  Soft2D 中，每个粒子都可以有一个自己的标签。Body 在初始化时将此值赋值给其包含的所有粒子，使得该 body 包含的每个粒子的标签都是此值。
   
-  > 粒子标签主要用于 Trigger 逻辑事件和渲染，可以通过 `S2Particle.tag` (CPU) 或者 `GetParticleTagBuffer()` (GPU) 进行访问。
+  > 粒子标签主要用于 trigger 逻辑事件和渲染，可以通过 `S2Particle.tag` (CPU) 或者 `GetParticleTagBuffer()` (GPU) 进行访问。

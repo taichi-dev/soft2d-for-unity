@@ -1,5 +1,5 @@
 # Soft2DManager
-Soft2DManager 是核心的场景管理器，它负责管理场景的参数配置、渲染和管理各个物体（Body, Collider, Trigger）。场景里必须放置一个 Soft2DManager 才能使用插件的相关功能。对应代码中的 `Soft2DManager` 类型。
+Soft2DManager 是核心的场景管理器，它负责管理场景的参数配置、渲染和管理各个物体（body、collider 和 trigger）。场景里必须放置一个 Soft2DManager 才能使用插件的相关功能。对应代码中的 `Soft2DManager` 类型。
 
 ## 参数面板
 Soft2DManager 的参数面板分为渲染设置、world 设置、调试工具设置、最大值设置、分辨率设置和碰撞设置六个部分。
@@ -65,7 +65,7 @@ World 是一个容器，它包含一个场景中与模拟相关的所有物体�
 ### 碰撞设置
 - 法线碰撞力度：粒子沿着 collider 法线方向的碰撞衰减力度。
 - 速度碰撞力度：粒子沿着粒子速度方向的碰撞衰减力度。
-- Mesh Body 内力缩放系数：Mesh Body 内部受力的缩放系数。
+- Mesh body 内力缩放系数：Mesh body 内部受力的缩放系数。
 
 ## FAQ
 如何在一个大规模的世界中模拟很小的物体？

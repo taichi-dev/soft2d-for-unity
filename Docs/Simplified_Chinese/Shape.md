@@ -1,5 +1,5 @@
 # Shape
-Shape 用于描述一个 2D 的形状。主要用于 Soft2D 物体（Collider、Trigger 和 Body）的创建。
+Shape 用于描述一个 2D 的形状。主要用于 Soft2D 物体（collider、trigger 和 body）的创建。
 
 ### Box（长方形）
 - 半宽度：长方形宽度的一半。
