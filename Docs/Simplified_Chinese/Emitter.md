@@ -1,5 +1,5 @@
 # Emitter
-Emitter 是一个能自由控制发射 Body 的发射器。对应代码中的 EEmitter 类型。 
+Emitter 是一个能自由控制发射 Body 的发射器。对应代码中的 `EEmitter` 类型。 
 
 ## 参数面板
 EEmitter 的参数面板分为 Emitter 设置、材质设置、颜色设置、事件设置四个部分。

@@ -1,30 +1,25 @@
 # Trigger
-Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。对应代码中的 ETrigger 类型。 Trigger 的作用范围由它的 BoxCollider2D 组件控制。
+Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。对应代码中的 `ETrigger` 类型。 Trigger 的作用范围由它的 BoxCollider2D 组件控制。
 
-> 本文中 Trigger 均表示 Soft2D 内的触发器组件。
+> 本文中 Trigger 均表示 Soft2D 内的 Trigger，而非 unity 自带的 Trigger。
 
-## 使用 Trigger GameObject 的方法
+## Trigger 事件
+Trigger 提供了多个接口允许用户对 trigger 内的粒子进行查询和操作。
+* `QueryParticleOverlapping()`: 查询是否有粒子在 trigger 区域内。
+* `QueryParticleOverlappingByTag()`：查询是否有满足 tag 条件的粒子的 trigger 在区域内。
+* `QueryParticleNum()`：查询 trigger 区域内粒子的数量。
+* `QueryParticleNumByTag()`：查询 trigger 区域内满足 tag 条件的粒子的数量。
+* `DestroyParticles()`：移除 trigger 区域内的所有粒子。
+* `DestroyParticlesByTag()`：移除 trigger 区域内的所有粒子。
 
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302-96a5-02fbfcff12fa
-
-## 自定义委托
-
-用户可以自定义 Trigger 触发的事件来操作 Soft2D 粒子。我们将展开介绍固定函数和自定义委托两种方法。
-
-> 本文出现的 Trigger 均表示 Soft2D 内的触发器而非 Unity 自带的触发器。
-
-## 固定函数
-
-我们可以使用 Trigger 的内置函数来对粒子进行操作。
-
-## 自定义委托
+## 自定义回调函数
+除了 trigger 事件以外，用户还可以传入自定义的回调函数来查询和操作 trigger 中的粒子。本章节将会介绍自定义回调函数的用法。下面的视频对其用法进行了一个直观展示：
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a5d525dd-c056-4340-b6b4-3f31c86c3918
 
 
-### 基本结构
-
-用户可以自己编写一个方法，并将它传至 Soft2D 内调用。这个方法的基本结构如下：
+### 回调函数要求
+在 c# 中，用户需要定义一个 `S2ParticleManipulationCallback` 类型的回调函数。一个满足要求的回调函数示例如下：
 ```csharp
 [AOT.MonoPInvokeCallback(typeof(S2ParticleManipulationCallback))]
 public static void ManipulateParticlesInTrigger(IntPtr particles, int size)
@@ -32,11 +27,12 @@ public static void ManipulateParticlesInTrigger(IntPtr particles, int size)
 
 }
 ```
-在这个函数中：
-- particles 是一个指针，它指向一个记录了进入 Trigger 范围的所有粒子信息的数组。
-- size 是进入 Trigger 范围粒子的总数。
+此回调函数接受两个参数：
+- particles： Soft2D 提供的一个数组指针，这个数组包含了所有 trigger 内的粒子数据。
+- size：数组中粒子的数量。
 
-粒子信息被包装在一个叫 **S2Particle** 的结构体内：
+### 粒子结构体
+每个粒子的数据以 `S2Particle` 结构体的形式保存：
 ```csharp
 public struct S2Particle {
     public uint id;
@@ -46,13 +42,13 @@ public struct S2Particle {
     public uint is_removed;
 }
 ```
-- id 为粒子在 Soft2D 内部的 ID。粒子的 ID 不会随着粒子的增减发生变化。
-- position 为粒子当前所在的位置。
-- velocity 为粒子当前的线速度。
-- tag 为粒子的 tagbuffer 。
-- is_removed 表示粒子是否被移除。大于0表示粒子被移除。
+- `id`：粒子在 Soft2D 内部的 ID。粒子的 ID 不会随着粒子的增减发生变化。
+- `position`：粒子当前的位置。
+- `velocity`：粒子当前的速度。
+- `tag`：粒子的tag。
+- `is_remove`：表示粒子是否被移除。大于0表示粒子被移除。该值默认为0。
 
-### 函数编写
+### 回调函数的编写
 
 如果想对单个粒子进行操作，我们需要先获取当前粒子信息所在的内存信息，并把它转换为 S2Particle 结构体：
 ```csharp

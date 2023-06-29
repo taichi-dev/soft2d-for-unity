@@ -1,8 +1,8 @@
-# Custom Shader
+# 自定义渲染效果
 用户除了使用插件自带的 shader 外，还可以自己编写 shader 代码并在场景内使用。我们将从参数设置、顶点着色器、脚本设置三部分展开介绍。
 
 ## 参数设置
-由于 Soft2D 仅支持 Vulkan 与 Metal 图形 API，我们在编译着色器代码时也可以只为它们编译以节省性能：
+由于 Soft2D 目前仅支持 Vulkan 与 Metal 图形 API，我们在编译着色器代码时也可以只为它们编译以节省性能：
 ``` shaderlab
 #pragma exclude_renderers d3d11
 ```
@@ -38,7 +38,7 @@ UNITY_TRANSFER_INSTANCE_ID(IN, OUT);
 int instance_id = UNITY_GET_INSTANCE_ID(IN);
 ```
 
-因为 Soft2D 当前粒子所在位置是由 Soft2D 提供的，所以我们需要手动为粒子做模型变换操作：
+因为当前粒子所在位置是由 Soft2D 提供的，所以我们需要手动为粒子做模型变换操作：
 ```shaderlab
 int instance_id = UNITY_GET_INSTANCE_ID(IN);
 float2 center = positionBuffer[instance_id]; 
@@ -77,6 +77,6 @@ baseColor.b=bbits/255.0;
 
 ![](../images/custom_rendering.png)
 
-你也可以在这里设置粒子渲染所在的层级和网格。具体内容可参考 [Soft2DManager.md]()
+你也可以在这里设置粒子渲染所在的层级和网格。详细内容见 [Soft2DManager](Soft2DManager.md)。
 
 设置好自定义 Material 的相关参数后运行即可。

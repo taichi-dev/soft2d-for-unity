@@ -2,10 +2,6 @@
 
 > Soft2DManager is a script used to control and render Soft2D particles in the current scene. You need to place a Soft2DManager GameObject in the scene to use the functionalities related to Soft2D. It corresponds to the Soft2DManager class in the code.
 
-## How to Use Soft2DManager GameObject
-
-![gif](../../images/Soft2DManager.gif)
-
 ## Parameter Panel
 
 The parameter panel of Soft2DManager is divided into six sections: World Settings, Debug Tool Settings, Render Settings, Time Settings, Maximum Value Settings, Resolution Settings, and Collision Settings.
