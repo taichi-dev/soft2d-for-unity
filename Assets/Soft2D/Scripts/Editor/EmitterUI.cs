@@ -142,7 +142,7 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.PropertyField(density, new GUIContent("Density", "Body's density"));
             EditorGUILayout.Slider(youngsModulus, 0f, 10f, new GUIContent("Young's Modulus", "Body's Young's modulus"));
             EditorGUILayout.Slider(poissonsRatio, 0f, 1f, new GUIContent("Poisson's Ratio", "Body's Poisson's ratio"));
-            EditorGUILayout.IntSlider(particleTag, 0, 7, new GUIContent("Particle Tag", "Emitting Body's logical tag"));
+            EditorGUILayout.IntSlider(particleTag, 0, 7, new GUIContent("Particle Tag", "Particle's tag"));
             EditorGUILayout.EndVertical();
 
             EditorGUILayout.Space(10);

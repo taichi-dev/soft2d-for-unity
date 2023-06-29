@@ -207,7 +207,7 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.EndVertical();
             
             EditorGUILayout.Space(10);
-            EditorGUILayout.LabelField("Query Settings", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("World Query Settings", EditorStyles.boldLabel);
             EditorGUILayout.PropertyField(S2EnableWorldQuery, new GUIContent("Enable World Query", "Whether enable world query"));
 
             serializedObject.ApplyModifiedProperties();

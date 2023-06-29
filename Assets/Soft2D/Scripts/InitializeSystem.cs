@@ -1,8 +1,10 @@
 #if UNITY_EDITOR
 
+using System;
 using System.IO;
 using Taichi.Soft2D.Plugin;
 using UnityEditor;
+using UnityEditor.Build;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -60,26 +62,30 @@ public class Soft2DLauncherWindow : EditorWindow
 
         // Set Default Contact Offset
         Physics2D.defaultContactOffset = 0.001f;
-        
+
         // Set Architecture
         PlayerSettings.SetArchitecture(BuildTargetGroup.Android, 1);
         
         // Check Render Pipeline
-        if (GraphicsSettings.defaultRenderPipeline == null)
-        {
-            string filePath = PathInitializer.MainPath + "/Samples/02_Sandbox/Resources/Materials/KawaseBlur.cs";
-            if (File.Exists(filePath))
-            {
-                File.Delete(filePath);
-            }
-        }
-        else
+        if (QualitySettings.renderPipeline != null)
         {
             CreateNewLayer("Soft2D");
+            SetDefineSymbols(NamedBuildTarget.Android);
+            SetDefineSymbols(NamedBuildTarget.Standalone);
+            SetDefineSymbols(NamedBuildTarget.iOS);
         }
         
         // Restart this project
         EditorApplication.OpenProject(Application.dataPath.Substring(0, Application.dataPath.Length - "Assets".Length));
+    }
+
+    private void SetDefineSymbols(NamedBuildTarget buildTarget)
+    {
+        string[] symbols;
+        PlayerSettings.GetScriptingDefineSymbols(buildTarget, out symbols);
+        Array.Resize(ref symbols, symbols.Length + 1);
+        symbols[^1] = "SOFT2D_URP_PIPELINE";
+        PlayerSettings.SetScriptingDefineSymbols(buildTarget, "SOFT2D_URP_PIPELINE");
     }
     
     public static void CreateNewLayer(string layerName)
@@ -87,23 +93,11 @@ public class Soft2DLauncherWindow : EditorWindow
         SerializedObject tagManager = new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
         SerializedProperty layersProperty = tagManager.FindProperty("layers");
         
-        int emptyLayerIndex = -1;
-        for (int i = 8; i < layersProperty.arraySize; i++)
+        SerializedProperty layerProperty = layersProperty.GetArrayElementAtIndex(8);
+        if (string.IsNullOrEmpty(layerProperty.stringValue))
         {
-            SerializedProperty layerProperty = layersProperty.GetArrayElementAtIndex(i);
-            if (string.IsNullOrEmpty(layerProperty.stringValue))
-            {
-                emptyLayerIndex = i;
-                break;
-            }
+            layerProperty.stringValue = layerName;
         }
-        
-        if (emptyLayerIndex != -1)
-        {
-            SerializedProperty newLayerProperty = layersProperty.GetArrayElementAtIndex(emptyLayerIndex);
-            newLayerProperty.stringValue = layerName;
-        }
-
         tagManager.ApplyModifiedProperties();
     }
 }

@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 2784320023987407690}
   - component: {fileID: 3215248915441522164}
   - component: {fileID: 7917611819990731137}
+  - component: {fileID: 9027450086509852075}
   m_Layer: 5
   m_Name: WarningText
   m_TagString: Untagged
@@ -180,10 +181,24 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Please configure the renderer data correctly before running this scene:\n\n1.
+  m_Text: 
+--- !u!114 &9027450086509852075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7086039456273996698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1547b09af329354498de36b6812c3932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warning: "Please configure the renderer data correctly before running this scene:\n\n1.
     Find the file location of 'Render Pipeline Asset' currently used by this project:
     Project Settings ->Quality -> Rendering -> Render Pipeline Asset.\n\n2. Click
     that 'Render Pipline Asset' asset file and click \u201C+\u201D to add a renderer
     data into its  'Renderer List' in its Inspector window, select 'Kawase Blur Data'
     as the new renderer data.\n\n(Disable the 'WarningCanvas' object in the scene
     to close this message.)"
+  warningText: {fileID: 7917611819990731137}
