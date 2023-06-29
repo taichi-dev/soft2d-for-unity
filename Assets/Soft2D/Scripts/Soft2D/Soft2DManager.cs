@@ -111,7 +111,7 @@ namespace Taichi.Soft2D.Plugin
         [HideInInspector] public float S2NormalForceScale;
         [HideInInspector] public float S2VelocityForceScale;
         [HideInInspector] public int S2FineGridScale;
-        [FormerlySerializedAs("S2EnableTrigger")] [HideInInspector] public bool S2EnableWorldQuery;
+        [FormerlySerializedAs("S2EnableTrigger")] [HideInInspector] public bool S2EnableWorldQuery = true;
 
         #endregion
 
@@ -268,7 +268,6 @@ namespace Taichi.Soft2D.Plugin
             Application.targetFrameRate = (int)(1.0f / timeStep);
             UpdateWorldConfig();
             World.Reset();
-            World.SetWorldQueryEnabled(true);
             World.SetWorldExtent(worldExtent);
             World.SetSubstepTimeStep(1.6e-4f);
 
