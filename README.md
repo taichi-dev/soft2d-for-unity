@@ -40,8 +40,8 @@
 - Multi-material: Elastic bodies, fluid, sand, snow.
 - High-level abstraction: world, body, emitter, collider, trigger.
 - Universal Deployment: Linux, Windows, MacOS/iOS, Android.
-- Easy-to-use editor tools, creating a simulation scene in seconds.
-- Supports 2D and 3D rendering, only requiring a few clicks to modify rendering effects.
+- Easy-to-use editor tools: Create a simulation scene in seconds.
+- Supports 2D and 3D rendering: Requires just a few clicks to modify rendering effects.
 - Contains rich and comprehensive tutorials and sample scenes.
 
 ## Environment Requirements
