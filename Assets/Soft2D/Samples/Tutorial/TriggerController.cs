@@ -9,7 +9,7 @@ public class TriggerController : MonoBehaviour
     
     void Update()
     {
-        bool isTriggered = trigger.QueryParticles();
+        bool isTriggered = trigger.QueryParticleOverlapping();
         text.text = isTriggered ? "Trigger is activated." : "Trigger is not activated.";
     }
 }
