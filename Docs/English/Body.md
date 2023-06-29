@@ -1,61 +1,48 @@
 # Body
-
-> Body is a simulated continuum composed of a group of particles. A body has attributes such as shape, center and material. Body corresponds to the EBody class in the code.
+A body is a continuum that can be simulated, composed of a group of particles. A body has attributes such as `shape`, `center` and `material`. In the code, it corresponds to the `EBody` class.
 
 
 ## Parameter Panel
-
-The parameter panel for Body consists of three sections: Body Settings, Material Settings, and Color Settings.
+The parameter panel of body is divided into body settings, material settings, and color settings.
 
 ### Body Settings
-
 - Shape
-  - The initial shape of the Body. Depending on the specific shape, Soft2D will automatically sample and generate particles inside it. Currently, it supports several types: box, circle, ellipse, capsule, and polygon.
-  - For detailed documentation on shapes, see: [Shape.md](./Shape.md)
+  - The initial shape of the body. According to the specific shape, Soft2D will automatically generate particles inside it. Currently, it supports rectangle, circle, ellipse, capsule, and polygon types. Detailed documentation on shapes can be found in [Shape](./Shape.md).
 - Linear Velocity
-  - The initial linear velocity of the Body, measured in m/s.
+  - The initial linear velocity of the body, measured in `meters per second`.
 - Angular Velocity
-  - The initial angular velocity of the Body, measured in s^-1.
-- Life Cycle
-  - The duration from the generation to the automatical destruction of the Body. Measured in seconds. A value less than or equal to 0 means it will never be automatically destroyed.
-
+  - The initial angular velocity of the body, measured in `degrees per second`.
+- Lifetime
+  - The duration after which the Body is automatically destroyed, measured in `seconds`. A value less than or equal to 0 indicates that it will never be automatically destroyed.
+- Particle Tag
+  - In Soft2D, every particle can have its own tag. The body assigns this value to all its contained particles during initialization, which means that each particle contained in the body has this tag value.
+  
+  > The particle tag is mainly used for trigger logic events and rendering, which can be accessed through `S2Particle.tag` (CPU) or `GetParticleTagBuffer()` (GPU).
+  
 ### Material Settings
-
-[Detailed Content](./Material.md)
+Refer to [Material](./Material.md).
 
 ### Color Settings
-
 - Base Color
-  - The color given to the particles inside the Body.
-- Randomize Color
-  - Randomly generated color for the particles inside the Body.
+  - Provides the particles inside the body with a same color.
+- Random Color
+  - Provides the particles inside the body with randomly generated colors.
 
-# Other Types of Body
+# Other Body Types
 
-## CustomBody
-
-CustomBody is a Body where the user specifies the sampling points. It corresponds to the ECustomBody class in the code.
-
-### How to Use CustomBody GameObject
-
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33-832a-618c5eb4dff6
+## Custom Body
+A custom body is a body with user-specified sample points. Users can customize the particle positions within the body. In the code, it corresponds to the `ECustomBody` type.
 
 ### Parameter Panel
 
 - Particle Local Space Position
-  - The position of particles inside the CustomBody in local space.
+  - The position of particles inside the custom body in local space.
 
-## MeshBody
-
-MeshBody is a Body with a topological relationship. Each vertex position in the input mesh generates a Soft2D particle, and they follow the topological relationship of the triangles inside the mesh. It corresponds to the EMeshBody class in the code.
-
-### How to Use MeshBody GameObject
-
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927-96e4-c20d4e9b1d6c
+## Mesh Body
+A mesh body is a body with topological relationships. Each vertex position of the input mesh will generate a particle, and they follow the topology of the triangles within the mesh. In the code, it corresponds to the `EMeshBody` type.
 
 ### Parameter Panel
-
 - Mesh
-  - The mesh corresponding to the MeshBody.
+  - The 2D mesh used to generate the mesh body.
 - Mesh Scale
-  - The scaling factor for generating the MeshBody from the mesh.
+  - The scale factor of the mesh.

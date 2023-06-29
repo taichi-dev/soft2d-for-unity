@@ -1,7 +1,10 @@
 # Trigger
-Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。对应代码中的 `ETrigger` 类型。 Trigger 的作用范围由它的 BoxCollider2D 组件控制。
+> 用户必须启用 Soft2DManager 中的`世界查询`选项，trigger 才能正常工作。见 [世界查询设置](Soft2DManager.md#世界查询设置)。
 
 > 本文中 `trigger` 均表示 Soft2D 内的 trigger，而非 Unity 自带的 trigger。
+
+Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。对应代码中的 `ETrigger` 类型。 Trigger 的作用范围由它的 BoxCollider2D 组件控制。
+
 
 ## Trigger 事件
 Trigger 提供了多个接口允许用户对 trigger 内的粒子进行查询和操作。

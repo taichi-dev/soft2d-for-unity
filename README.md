@@ -44,7 +44,7 @@
 - Supports 2D and 3D rendering, only requiring a few clicks to modify rendering effects.
 - Contains rich and comprehensive tutorials and sample scenes.
 
-## Prerequisites
+## Environment Requirements
 
 |     Unity Version    |Graphics API    | Rendering Pipeline   | Scripting Backend |
 |----------------------|----------------|----------------------|-------------------|

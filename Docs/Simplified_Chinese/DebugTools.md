@@ -1,12 +1,16 @@
 # 调试工具
+> 除非特殊指定，本文中提及的 collider 和 trigger 均表示 Soft2D 内的 collider 和 trigger ，而不是 Unity 自带的 collider 和 trigger 。
+
 调试工具可以可视化场景中的 collider 和 trigger 的位置。
 
-> 本文中提及的 collider 和 trigger 均表示 Soft2D 内的 collider 和 trigger 。若提及 Unity 自带的 collider 和 trigger 会在前面注明。
 
 ## 参数面板
-- 开启调试工具：打开 Debug Tools 窗口。
-- Collider 颜色：Collider 显示的颜色。
-- Trigger 颜色：Trigger 显示的颜色。
+- 开启调试工具
+  - 打开 Debug Tools 窗口。
+- Collider 颜色
+  - Collider 显示的颜色。
+- Trigger 颜色
+  - Trigger 显示的颜色。
 
 未开启调试工具的效果：
 ![](../images/disable_debugging_tools.png)
