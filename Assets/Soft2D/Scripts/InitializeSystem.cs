@@ -67,7 +67,7 @@ public class Soft2DLauncherWindow : EditorWindow
         // Check Render Pipeline
         if (GraphicsSettings.defaultRenderPipeline == null)
         {
-            string filePath = PathInitializer.MainPath + "/Samples/02_2DGame/Resources/Materials";
+            string filePath = PathInitializer.MainPath + "/Samples/02_Sandbox/Resources/Materials";
             DirectoryInfo directory = new DirectoryInfo(filePath);
             foreach (FileInfo file in directory.GetFiles())
             {
