@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     public Button skipButton;
     public Button nextStageButton;
     public GameObject settingPanel;
-    
+
     [Tooltip("UI Slot Group")] public List<GameObject> slotGroup;
     
     public SkinData currData;
