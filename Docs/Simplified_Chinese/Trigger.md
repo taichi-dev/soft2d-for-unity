@@ -1,6 +1,5 @@
 # Trigger
-
-> Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。对应代码中的 ETrigger 类型。 Trigger 的作用范围由它的 BoxCollider2D 组件控制。
+Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。对应代码中的 ETrigger 类型。 Trigger 的作用范围由它的 BoxCollider2D 组件控制。
 
 > 本文中 Trigger 均表示 Soft2D 内的触发器组件。
 
@@ -10,9 +9,9 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302
 
 ## 自定义委托
 
-> 用户可以自定义 Trigger 触发的事件来操作 Soft2D 粒子。我们将展开介绍固定函数和自定义委托两种方法。
+用户可以自定义 Trigger 触发的事件来操作 Soft2D 粒子。我们将展开介绍固定函数和自定义委托两种方法。
 
-> 本文出现的 Trigger 均表示 Soft2D 内的触发器。
+> 本文出现的 Trigger 均表示 Soft2D 内的触发器而非 Unity 自带的触发器。
 
 ## 固定函数
 

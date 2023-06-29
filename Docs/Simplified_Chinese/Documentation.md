@@ -1,9 +1,7 @@
 # 用户文档
-
-> 这是 Soft2D-for-Unity 的用戶文档，它可以帮助你快速上手 Soft2D 插件。
+这是 Soft2D-for-Unity 的用戶文档，它可以帮助你快速上手 Soft2D 插件。
 
 ## 介绍
-
 Soft2D 是一个实时 2D 多材料连续体物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D for Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户方便地在 Unity 中实现各种物理模拟和渲染效果。
 
 ### 环境要求
@@ -38,13 +36,13 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118
 
 
 ## 创建 Custom Body
-CustomBody 是用户指定采样点的 Body。详细介绍见 [Body](./Body.md)。
+CustomBody 是用户指定采样点的 Body。详细介绍见 [Custom Body](./Body.md#custom-body)。
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33-832a-618c5eb4dff6
 
 
 ## 创建 Mesh Body
-MeshBody 是带有拓扑关系的 Body。每个传入网格的顶点位置会生成一个 Soft2D 粒子，它们之间遵循网格内三角形的拓扑关系。详细介绍见 [Body](./Body.md)。
+MeshBody 是带有拓扑关系的 Body。每个传入网格的顶点位置会生成一个 Soft2D 粒子，它们之间遵循网格内三角形的拓扑关系。详细介绍见 [Mesh Body](./Body.md#mesh-body)。
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927-96e4-c20d4e9b1d6c
 
@@ -59,7 +57,6 @@ Collider 是一个障碍物，会阻挡 body 的运动。详细介绍见 [Collid
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed-915d-3ca825e6ef97
 
 ## 创建 Trigger
-
 Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。详细介绍见 [Trigger](./Trigger.md)。
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302-96a5-02fbfcff12fa
@@ -71,7 +68,6 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/026ecf9b-a9bd-4b98
 
 
 ## 自定义渲染效果
-
 见 [自定义着色器](./CustomShader.md)。
 
 ## 示例场景

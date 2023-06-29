@@ -1,13 +1,9 @@
 # 调试工具
-
 调试工具可以可视化场景中的 Soft2D Collider 和 Trigger 的位置。
 
 > 本文中出现的 Collider 和 Trigger 均表示 Soft2D 内的碰撞体和触发器。Unity 的碰撞体和触发器会在前面标明。
 
-
-
 ## 参数面板
-
 - 开启测试工具：打开 Debug Tools 窗口。
 - Collider 颜色：Collider 显示的颜色。
 - Trigger 颜色：Trigger 显示的颜色。

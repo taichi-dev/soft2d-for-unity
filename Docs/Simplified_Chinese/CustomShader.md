@@ -1,9 +1,7 @@
 # Custom Shader
-
-> 用户除了使用插件自带的 shader 外，还可以自己编写 shader 代码并在场景内使用。我们将从参数设置、顶点着色器、脚本设置三部分展开介绍。
+用户除了使用插件自带的 shader 外，还可以自己编写 shader 代码并在场景内使用。我们将从参数设置、顶点着色器、脚本设置三部分展开介绍。
 
 ## 参数设置
-
 由于 Soft2D 仅支持 Vulkan 与 Metal 图形 API，我们在编译着色器代码时也可以只为它们编译以节省性能：
 ``` shaderlab
 #pragma exclude_renderers d3d11
@@ -33,7 +31,6 @@ StructuredBuffer<int> IDBuffer;
 最后，我们需要在输入顶点着色器的结构体内加上`UNITY_VERTEX_INPUT_INSTANCE_ID`。
 
 ## 顶点着色器
-
 首先我们需要获取当前粒子的 instance_id ，因为 Soft2D 提供的缓冲都以 instance_id 作为索引。
 ```shaderlab
 UNITY_SETUP_INSTANCE_ID(IN);
@@ -76,7 +73,6 @@ baseColor.b=bbits/255.0;
 > 至此，我们已经获得了编写一个普通材质 shader 所需的参数了。
 
 ## 脚本设置
-
 在 Soft2DManager 的 Inspector 窗口内将粒子渲染模式改成 Custom，并将自定义编写的材质拖进 Instance Material 内。
 
 ![](../images/custom_rendering.png)
