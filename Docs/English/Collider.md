@@ -1,5 +1,5 @@
 # Collider
-> Unless specifically stated, the term collider in this document refers to the collider within Soft2D, not the Unity built-in collider.
+> Unless specifically stated, the term 'collider' in this document refers to the collider within Soft2D, not the Unity built-in collider.
 
 A collider is an obstacle that blocks the movement of bodies. In the code, it corresponds to the `ECollider` type.
 
@@ -17,7 +17,7 @@ A collider is an obstacle that blocks the movement of bodies. In the code, it co
 - Auto correction
   - When set to true, it will automatically synchronize the position and speed of the Unity collider to Soft2D every frame.
 - Collision Type
-  - `Separate`: Particles will separate after colliding with the collider.
+  - `Separate`: Particles will leave the collider after colliding with the collider.
   - `Slip`: Particles will slide along the edge after colliding with the collider.
   - `Sticky`:  Particles will stick to the collider after collision.
 - Friction Coefficient

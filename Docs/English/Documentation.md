@@ -13,8 +13,8 @@ Soft2D is a 2D multi-material continuum physics engine designed for real-time ap
 
 ### How to Use
 Users can use Soft2D-for-Unity in two ways:
-1. Download this repository locally and open it as a new project in Unity.
-2. Download the plugin file from the Asset Store and import it into an existing project.
+1. Download this repository and open it as a new project in Unity.
+2. Download the plugin package file from the Asset Store and import it into an existing project.
 
 ### Using the Unity Project on Github
 If you clone this project using `git`, make sure to use `git-lfs` to correctly pull the binary files in the project.
@@ -49,7 +49,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927
 
 
 ### Creating an Emitter
-An emitter is a device that can freely control the emission of bodies. For more details, see [Emitter](./Emitter.md).
+An emitter is an object that can freely control the emission of bodies. For more details, see [Emitter](./Emitter.md).
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/444ce93b-6727-4edb-80c2-81954cc613da
 
@@ -60,7 +60,7 @@ A collider is an obstacle that blocks the movement of bodies. For more details, 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed-915d-3ca825e6ef97
 
 ### Creating a Trigger
-> Users must enable the World Query option in `Soft2DManager` for the trigger to work properly. See [World Query Settings](Soft2DManager.md#World Query Settings).
+> Users must enable the World Query option in `Soft2DManager` for the trigger to work properly. See [World Query Settings](./Soft2DManager.md##World-Query-Settings).
 
 A trigger is a spatial region with a specific shape that can detect particles passing through it. For more details, see [Trigger](./Trigger.md).
 

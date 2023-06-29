@@ -1,7 +1,7 @@
 # Trigger
 > 用户必须启用 Soft2DManager 中的`世界查询`选项，trigger 才能正常工作。见 [世界查询设置](Soft2DManager.md#世界查询设置)。
 
-> 本文中 `trigger` 均表示 Soft2D 内的 trigger，而非 Unity 自带的 trigger。
+> 本文中提及的 `trigger` 均表示 Soft2D 内的 trigger，而非 Unity 自带的 trigger。
 
 Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。对应代码中的 `ETrigger` 类型。 Trigger 的作用范围由它的 Collider2D 组件控制。
 
@@ -48,11 +48,11 @@ public struct S2Particle {
     public uint is_removed;
 }
 ```
-- `id`：粒子在 Soft2D 内部的 ID。粒子的 ID 不会随着粒子的增减发生变化。
+- `id`：粒子在 Soft2D 内部的 ID。一个粒子的 ID 在整个模拟过程中不会改变。
 - `position`：粒子当前的位置。
 - `velocity`：粒子当前的速度。
 - `tag`：粒子的tag。
-- `is_remove`：表示粒子是否被移除。大于0表示粒子被移除。该值默认为0。
+- `is_remove`：表示是否（在下一个 step 之前）删除当前粒子。大于0则粒子将被删除。该值默认为0。
 
 ### 回调函数的编写
 

@@ -1,9 +1,7 @@
-# Custom Shader
-
-> In addition to using the shaders provided by the plugin, users can create their own shader and use it in the scene. We will introduce custom shader from three perspectives: parameter settings, vertex shader and script settings.
+# Custom Shaders
+In addition to using the shaders provided by the plugin, users can create their own shader and use it in the scene. We will introduce custom shader from three perspectives: parameter settings, vertex shader and script settings.
 
 ## Parameter Setting
-
 Since Soft2D only supports Vulkan and Metal, we can optimize the performance by compiling shader code tailored to them:
 ``` shaderlab
 #pragma exclude_renderers d3d11
@@ -14,7 +12,7 @@ At the same time, we need to enable GPU instancing and set the target version to
 #pragma UNITY_INSTANCING_ENABLE
 #pragma target 4.5
 ```
-Soft2DManager will automatically retrieve the buffer of particle properties and pass them to the shader. We only need to declare them, and **cannot change their names or variable types**:
+Soft2DManager will automatically retrieve the buffer of particle properties and pass them to the shader. We only need to declare them, and **should not change their names or variable types**:
 ```shaderlab
 #if SHADER_TARGET >= 45
 StructuredBuffer<float2> positionBuffer;
@@ -77,10 +75,8 @@ The obtained RGB values range from 0 to 255, and we need to convert them to floa
 
 ## Script Setting
 
-Change the particle rendering mode to Custom in the inspector window of Soft2DManager, and drag the custom material into the Instance Material slot.
+Change the particle rendering mode to `Custom` in the inspector window of Soft2DManager, and drag the custom material into the Instance Material slot.
 
 ![](../images/custom_rendering.png)
 
-You can also set the rendering layer and the mesh for the particle here. For more details, please refer to [Soft2DManager.md](./Soft2DManager.md).
-
-Once you have set the parameters for the custom material, you can run the simulation.
+You can also set the rendering layer and the mesh for the particle here. For more details, please refer to [Soft2DManager](./Soft2DManager.md).

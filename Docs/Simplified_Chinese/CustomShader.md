@@ -78,5 +78,3 @@ baseColor.b=bbits/255.0;
 ![](../images/custom_rendering.png)
 
 你也可以在这里设置粒子渲染所在的层级和网格。详细内容见 [Soft2DManager](Soft2DManager.md)。
-
-设置好自定义 Material 的相关参数后运行即可。

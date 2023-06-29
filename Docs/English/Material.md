@@ -7,7 +7,7 @@
 - Young's Modulus
   - The [Young's Modulus](https://en.wikipedia.org/wiki/Young%27s_modulus) of the material. Measured in `MPa`. For materials similar to jelly, the Young's modulus is usually between 0.01Mpa ~ 1MPa.
   
-  > A higher Young's modulus may cause simulation explosion. In such cases, reducing the time sub-step in Soft2DManager (see [Soft2DManager](./Soft2DManager.md)) can prevent simulation explosion. However, please note that a very small time sub-step could lead to performance reduction.
+  > A higher Young's modulus may cause simulation explosion. In such cases, reducing the time step of sub-steps in Soft2DManager (see [Soft2DManager](./Soft2DManager.md)) can prevent simulation explosion. However, please note that a very small time step of sub-steps could lead to performance reduction.
 
   > Fluid itself does not possess a Young's modulus property. In this plugin, the Young's modulus of fluid is used to indicate the incompressibility of the fluid.
 
