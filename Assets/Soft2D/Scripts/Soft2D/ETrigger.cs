@@ -127,6 +127,17 @@ namespace Taichi.Soft2D.Plugin
         }
 
         /// <summary>
+        /// Query the number of particles in the trigger area.
+        /// </summary>
+        /// <returns></returns>
+        public uint QueryParticleNum()
+        {
+            if (isInitialized)
+                return Soft2D.World.QueryParticleNumInTrigger(this.trigger);
+            return 0;
+        }
+
+        /// <summary>
         /// Query the number of particles with specific tag in the trigger area.
         /// </summary>
         /// <param name="tag">specific tag(above 0)</param>

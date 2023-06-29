@@ -280,6 +280,11 @@ namespace Taichi.Soft2D
             Ffi.S2ApplyImpulseInCircularArea(Singleton.Handle, force_, center_, radius);
         }
 
+        public static uint QueryParticleNumInTrigger(Trigger trigger)
+        {
+            return Ffi.S2QueryParticleNumInTrigger(trigger.Handle);
+        }
+
         public static bool QueryTriggerOverlapped(Trigger trigger)
         {
             uint is_overlapped = Ffi.S2QueryTriggerOverlapped(trigger.Handle);
