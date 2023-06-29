@@ -1,6 +1,6 @@
-# Tutorial
+# User Documentation
 
-> This is a tutorial for Soft2D for Unity, which can help you quickly get started with it.
+> This is the user documentation for Soft2D for Unity, which can help you quickly get started with it.
 
 ## Introduction
 
@@ -20,15 +20,10 @@ Users can have 2 ways to use Soft2D: 1. Download this github repository and open
 ### Use Github Project
 If users are using `git` to clone this project, please use `git-lfs` to ensure pulling binary files correctly.
 ### Import Soft2D-for-Unity plugin into existing projects
-Download the plugin from [Asset Store](https://assetstore.unity.com/packages/slug/256549) and import it into an existing project. After the import is completed, the plugin will automatically display a startup window. The program will perform the following procedures:
-- Change graphics API to Vulkan or Metal.
-- Change scripting backend to IL2CPP.
-- If the current pipeline is not Universal Render Pipeline, delete files related to it (URP).
-- Restart.
-If users are importing this plugin into a URP project: you also need the following steps to run 02_2DGame normally, for the scenes use **Renderer Feature** to achieve post-processing effects:
-  - Find the **Render Pipeline Asset** used by the project under Project Settings -> Rendering -> Render Pipeline Asset.
-  - Find **Renderer List** in **Render Pipeline Asset**'s Inspector window.
-  - Click the "+" button to add a Renderer Data, and choose **Kawase Blur Data** as this new Renderer Data.
+Download this plugin from [Unity Asset Store](https://assetstore.unity.com/packages/slug/256549) and import it into an existing project. After the import is completed, the plugin will automatically display a startup window. Click `Run and Restart` will perform the following operations:
+- The project's `Graphics API` setting will be changed to `Vulkan` or `Metal`.
+- The `Scripting Backend` setting will be changed to `IL2CPP`.
+- If the current pipeline is not Universal Render Pipeline, URP-related files in the plugin will be automatically removed.
 
 
 ## Using Soft2DManager && Creating a Body
@@ -163,6 +158,6 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302
 ## Using Debugging Tools
 [Debug Tools](./DebugTools.md)
 
-## Using Custom Shaders
+## Custom Rendering Effects
 [Custom Soft2D Shader](./CustomShader.md)
 
