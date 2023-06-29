@@ -1,5 +1,5 @@
 # 用户文档
-这是 Soft2D-for-Unity 的用戶文档，它可以帮助你快速上手 Soft2D 插件。
+这是 Soft2D-for-Unity 的用戶文档。
 
 ## 介绍
 Soft2D 是一个实时 2D 多材料连续体物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D-for-Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户方便地在 Unity 中实现各种物理模拟和渲染效果。
@@ -36,18 +36,18 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118
 
 
 ## 创建 Custom Body
-CustomBody 是用户指定采样点的 Body。详细介绍见 [Custom Body](./Body.md#custom-body)。
+Custom Body 是用户指定采样点的 body。用户可以自定义 body 内部的粒子位置。详细介绍见 [Custom Body](./Body.md#custom-body)。
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33-832a-618c5eb4dff6
 
 
 ## 创建 Mesh Body
-MeshBody 是带有拓扑关系的 Body。每个传入网格的顶点位置会生成一个 Soft2D 粒子，它们之间遵循网格内三角形的拓扑关系。详细介绍见 [Mesh Body](./Body.md#mesh-body)。
+Mesh Body 是带有拓扑关系的 Body。每个传入网格的顶点位置会生成一个粒子，它们之间遵循网格内三角形的拓扑关系。详细介绍见 [Mesh Body](./Body.md#mesh-body)。
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927-96e4-c20d4e9b1d6c
 
 ## 创建 Emitter
-Emitter 是一个能自由控制发射 Body 的发射器。详细介绍见 [Emitter](./Emitter.md)。
+Emitter 是一个能自由控制发射 body 的发射器。详细介绍见 [Emitter](./Emitter.md)。
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/444ce93b-6727-4edb-80c2-81954cc613da
 
@@ -75,7 +75,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/026ecf9b-a9bd-4b98
 ## 示例场景
 我们提供了数个示例场景用于展示 Soft2D-for-Unity 在游戏中的使用方法。这些示例场景可以在 `Soft2D/Samples/`中找到。目前示例场景只支持 3D URP 管线。
 ### SandBox
-这是一个包含多个关卡的小游戏，用户可以通过鼠标、手指或者重力感应器对场景中的内容进行交互。本仓库中的 unity 项目默认的打包内容就是这个小游戏的所有关卡。支持 Windows/Linux/MacOS/iOS/Android 平台。
+这是一个包含多个关卡的小游戏，用户可以通过鼠标、手指或者重力陀螺仪对场景中的内容进行交互。本仓库中的 unity 项目默认的打包内容是这个小游戏的所有关卡。支持 Windows/Linux/MacOS/iOS/Android 平台。
 
 <img src="../images/sandbox.png" alt="sandbox" width="300px"> 
 

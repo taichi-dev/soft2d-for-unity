@@ -1,7 +1,7 @@
 # 调试工具
-调试工具可以可视化场景中的 Collider 和 Trigger 的位置。
+调试工具可以可视化场景中的 collider 和 trigger 的位置。
 
-> 本文中提及的 Collider 和 Trigger 均表示 Soft2D 内的 Collider 和 Trigger 。若提及 Unity 自带的 Collider 和 Trigger 会在前面注明。
+> 本文中提及的 collider 和 trigger 均表示 Soft2D 内的 collider 和 trigger 。若提及 Unity 自带的 collider 和 trigger 会在前面注明。
 
 ## 参数面板
 - 开启调试工具：打开 Debug Tools 窗口。
