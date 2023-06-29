@@ -1,8 +1,6 @@
 # Soft2DManager
 
-> Soft2DManager 是用来控制并渲染当前场景的 Soft2D 粒子的脚本。你只有在场景里放置一个 Soft2DManager 才能使用 Soft2D 的相关功能。对应代码中的 Soft2DManager 类型。
-
-## 使用 Soft2DManager GameObject 的方法
+Soft2DManager 是核心的场景管理器，它负责管理场景的参数配置、渲染和管理各个物体（Body, Collider, Trigger）。场景里必须放置一个 Soft2DManager 才能使用插件的相关功能。对应代码中的 `Soft2DManager` 类型。
 
 ![gif](../../images/Soft2DManager.gif)
 

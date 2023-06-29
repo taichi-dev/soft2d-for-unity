@@ -1,6 +1,6 @@
 # Emitter
 
-> Emitter 是一个能自由控制发射 Body 的发射器。对应代码中的 EEmitter 类型。 
+Emitter 是一个能自由控制发射 Body 的发射器。对应代码中的 EEmitter 类型。 
 
 ## 使用 Emitter GameObject 的方法
 
