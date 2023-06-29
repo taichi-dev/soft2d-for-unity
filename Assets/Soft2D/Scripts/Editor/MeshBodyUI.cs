@@ -52,7 +52,7 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.PropertyField(li_v, new GUIContent("Linear Velocity", "Body's linear velocity"));
             EditorGUILayout.PropertyField(an_v, new GUIContent("Angular Velocity", "Body's angular velocity"));
             EditorGUILayout.PropertyField(lifetime, new GUIContent("Lifetime", "Body's lifetime, 0 means infinity"));
-            EditorGUILayout.IntSlider(particleTag, 0, 9, new GUIContent("Particle Tag", "Particle's logical tag"));EditorGUILayout.EndVertical();
+            EditorGUILayout.IntSlider(particleTag, 0, 9, new GUIContent("Particle Tag", "Particle's tag"));EditorGUILayout.EndVertical();
 
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Material Settings", EditorStyles.boldLabel);
