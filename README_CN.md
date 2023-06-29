@@ -26,7 +26,7 @@
     </p>
 </h4>
 
-[Soft2D](https://www.soft2d.tech/) 是一个实时的 2D 多材料连续体物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D-for-Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户方便地在 Unity 中实现各种物理模拟效果。本插件的详细使用方法请参考[用户文档](./Docs/Simplified_Chinese/Tutorial.md)。
+[Soft2D](https://www.soft2d.tech/) 是一个实时的 2D 多材料连续体物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D-for-Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户在 Unity 中方便地实现各种物理模拟效果。本插件的详细使用方法请参考[用户教程](./Docs/Simplified_Chinese/Documentation.md)。
 
 <div align="center">
 <img src="images/waterwheel.gif" alt="waterwheel" width="300px"> <img src="images/maze.gif" alt="maze" width="300px">
@@ -36,7 +36,7 @@
 </div>
 
 
-## 插件特性
+## 功能特性
 
 - 多材料物理模拟：弹性体、流体、沙子、雪。
 - 高层次抽象：world, body, emitter, collider, trigger。

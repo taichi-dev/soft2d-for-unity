@@ -12,10 +12,10 @@
 - Trigger Color: represents the color of triggers in Debug Tools.
 
 Effect without Debug Tools:
-![img_2.png](img_2.png)
+![](../images/disable_debugging_tools.png)
 
 Effect with Debug Tools:
-![img_1.png](img_1.png)
+![](../images/enable_debugging_tools.png)
 
 ## Important Notes
 
