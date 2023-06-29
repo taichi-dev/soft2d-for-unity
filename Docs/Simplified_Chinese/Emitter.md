@@ -6,7 +6,7 @@ EEmitter 的参数面板分为 emitter 设置、材质设置、颜色设置、�
 
 ### Emitter 设置
 - 是否在开始时发射
-  - 为真时 Emitter 会在 World 生成完毕后就开始发射预设 body。
+  - 为真时 emitter 会在 World 生成完毕后就开始发射预设 body。
 - 发射初的线速度
   - 发射 body 的初始线速度。单位为`米每秒`。
 - 发射初的角速度

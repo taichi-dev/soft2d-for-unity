@@ -87,3 +87,13 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/026ecf9b-a9bd-4b98
 
 ### Maze
 <img src="../images/maze.png" alt="maze" width="300px"> 
+
+
+## FAQ
+如何在一个大规模的世界中模拟很小的物体？
+
+- 在 Soft2D-for-Unity 中，body 中粒子的采样密度会根据世界的大小来自动调整，更大的世界会导致更稀疏的粒子采样。因此，在一个较大的世界中可能没有足够的精度来模拟非常小的物体。
+
+是否可以为不同的粒子设置不同的渲染材质。
+
+- 目前粒子通过`Graphics.DrawMeshInstancedIndirect`方法绘制，暂时不支持为不同的粒子设置不同的材质。
