@@ -1,3 +1,4 @@
+#if SOFT2D_URP_PIPELINE
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -99,3 +100,4 @@ public class KawaseBlur : ScriptableRendererFeature
         renderer.EnqueuePass(scriptablePass);
     }
 }
+#endif
