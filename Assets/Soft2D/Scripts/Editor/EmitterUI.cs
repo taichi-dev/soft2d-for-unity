@@ -98,7 +98,7 @@ namespace Taichi.Soft2D.Plugin
             }
 
             EditorGUILayout.Space(10);
-            EditorGUILayout.PropertyField(useMesh, new GUIContent("Use Mesh Body", "Use MeshBody if true"));
+            EditorGUILayout.PropertyField(useMesh, new GUIContent("Use Mesh Body", "Whether to let the emitter emit mesh bodies.\nWhen true, the emitter will emit mesh bodies."));
             if (!eEmitter.useMesh)
             {
                 EditorGUILayout.PropertyField(shapeType, new GUIContent("Shape Type", "Emitting Body's shape type"));
@@ -138,7 +138,7 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Material Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
-            EditorGUILayout.PropertyField(materialType, new GUIContent("Material Type", "Body's Material Type"));
+            EditorGUILayout.PropertyField(materialType, new GUIContent("Physical Material Type", "Body's Physical Material Type"));
             EditorGUILayout.PropertyField(density, new GUIContent("Density", "Body's density"));
             EditorGUILayout.Slider(youngsModulus, 0f, 10f, new GUIContent("Young's Modulus", "Body's Young's modulus"));
             EditorGUILayout.Slider(poissonsRatio, 0f, 1f, new GUIContent("Poisson's Ratio", "Body's Poisson's ratio"));
@@ -148,18 +148,18 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Color Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
-            EditorGUILayout.PropertyField(isRandom, new GUIContent("Support Random Colors"));
+            EditorGUILayout.PropertyField(isRandom, new GUIContent("Random Color"));
             if (eEmitter.isRandom)
             {
-                EditorGUILayout.PropertyField(rainbow, new GUIContent("Rainbow Mode", "Emitting Body's color will be generated randomly if true"));
+                EditorGUILayout.PropertyField(rainbow, new GUIContent("Rainbow Mode", "Determines whether RGB values are randomly generated as particle colors"));
                 if (!eEmitter.rainbow)
                 {
-                    EditorGUILayout.PropertyField(randColors, new GUIContent("Random Colors", "Emitting Body's possible colors, their color will be randomly picked from this list"));
+                    EditorGUILayout.PropertyField(randColors, new GUIContent("Random Color List", "The collection of all colors that can be randomly selected"));
                 }
             }
             else
             {
-                EditorGUILayout.PropertyField(baseColor, new GUIContent("Base Color", "Emitting Body's base color"));
+                EditorGUILayout.PropertyField(baseColor, new GUIContent("Base Color", "The color of the particles inside the emitted bodies"));
             }
 
             EditorGUILayout.EndVertical();
@@ -167,7 +167,7 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Event Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("box");
-            EditorGUILayout.PropertyField(OnEmitterOut, new GUIContent("OnEmitterOut", "An event which will be invoked while emitting a body"));
+            EditorGUILayout.PropertyField(OnEmitterOut, new GUIContent("OnEmitterOut", "This event is automatically called when particles are emitted"));
             EditorGUILayout.EndVertical();
 
             serializedObject.ApplyModifiedProperties();

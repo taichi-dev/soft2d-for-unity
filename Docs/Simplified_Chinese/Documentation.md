@@ -22,7 +22,7 @@ Soft2D 是一个实时 2D 多材料连续体物理引擎，可以模拟流体、
 从 [Unity Asset Store](https://assetstore.unity.com/packages/slug/256549)下载 Soft2D-for-Unity 插件并导入到一个已存在的项目中。当导入完成后，插件会自动弹出一个启动窗口。点击“Run and Restart”会执行以下操作：
 - 项目的 `Graphics API` 设置会被修改为 `Vulkan` 或 `Metal`。
 - 项目的 `Scripting Backend` 设置会被修改为 `IL2CPP`。
-- 如果当前渲染管线不是 URP 管线，插件中与 URP 相关的文件会自动被删除。
+- 如果当前渲染管线是 URP 管线，一个名称为`SOFT2D_URP_PIPELINE`的宏会被加进项目。
 
 ## 用户教程
 本章节介绍如何在 Unity 编辑器中使用 Soft2D-for-Unity 插件。本章节用到的所有教程场景均可以在 `Soft2D/Samples/Tutorial/` 中找到。

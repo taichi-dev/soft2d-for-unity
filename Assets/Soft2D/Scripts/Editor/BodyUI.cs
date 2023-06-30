@@ -102,7 +102,7 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Material Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
-            EditorGUILayout.PropertyField(materialType, new GUIContent("Material Type", "Body's Material Type"));
+            EditorGUILayout.PropertyField(materialType, new GUIContent("Physical Material Type", "Body's Physical Material Type"));
             EditorGUILayout.PropertyField(density, new GUIContent("Density", "Body's density"));
             EditorGUILayout.Slider(youngsModulus, 0f, 10f, new GUIContent("Young's Modulus", "Body's Young's modulus"));
             EditorGUILayout.Slider(poissonsRatio, 0f, 1f, new GUIContent("Poisson's Ratio", "Body's Poisson's ratio"));
@@ -112,8 +112,8 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.LabelField("Color Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
             if (!body.randomColor)
-                EditorGUILayout.PropertyField(baseColor, new GUIContent("Base Color", "Particle's base color inside body"));
-            EditorGUILayout.PropertyField(rainbow, new GUIContent("Random Color", "Generate a color randomly if true"));
+                EditorGUILayout.PropertyField(baseColor, new GUIContent("Base Color", "Provides the particles inside the body with a same color"));
+            EditorGUILayout.PropertyField(rainbow, new GUIContent("Random Color", "Provides the particles inside the body with randomly generated colors"));
             EditorGUILayout.EndVertical();
 
             serializedObject.ApplyModifiedProperties();

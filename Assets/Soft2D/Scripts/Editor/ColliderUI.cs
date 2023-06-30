@@ -12,7 +12,7 @@ namespace Taichi.Soft2D.Plugin
 
         private SerializedProperty uColl;
         private SerializedProperty isDynamic;
-        private SerializedProperty autoUpdate;
+        private SerializedProperty autoCorrection;
         private SerializedProperty collisionType;
         private SerializedProperty frictionCoefficient;
         private SerializedProperty restitutionCoefficient;
@@ -24,7 +24,7 @@ namespace Taichi.Soft2D.Plugin
             
             uColl = serializedObject.FindProperty("uCollider");
             isDynamic = serializedObject.FindProperty("isDynamic");
-            autoUpdate = serializedObject.FindProperty("autoCorrection");
+            autoCorrection = serializedObject.FindProperty("autoCorrection");
             collisionType = serializedObject.FindProperty("collisionType");
             frictionCoefficient = serializedObject.FindProperty("frictionCoefficient");
             restitutionCoefficient = serializedObject.FindProperty("restitutionCoefficient");
@@ -39,7 +39,7 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Collider Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
-            EditorGUILayout.PropertyField(uColl, new GUIContent("Collider 2D", "Unity Collider 2D (support box, circle, polygon, capsule, composite)"));
+            EditorGUILayout.PropertyField(uColl, new GUIContent("Unity Collider 2D", "Unity Collider 2D (support box, circle, polygon, capsule, composite)"));
             if (eCollider.uCollider is not BoxCollider2D &&
                 eCollider.uCollider is not CircleCollider2D &&
                 eCollider.uCollider is not CompositeCollider2D &&
@@ -49,30 +49,30 @@ namespace Taichi.Soft2D.Plugin
             }
             else
             {
-                EditorGUILayout.PropertyField(isDynamic, new GUIContent("Dynamic", "Moving by user-specified velocity or auto-simulating"));
+                EditorGUILayout.PropertyField(isDynamic, new GUIContent("Is It Dynamic", "No: Static. Not moving\n Yes: Dynamic. Moves at the user-specified speed or simulates automatically"));
                 if (eCollider.isDynamic)
                 {
                     EditorGUI.BeginChangeCheck();
-                    Vector2 newLiVel = EditorGUILayout.Vector2Field(new GUIContent("Linear Velocity", "Collider's linear velocity"), eCollider.linearVelocity);
-                    float newAnVel = EditorGUILayout.FloatField(new GUIContent("Angular Velocity", "Collider's angular velocity (degree)"), eCollider.angularVelocity);
+                    Vector2 newLiVel = EditorGUILayout.Vector2Field(new GUIContent("Linear Velocity", "The user-specified linear velocity"), eCollider.linearVelocity);
+                    float newAnVel = EditorGUILayout.FloatField(new GUIContent("Angular Velocity", "The user-specified angular velocity (degree)"), eCollider.angularVelocity);
                     if (EditorGUI.EndChangeCheck())
                     {
                         eCollider.linearVelocity = newLiVel;
                         eCollider.angularVelocity = newAnVel;
                         EditorUtility.SetDirty(eCollider);
                     }
-                    EditorGUILayout.PropertyField(autoUpdate, new GUIContent("Auto Correction", "Automatically sync the position and velocity data of unity colliders to soft2d each frame"));
+                    EditorGUILayout.PropertyField(autoCorrection, new GUIContent("Auto Correction", "Automatically sync the position and velocity data of unity colliders to soft2d each frame"));
                     if (eCollider.autoCorrection)
                     {
                         EditorGUILayout.HelpBox("Turning this on may cause performance overhead.",MessageType.Warning);
                     }
                 }
             }
-            EditorGUILayout.PropertyField(collisionType, new GUIContent("Collision Type", "Collider's collision type"));
+            EditorGUILayout.PropertyField(collisionType, new GUIContent("Collision Type", "Collider's collision type\n.Separate: Particles will leave the collider after colliding with the collider\nSlip: Particles will slide along the edge after colliding with the collider\nSticky: Particles will stick to the collider after collision"));
             EditorGUILayout.Slider(frictionCoefficient, 0, 1,
-                new GUIContent("Coefficient of Friction", "Collider's coefficient of friction"));
+                new GUIContent("Friction Coefficient", "The friction coefficient when particles move along the edge of the collider"));
             EditorGUILayout.Slider(restitutionCoefficient, 0, 1,
-                new GUIContent("Coefficient of Restitution", "Collider's coefficient of restitution"));
+                new GUIContent("Restitution Coefficient", "The bounce coefficient when particles collide with the collider"));
 
             EditorGUILayout.EndVertical();
 

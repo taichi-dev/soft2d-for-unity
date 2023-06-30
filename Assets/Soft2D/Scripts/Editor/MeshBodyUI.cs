@@ -73,7 +73,7 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Mesh Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
-            EditorGUILayout.PropertyField(meshSprite, new GUIContent("Mesh Sprite", "2D Sprite with mesh"));
+            EditorGUILayout.PropertyField(meshSprite, new GUIContent("Mesh Sprite", "2D Sprite with mesh used to generate the mesh body"));
             EditorGUILayout.PropertyField(meshScale, new GUIContent("Mesh Scale", "MeshBody's mesh scale"));
             EditorGUILayout.EndVertical();
 

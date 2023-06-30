@@ -47,9 +47,9 @@ namespace Taichi.Soft2D.Plugin
 
     public enum CollisionType
     {
-        Separate,
-        Slip,
-        Sticky,
+        Separate, // Particles will leave the collider after colliding with the collider.
+        Slip,     // Particles will slide along the edge after colliding with the collider.
+        Sticky,   // Particles will stick to the collider after collision.
     }
 
     public static class Utils

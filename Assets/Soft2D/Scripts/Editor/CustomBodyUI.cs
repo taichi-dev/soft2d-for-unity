@@ -63,7 +63,7 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Material Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
-            EditorGUILayout.PropertyField(materialType, new GUIContent("Material Type", "Body's Material Type"));
+            EditorGUILayout.PropertyField(materialType, new GUIContent("Physical Material Type", "Body's Physical Material Type"));
             EditorGUILayout.PropertyField(density, new GUIContent("Density", "Body's density"));
             EditorGUILayout.Slider(youngsModulus, 0f, 10f, new GUIContent("Young's Modulus", "Body's Young's modulus"));
             EditorGUILayout.Slider(poissonsRatio, 0f, 1f, new GUIContent("Poisson's Ratio", "Body's Poisson's ratio"));
@@ -80,7 +80,7 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Particle Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
-            EditorGUILayout.PropertyField(points, new GUIContent("Particles Local Position", "CustomBody particles' local postion"));
+            EditorGUILayout.PropertyField(points, new GUIContent("Particles Local Space Position", "CustomBody particles' local space position"));
 
             EditorGUILayout.EndVertical();
 

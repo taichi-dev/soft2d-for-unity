@@ -98,8 +98,8 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("World Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("box");
-            EditorGUILayout.PropertyField(WorldExtent, new GUIContent("World Extent","Simulated area of scale"));
-            EditorGUILayout.PropertyField(WorldOffset, new GUIContent("World Offset","Simulated area of position"));
+            EditorGUILayout.PropertyField(WorldExtent, new GUIContent("World Area Size","The size of the area for physical simulation"));
+            EditorGUILayout.PropertyField(WorldOffset, new GUIContent("World Offset Coordinates","The position coordinates of the bottom left corner of the physical simulation area"));
             if (!Soft2DManager.enableGyro)
                 EditorGUILayout.PropertyField(gravity, new GUIContent("Gravity","Gravity's scale & direction"));
             EditorGUILayout.PropertyField(enableGyro, new GUIContent("Enable Gyro","Enable Gyro Scope as gravity"));
@@ -107,15 +107,15 @@ namespace Taichi.Soft2D.Plugin
                 EditorGUILayout.PropertyField(gyroScale, new GUIContent("Gyro Scale","Gyroscope's gravity scale"));
             EditorGUILayout.PropertyField(enableForceField, new GUIContent("Enable Force Field","Enable force field"));
             if (Soft2DManager.enableForceField)
-                EditorGUILayout.PropertyField(forceFieldScale, new GUIContent("Force Field Scale","Force field scale"));
-            EditorGUILayout.PropertyField(enableWorldBoundary, new GUIContent("Enable World Boundary","Enable world boundary"));
+                EditorGUILayout.PropertyField(forceFieldScale, new GUIContent("Force Field Magnitude","The magnitude of the force within the force field.\nOnly effective when the force field is enabled."));
+            EditorGUILayout.PropertyField(enableWorldBoundary, new GUIContent("World Boundary","Whether to enable the world boundary.\nTurning on world boundaries will automatically generate colliders on the boundary of the simulation area to prevent particles from leaving the simulation area."));
             if (Soft2DManager.enableWorldBoundary)
             {
                 EditorGUILayout.PropertyField(collisionType, new GUIContent("Collision Type", "Boundary's collision type"));
                 EditorGUILayout.Slider(frictionCoefficient, 0, 1,
-                    new GUIContent("Coefficient of Friction", "Boundary's coefficient of friction"));
+                    new GUIContent("Friction Coefficient", "Boundary's friction coefficient when particles move along the edge of the collider"));
                 EditorGUILayout.Slider(restitutionCoefficient, 0, 1,
-                    new GUIContent("Coefficient of Restitution", "Boundary's coefficient of restitution"));
+                    new GUIContent("Restitution Coefficient", "Boundary's bounce coefficient when particles collide with the collider"));
             }
             EditorGUILayout.EndVertical();
 
@@ -134,8 +134,8 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.LabelField("Render Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("box");
             EditorGUI.BeginChangeCheck();
-            EditorGUILayout.PropertyField(instanceMesh, new GUIContent("Instance Mesh","Particle instance's mesh"));
-            int layer = EditorGUILayout.LayerField("Particle Sorting Layer", Soft2DManager.layerIndex);
+            EditorGUILayout.PropertyField(instanceMesh, new GUIContent("Particle Mesh Model","The mesh model used to render each particle."));
+            int layer = EditorGUILayout.LayerField("Particle Rendering Layer", Soft2DManager.layerIndex);
             EditorGUILayout.Space(10);
             EditorGUILayout.PropertyField(shaderType, new GUIContent("Particle Render Mode","Particle's render mode"));
             EditorGUILayout.BeginVertical("box");
@@ -179,16 +179,16 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Time Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
-            EditorGUILayout.PropertyField(worldStep, new GUIContent("Time Step","Soft2D's simulated time step"));
-            EditorGUILayout.PropertyField(S2Substep, new GUIContent("SubStep","The time step of the internal sub-step"));
+            EditorGUILayout.PropertyField(worldStep, new GUIContent("Time Step","The time step of physical simulation"));
+            EditorGUILayout.PropertyField(S2Substep, new GUIContent("Substep Time","The time step of the internal sub-steps"));
             EditorGUILayout.EndVertical();
 
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Max Num Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
-            EditorGUILayout.PropertyField(S2MaxParticleNum, new GUIContent("Max Particle Number", "The maximum allowed number of particles"));
-            EditorGUILayout.PropertyField(S2MaxBodyNum, new GUIContent("Max Body Number", "The maximum allowed number of bodies"));
-            EditorGUILayout.PropertyField(S2MaxTriggerNum, new GUIContent("Max Trigger Number", "The maximum allowed number of triggers"));
+            EditorGUILayout.PropertyField(S2MaxParticleNum, new GUIContent("Maximum Particle Count", "The maximum allowed number of particles"));
+            EditorGUILayout.PropertyField(S2MaxBodyNum, new GUIContent("Maximum Body Count", "The maximum allowed number of bodies"));
+            EditorGUILayout.PropertyField(S2MaxTriggerNum, new GUIContent("Maximum Trigger Count", "The maximum allowed number of triggers"));
             EditorGUILayout.EndVertical();
 
             EditorGUILayout.Space(10);
@@ -201,9 +201,9 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Collision Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
-            EditorGUILayout.PropertyField(S2NormalForceScale, new GUIContent("Normal Force Scale", "Collision penalty force scale along normal direction"));
-            EditorGUILayout.PropertyField(S2VelocityForceScale, new GUIContent("Velocity Force Scale", "Collision penalty force scale along velocity direction"));
-            EditorGUILayout.PropertyField(S2MeshBodyForceScale, new GUIContent("Mesh Body Force Scale", ""));
+            EditorGUILayout.PropertyField(S2NormalForceScale, new GUIContent("Normal Collision Magnitude", "Collision penalty force scale along normal direction"));
+            EditorGUILayout.PropertyField(S2VelocityForceScale, new GUIContent("Velocity Collision Magnitude", "Collision penalty force scale along velocity direction"));
+            EditorGUILayout.PropertyField(S2MeshBodyForceScale, new GUIContent("MeshBody Magnitude", "The scaling factor of the mesh body's internal force"));
             EditorGUILayout.EndVertical();
             
             EditorGUILayout.Space(10);
