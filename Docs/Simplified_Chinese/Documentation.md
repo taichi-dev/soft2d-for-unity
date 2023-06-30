@@ -77,7 +77,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/026ecf9b-a9bd-4b98
 见 [自定义着色器](./CustomShader.md)。
 
 ## 示例场景
-我们提供了数个示例场景用于展示 Soft2D-for-Unity 在游戏中的使用方法。这些示例场景可以在 `Soft2D/Samples/`中找到。
+我们提供了数个示例场景用于展示 Soft2D-for-Unity 在游戏中的使用方法。这些示例场景可以在 `Soft2D/Samples/` 中找到。
 
 ### Sandbox
 这是一个包含多个关卡的小游戏，用户可以通过鼠标、手指或者重力陀螺仪对场景中的内容进行交互。本仓库中的 unity 项目默认的打包内容是这个小游戏的所有关卡。支持 Windows/Linux/MacOS/iOS/Android 平台。
@@ -108,6 +108,15 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/026ecf9b-a9bd-4b98
 
 
 ## FAQ
+教程场景在 `2D URP` 管线中渲染效果表现不正常。
+- 请将相机的背景设置从 `Skybox` 修改为 `Solid Color`。
+
+<img src="../images/camera_background.png" alt="skybox_background" width="300px">
+
+|修改前|修改后|
+|----------------|----------------|
+|<img src="../images/skybox_background.png" alt="skybox_background" width="300px"> |<img src="../images/solidcolor_background.png" alt="solidcolor_background" width="300px"> |
+
 如何在一个大规模的世界中模拟很小的物体？
 
 - 在 Soft2D-for-Unity 中，body 中粒子的采样密度会根据世界的大小来自动调整，更大的世界会导致更稀疏的粒子采样。因此，在一个较大的世界中可能没有足够的精度来模拟非常小的物体。

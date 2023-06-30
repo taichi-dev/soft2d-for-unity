@@ -102,4 +102,22 @@ This is a game with multiple levels. Users can interact with the content in the 
 ### Maze
 > This scene only supports the URP pipeline. And please use `3D URP` pipeline to ensure correct lighting effects.
 
-<img src="../images/maze.png" alt="maze" width="300px"> 
+<img src="../images/maze.png" alt="maze" width="300px">
+
+## FAQ
+The tutorial scenes does not render correctly in the `2D URP` pipeline.
+- Please change the background of camera from `Skybox` to `Solid Color`.
+
+<img src="../images/camera_background.png" alt="skybox_background" width="300px">
+
+|Skybox          |Solid Color     |
+|----------------|----------------|
+|<img src="../images/skybox_background.png" alt="skybox_background" width="300px"> |<img src="../images/solidcolor_background.png" alt="solidcolor_background" width="300px"> |
+
+How to simulate very small objects in a large-scale world?
+
+ - In Soft2D-for-Unity, the sampling density of the particles in a body is automatically adjusted based on the size of the world. A larger world will lead to sparser particle sampling. Therefore, there may not be enough precision to simulate very small objects in a larger world.
+
+Can different rendering materials be set for different particles?
+
+ - Currently, particles are drawn using the `Graphics.DrawMeshInstancedIndirect()`method, which temporarily does not support setting different materials for different particles.
