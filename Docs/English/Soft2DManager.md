@@ -34,9 +34,9 @@ World is a container that includes all the objects in the scene related to simul
   - The visualization color of the trigger.
 
 ### Render Settings
-- Particle Mesh Model
+- Instance Mesh
   - The mesh model used to render each particle.
-- Particle Rendering Layer
+- Particle Sorting Layer
   - The rendering layer of the particles.
 - Particle Rendering Mode. The rendering material used for rendering particles. Soft2D-for-Unity has 3 built-in rendering modes and supports user-defined rendering modes. We currently support the following rendering modes:
   - `Unlit`: Only displays color, without lighting effects.
@@ -46,16 +46,16 @@ World is a container that includes all the objects in the scene related to simul
 
 ### Time Settings
 - Time Step
-  - The time step of physical simulation.
-- Substep Time
-  - The time step of the internal sub-steps.
+  - Soft2D's simulated time step.
+- SubStep
+  - The time step of the internal sub-step.
 
 ### Maximum Value Settings
-- Maximum Particle Count
+- Max Particle Number
   - The maximum number of particles allowed in the current scene.
-- Maximum Body Count
+- Max Body Number
   - The maximum number of bodies allowed in the current scene.
-- Maximum Trigger Count
+- Max Trigger Number
   - The maximum number of triggers allowed in the current scene.
 
 ### Resolution Settings
@@ -65,11 +65,11 @@ World is a container that includes all the objects in the scene related to simul
   - The ratio of the resolution of the fine grid to the world background grid. This value affects the precision of the collider and trigger.
 
 ### Collision Settings
-- Normal Collision Magnitude
+- Normal Force Scale
   - The collision coefficient of the particles along the collider normal direction.
-- Velocity Collision Magnitude
+- Velocity Force Scale
   - The collision coefficient of the particles along the particle velocity direction.
-- MeshBody Magnitude
+- MeshBody Force Scale
   - The scaling factor of the mesh body's internal force.
 
 ### World Query Settings
