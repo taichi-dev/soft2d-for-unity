@@ -5,25 +5,25 @@ Soft2DManager is the core scene manager, responsible for managing the scene para
 ### World Settings
 World is a container that includes all the objects in the scene related to simulation, and performs physical simulation on these objects according to physical rules.
 
-- World Area Size
+- World Extent
   - The size of the area for physical simulation.
-- World Offset Coordinates
+- World Offset
   - The position coordinates of the bottom left corner of the physical simulation area.
 - Gravity
   - The size and direction of gravity in the scene. This is only effective when the gyroscope is off.
-- Gyro
+- Enable Gyro
   - Whether to turn on the gyroscope.
 - Gyro Scale
   - The scaling factor for the gyroscope gravity. Only effective when the gyroscope is on.
-- Force Field
+- Enable Force Field
   - Whether to enable the force field. When the user drags the cursor on the screen, a force that affects particles is applied around the cursor, and the direction of the force is the direction of cursor movement.
-- Force Field Magnitude
+- Force Field Scale
   - The magnitude of the force within the force field. Only effective when the force field is enabled.
 - World Boundary
   - Whether to enable the world boundary. Turning on world boundaries will automatically generate colliders on the boundary of the simulation area to prevent particles from leaving the simulation area.
 
-### Debug Tool Settings
-- Enable Debug Tool
+### Debug Tools Settings
+- Enable Debug Tools
   - Whether to enable debugging tools. Enabling this option can visualize the location of the collider and trigger during runtime.
 - Collider Color
   - The visualization color of the collider.

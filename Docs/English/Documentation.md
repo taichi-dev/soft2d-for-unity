@@ -26,7 +26,7 @@ Download the Soft2D-for-Unity plugin from the [Unity Asset Store](https://assets
 - If the current rendering pipeline is the URP, a macro `SOFT2D_URP_PIPELINE` will be added into the project settings.
 
 ## User Tutorial
-This section introduces how to use the Soft2D-for-Unity plugin in the Unity editor. All tutorial scenes used in this section can be found in `Soft2D/Samples/Tutorial/`.
+This section introduces how to use the Soft2D-for-Unity plugin in the Unity editor. All tutorial scenes used in this section can be found in `Soft2D/Tutorial/`.
 
 ### Using Soft2DManager and Creating a Body
 `Soft2DManager` is the core scene manager, responsible for managing scene parameter configuration, rendering, and managing objects (bodies, colliders, and triggers). A Soft2DManager must be placed in the scene to use the related functions of the plugin. For more details, see [Soft2DManager](./Soft2DManager.md).
