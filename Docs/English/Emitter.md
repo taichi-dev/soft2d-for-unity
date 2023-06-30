@@ -2,7 +2,6 @@
 An emitter is an object that can freely control the emission of bodies. Corresponds to the `EEmitter` type in the code.
 
 ## Parameter Panel
-The parameter panel of EEmitter is divided into four parts: emitter settings, material settings, color settings, and event settings.
 
 ### Emitter Settings
 - Emit on Start
