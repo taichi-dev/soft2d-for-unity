@@ -2,7 +2,6 @@
 Soft2DManager 是核心的场景管理器，它负责管理场景的参数配置、渲染和管理各个物体（body、collider 和 trigger）。场景里必须放置一个 Soft2DManager 才能使用插件的相关功能。对应代码中的 `Soft2DManager` 类型。
 
 ## 参数面板
-Soft2DManager 的参数面板分为渲染设置、world 设置、调试工具设置、最大值设置、分辨率设置、碰撞设置和查询设置。
 
 ### World 设置
 World 是一个容器，它包含一个场景中与模拟相关的所有物体，并按照物理规则对这些物体进行物理模拟。
