@@ -67,7 +67,7 @@ A trigger is a spatial region with a specific shape that can detect particles pa
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302-96a5-02fbfcff12fa
 
 ### Using Debugging Tools
-Debugging tools can be used to visualize colliders or triggers in the scene. For more details, see [Debugging Tools](./DebugTools.md).
+Debugging tools can be used to visualize colliders or triggers in the scene. For more details, see [Debugging Tools](./DebuggingTools.md).
 
 ### Customizing Rendering Effects
 See [Custom Shaders](./CustomShader.md).

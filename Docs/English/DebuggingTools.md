@@ -6,7 +6,7 @@ Debugging tools can visualize the colliders and triggers in the scene.
 
 ## Parameter Panel
 - Enable Debugging Tools
-  - Enabble the Debugging Tools.
+  - Enable the Debugging Tools.
 - Collider Color
   - The color of colliders.
 - Trigger Color

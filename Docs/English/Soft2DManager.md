@@ -22,8 +22,8 @@ World is a container that includes all the objects in the scene related to simul
 - World Boundary
   - Whether to enable the world boundary. Turning on world boundaries will automatically generate colliders on the boundary of the simulation area to prevent particles from leaving the simulation area.
 
-### Debug Tools Settings
-- Enable Debug Tools
+### Debugging Tools Settings
+- Enable Debugging Tools
   - Whether to enable debugging tools. Enabling this option can visualize the location of the collider and trigger during runtime.
 - Collider Color
   - The visualization color of the collider.
