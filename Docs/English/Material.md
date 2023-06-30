@@ -1,5 +1,4 @@
 # Material
-
 - Material Type
   - Fluid, sand, elastic body, or snow.
 - Density

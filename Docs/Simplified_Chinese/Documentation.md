@@ -123,4 +123,4 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/026ecf9b-a9bd-4b98
 
 是否可以为不同的粒子设置不同的渲染材质。
 
-- 目前粒子通过`Graphics.DrawMeshInstancedIndirect()`方法绘制，暂时不支持为不同的粒子设置不同的材质。
+- 目前粒子通过 `Graphics.DrawMeshInstancedIndirect()` 方法绘制，暂时不支持为不同的粒子设置不同的材质。

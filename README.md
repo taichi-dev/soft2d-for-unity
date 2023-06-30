@@ -48,6 +48,6 @@
 
 |     Unity Version    |Graphics API    | Rendering Pipeline   | Scripting Backend |
 |----------------------|----------------|----------------------|-------------------|
-|2021.3.22f1 or higher |Vulkan or Metal |built-in or URP       |IL2CPP             |
+|2021.3.22f1 or higher |Vulkan or Metal |Built-in or URP       |IL2CPP             |
 
 > Note: MacOS currently only supports M1 chips.
