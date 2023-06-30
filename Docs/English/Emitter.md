@@ -27,11 +27,11 @@ See [Material](./Material.md).
 
 ### Color Settings
 - Base Color
-  - The color of the particles inside the emitted bodies. Only available when `Random Color` is turned off.
-- Random Color
+  - The color of the particles inside the emitted bodies. Only available when `Support Random Color` is turned off.
+- Support Random Color
   - Determines whether colors are randomly selected from the random color list.
-- Random Color List
-  - The collection of all colors that can be randomly selected. Available when `Random Color` is turned on.
+- Random Colors
+  - The collection of all colors that can be randomly selected. Available when `Support Random Color` is turned on.
 - Rainbow Mode
   - Determines whether RGB values are randomly generated as particle colors.
 
