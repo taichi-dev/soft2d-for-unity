@@ -1,7 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class RendererDataWarning : MonoBehaviour
@@ -14,7 +12,7 @@ public class RendererDataWarning : MonoBehaviour
 
     private void Start()
     {
-        if (QualitySettings.renderPipeline != null)
+        if (GraphicsSettings.renderPipelineAsset != null && GraphicsSettings.renderPipelineAsset.GetType().Name == "UniversalRenderPipelineAsset")
         {
             warningText.text = warning;
         }
