@@ -70,9 +70,9 @@ namespace Taichi.Soft2D.Plugin
         private RenderTexture outputRT;
         private int kernelIndex;
         private Vector2Int resolution;
-        [HideInInspector] [Tooltip("Quad screening Debug Tools")] public GameObject debugQuad;
-        [HideInInspector] [Tooltip("Collider's color showed on Debug Tools")] public Color colliderCol = new(93 / 255f, 231 / 255f, 0, 1);
-        [HideInInspector] [Tooltip("Trigger's color showed on Debug Tools")] public Color triggerCol = new(246 / 255f, 238 / 255f, 6 / 255f, 1);
+        [HideInInspector] [Tooltip("Quad screening Debugging Tools")] public GameObject debugQuad;
+        [HideInInspector] [Tooltip("Collider's color showed on Debugging Tools")] public Color colliderCol = new(93 / 255f, 231 / 255f, 0, 1);
+        [HideInInspector] [Tooltip("Trigger's color showed on Debugging Tools")] public Color triggerCol = new(246 / 255f, 238 / 255f, 6 / 255f, 1);
 #endif
 
         [Tooltip("Already invoked UnityActions or not")] private bool isInvoked;
@@ -93,7 +93,7 @@ namespace Taichi.Soft2D.Plugin
         [HideInInspector] [Tooltip("Force field scale")] public float forceFieldScale;
         [HideInInspector] [Tooltip("Gravity's scale & direction")] public Vector2 gravity;
         [HideInInspector] [Tooltip("Soft2D's simulated time step")] public float timeStep;
-        [HideInInspector] [Tooltip("Enable Debug Tools")] public bool enableDebugTools;
+        [HideInInspector] [Tooltip("Enable Debugging Tools")] public bool enableDebuggingTools;
         [HideInInspector] [Tooltip("Particle's render mode")] public ShaderType shaderType;
         [HideInInspector] [Tooltip("Enable world boundary")] public bool enableWorldBoundary;
         [HideInInspector] [Tooltip("Boundary's collision type")] public CollisionType collisionType;
@@ -111,7 +111,7 @@ namespace Taichi.Soft2D.Plugin
         [HideInInspector] public float S2NormalForceScale;
         [HideInInspector] public float S2VelocityForceScale;
         [HideInInspector] public int S2FineGridScale;
-        [FormerlySerializedAs("S2EnableTrigger")] [HideInInspector] public bool S2EnableWorldQuery = true;
+        [HideInInspector] public bool S2EnableWorldQuery = true;
 
         #endregion
 
@@ -272,7 +272,7 @@ namespace Taichi.Soft2D.Plugin
             World.SetSubstepTimeStep(1.6e-4f);
 
 #if UNITY_EDITOR
-            if (enableDebugTools)
+            if (enableDebuggingTools)
             {
                 SetDebugTools();
             }
@@ -400,7 +400,7 @@ namespace Taichi.Soft2D.Plugin
                  new Vector3(500.0f, 500.0f, 500.0f)), argsBuffer, 0, null, ShadowCastingMode.On, true, layerIndex);
 
 #if UNITY_EDITOR
-            if (enableDebugTools)
+            if (enableDebuggingTools)
             {
                 Vector2 offset = World.GetWorldOffset();
                 debugQuad.transform.position = new Vector3(offset.x + worldExtent.x / 2, offset.y + worldExtent.y / 2, debugQuad.transform.position.z);
@@ -419,7 +419,7 @@ namespace Taichi.Soft2D.Plugin
         /// </summary>
         private void UpdateWorldConfig()
         {
-            WorldConfig.config.enable_debugging = enableDebugTools ? (uint)1 : 0;
+            WorldConfig.config.enable_debugging = enableDebuggingTools ? (uint)1 : 0;
             WorldConfig.config.gravity = new S2Vec2(gravity.x, gravity.y);
             WorldConfig.config.extent = new S2Vec2(worldExtent.x, worldExtent.y);
             WorldConfig.config.offset = new S2Vec2(worldOffset.x, worldOffset.y);

@@ -1,5 +1,5 @@
 # Trigger
-> Users must enable the World Query option in Soft2DManager for the trigger to function properly. See [World Query Settings](./Soft2DManager.md##World-Query-Settings).
+> Users must enable the `World Query` option in Soft2DManager for the trigger to function properly. See [World Query Settings](./Soft2DManager.md#world-query-settings).
 
 > In this document, 'trigger' refers to the trigger within Soft2D, not the built-in trigger in Unity.
 

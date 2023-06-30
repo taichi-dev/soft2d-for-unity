@@ -383,7 +383,7 @@ namespace Taichi.Soft2D.Plugin
             soft2DManager.worldExtent = new Vector2(1, 1);
             soft2DManager.gravity = new Vector2(0, -30f);
             soft2DManager.instanceSize = 0.01f;
-            soft2DManager.enableDebugTools = false;
+            soft2DManager.enableDebuggingTools = false;
             soft2DManager.timeStep = 16e-3f / 4.0f;
             soft2DManager.colliderCol = new Color(93 / 255f, 231 / 255f, 0, 1);
             soft2DManager.triggerCol = new Color(246 / 255f, 238 / 255f, 6 / 255f, 1);

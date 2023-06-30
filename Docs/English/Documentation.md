@@ -60,14 +60,14 @@ A collider is an obstacle that blocks the movement of bodies. For more details, 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed-915d-3ca825e6ef97
 
 ### Creating a Trigger
-> Users must enable the World Query option in `Soft2DManager` for the trigger to work properly. See [World Query Settings](./Soft2DManager.md##World-Query-Settings).
+> Users must enable the `World Query` option in `Soft2DManager` for the trigger to work properly. See [World Query Settings](./Soft2DManager.md#world-query-settings).
 
 A trigger is a spatial region with a specific shape that can detect particles passing through it. For more details, see [Trigger](./Trigger.md).
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302-96a5-02fbfcff12fa
 
 ### Using Debugging Tools
-Debugging tools can be used to visualize colliders or triggers in the scene. For more details, see [Debugging Tools](./DebugTools.md).
+Debugging tools can be used to visualize colliders or triggers in the scene. For more details, see [Debugging Tools](./DebuggingTools.md).
 
 ### Customizing Rendering Effects
 See [Custom Shaders](./CustomShader.md).

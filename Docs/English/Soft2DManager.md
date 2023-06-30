@@ -22,8 +22,8 @@ World is a container that includes all the objects in the scene related to simul
 - World Boundary
   - Whether to enable the world boundary. Turning on world boundaries will automatically generate colliders on the boundary of the simulation area to prevent particles from leaving the simulation area.
 
-### Debug Tools Settings
-- Enable Debug Tools
+### Debugging Tools Settings
+- Enable Debugging Tools
   - Whether to enable debugging tools. Enabling this option can visualize the location of the collider and trigger during runtime.
 - Collider Color
   - The visualization color of the collider.
@@ -70,5 +70,5 @@ World is a container that includes all the objects in the scene related to simul
   - The scaling factor of the mesh body's internal force.
 
 ### World Query Settings
-- Enable world query
+- Enable World Query
   - Enable the world querying. Only when this option is enabled, the trigger can detect the particles passing through its area. If users close this option, the trigger will not work, but the simulation performance can be improved.

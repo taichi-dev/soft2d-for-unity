@@ -6,7 +6,7 @@
 
 ## 参数面板
 - 开启调试工具
-  - 打开 Debug Tools 窗口。
+  - 打开 Debugging Tools 窗口。
 - Collider 颜色
   - Collider 显示的颜色。
 - Trigger 颜色

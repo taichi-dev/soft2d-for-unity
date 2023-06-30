@@ -66,7 +66,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302
 
 
 ### 使用调试工具
-使用调试工具可以对场景中的 collider 或者 trigger 进行可视化。详细介绍见 [调试工具](./DebugTools.md)。
+使用调试工具可以对场景中的 collider 或者 trigger 进行可视化。详细介绍见 [调试工具](./DebuggingTools.md)。
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/026ecf9b-a9bd-4b98-847d-d41d1d371671
 
