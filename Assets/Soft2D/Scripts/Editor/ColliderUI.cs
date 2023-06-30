@@ -70,9 +70,9 @@ namespace Taichi.Soft2D.Plugin
             }
             EditorGUILayout.PropertyField(collisionType, new GUIContent("Collision Type", "Collider's collision type"));
             EditorGUILayout.Slider(frictionCoefficient, 0, 1,
-                new GUIContent("Coefficient of Friction", "Collider's coefficient of friction"));
+                new GUIContent("Friction Coefficient", "Collider's coefficient of friction"));
             EditorGUILayout.Slider(restitutionCoefficient, 0, 1,
-                new GUIContent("Coefficient of Restitution", "Collider's coefficient of restitution"));
+                new GUIContent("Restitution Coefficient", "Collider's coefficient of restitution"));
 
             EditorGUILayout.EndVertical();
 
