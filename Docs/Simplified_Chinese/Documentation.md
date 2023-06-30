@@ -79,15 +79,28 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/026ecf9b-a9bd-4b98
 ### SandBox
 这是一个包含多个关卡的小游戏，用户可以通过鼠标、手指或者重力陀螺仪对场景中的内容进行交互。本仓库中的 unity 项目默认的打包内容是这个小游戏的所有关卡。支持 Windows/Linux/MacOS/iOS/Android 平台。
 
-<img src="../images/sandbox.png" alt="sandbox" width="300px"> 
+> 本场景的后处理效果只在 URP 管线中支持，Built-in 管线不支持后处理效果。
+
+|带有后处理效果（URP 管线）|没有后处理效果（built-in 管线）|
+|----------------|----------------|
+|<img src="../images/sandbox.png" alt="sandbox" width="300px"> |<img src="../images/sandbox_no_postprocessing.png" alt="sandbox_no_postprocessing" width="300px"> |
 
 ### WaterWheel
-<img src="../images/waterwheel.png" alt="waterwheel" width="300px"> 
+> 本场景的后处理效果只在 URP 管线中支持，Built-in 管线不支持后处理效果。
+
+|带有后处理效果（URP 管线）|没有后处理效果（built-in 管线）|
+|----------------|----------------|
+|<img src="../images/waterwheel.png" alt="waterwheel" width="300px"> |<img src="../images/waterwheel_no_postprocessing.png" alt="waterwheel_no_postprocessing" width="300px">  |
+
 
 ### Gear
+该场景只支持 URP 管线。并且请使用 `3D URP` 管线以获取正确的光照效果。
+
 <img src="../images/gear.png" alt="gear" width="300px"> 
 
 ### Maze
+该场景只支持 URP 管线。并且请使用 `3D URP` 管线以获取正确的光照效果。
+
 <img src="../images/maze.png" alt="maze" width="300px"> 
 
 

@@ -78,21 +78,27 @@ We provide several sample scenes to demonstrate how to use Soft2D-for-Unity in g
 ### Sandbox
 This is a game with multiple levels. Users can interact with the content in the scene through the mouse, fingers, or a gyroscope. The default building content of the Unity project in this repository is all the levels of this game. Supports Windows/Linux/MacOS/iOS/Android platforms.
 
-<img src="../images/sandbox.png" alt="sandbox" width="300px"> 
+> In this scene, the post-processing effect is only supported in the URP pipeline. The built-in pipeline does not support the post-processing effect.
+
+|With Post-processing (URP)|Without Post-processing (Built-in)|
+|----------------|----------------|
+|<img src="../images/sandbox.png" alt="sandbox" width="300px"> |<img src="../images/sandbox_no_postprocessing.png" alt="sandbox_no_postprocessing" width="300px"> |
 
 ### WaterWheel
-<img src="../images/waterwheel.png" alt="waterwheel" width="300px"> 
+> In this scene, the post-processing effect is only supported in the URP pipeline. The built-in pipeline does not support the post-processing effect.
+
+|With Post-processing (URP)|Without Post-processing (Built-in)|
+|----------------|----------------|
+|<img src="../images/waterwheel.png" alt="waterwheel" width="300px"> |<img src="../images/waterwheel_no_postprocessing.png" alt="waterwheel_no_postprocessing" width="300px">  |
+
 
 ### Gear
+> This scene only supports the URP pipeline. And please use `3D URP` pipeline to ensure correct lighting effects.
+
+
 <img src="../images/gear.png" alt="gear" width="300px"> 
 
 ### Maze
+> This scene only supports the URP pipeline. And please use `3D URP` pipeline to ensure correct lighting effects.
+
 <img src="../images/maze.png" alt="maze" width="300px"> 
-
-## FAQ
-How to simulate very small objects in a large-scale world?
-- In Soft2D-for-Unity, the sampling density of the particles in a body is automatically adjusted based on the size of the world. A larger world will lead to sparser particle sampling. Therefore, there may not be enough precision to simulate very small objects in a larger world.
-
-Can different rendering materials be set for different particles?
-
-- Currently, particles are drawn using the `Graphics.DrawMeshInstancedIndirect()` function, which temporarily does not support setting different materials for different particles.
