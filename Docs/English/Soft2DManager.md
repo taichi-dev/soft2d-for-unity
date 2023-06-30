@@ -70,5 +70,5 @@ World is a container that includes all the objects in the scene related to simul
   - The scaling factor of the mesh body's internal force.
 
 ### World Query Settings
-- Enable world query
+- Enable World Query
   - Enable the world querying. Only when this option is enabled, the trigger can detect the particles passing through its area. If users close this option, the trigger will not work, but the simulation performance can be improved.

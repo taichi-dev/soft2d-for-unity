@@ -20,8 +20,8 @@ A collider is an obstacle that blocks the movement of bodies. In the code, it co
   - `Separate`: Particles will leave the collider after colliding with the collider.
   - `Slip`: Particles will slide along the edge after colliding with the collider.
   - `Sticky`:  Particles will stick to the collider after collision.
-- Coefficient of Friction
+- Friction Coefficient
   - The friction coefficient when particles move along the edge of the collider.
-- Coefficient of Restitution
+- Restitution Coefficient
   - The bounce coefficient when particles collide with the collider.
 
