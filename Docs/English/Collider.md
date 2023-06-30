@@ -4,10 +4,10 @@
 A collider is an obstacle that blocks the movement of bodies. In the code, it corresponds to the `ECollider` type.
 
 ## Parameter Panel
-- Unity 2D Collider
+- 2D Collider
   - The Unity 2D collider component of the Collider, currently supports Box / Circle / Capsule / Polygon / Composite types.
   - The type and size of the Collider are controlled by its Collider2D component.
-- Is it Dynamic
+- Dynamic
   - No: Static. Not moving.
   - Yes: Dynamic. Moves at the user-specified speed or simulates automatically.
 - Linear Velocity
@@ -20,8 +20,8 @@ A collider is an obstacle that blocks the movement of bodies. In the code, it co
   - `Separate`: Particles will leave the collider after colliding with the collider.
   - `Slip`: Particles will slide along the edge after colliding with the collider.
   - `Sticky`:  Particles will stick to the collider after collision.
-- Friction Coefficient
+- Coefficient of Friction
   - The friction coefficient when particles move along the edge of the collider.
-- Restitution Coefficient
+- Coefficient of Restitution
   - The bounce coefficient when particles collide with the collider.
 

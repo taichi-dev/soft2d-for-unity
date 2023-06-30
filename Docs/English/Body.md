@@ -35,7 +35,7 @@ A custom body is a body with user-specified sample points. Users can customize t
 
 ### Parameter Panel
 
-- Particle Local Space Position
+- Particle Local Position
   - The position of particles inside the custom body in local space.
 
 ## Mesh Body

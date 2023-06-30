@@ -1,6 +1,6 @@
 # Material
 
-- Physical Material Types
+- Material Type
   - Fluid, sand, elastic body, or snow.
 - Density
   - The [density](https://en.wikipedia.org/wiki/Density) of the material, measured in `kg/m^3`. Common materials such as water have a density of 1000.
