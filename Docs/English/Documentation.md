@@ -21,8 +21,8 @@ If you clone this project using `git`, make sure to use `git-lfs` to correctly p
 
 ### Download Plugin from Asset Store and Import into Existing Project
 Download the Soft2D-for-Unity plugin from the [Unity Asset Store](https://assetstore.unity.com/packages/slug/256549) and import it into an existing project. Once the import is complete, the plugin will automatically pop up a start-up window. Clicking "Run and Restart" will perform the following actions:
-- The project's `Graphics API` setting will be modified to Vulkan or Metal.
-- The project's `Scripting Backend` setting will be modified to IL2CPP.
+- The project's `Graphics API` setting will be modified to `Vulkan` or `Metal`.
+- The project's `Scripting Backend` setting will be modified to `IL2CPP`.
 - If the current rendering pipeline is the URP, a macro `SOFT2D_URP_PIPELINE` will be added into the project settings.
 
 ## User Tutorial
