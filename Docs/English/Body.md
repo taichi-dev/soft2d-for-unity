@@ -24,9 +24,9 @@ Refer to [Material](./Material.md).
 
 ### Color Settings
 - Base Color
-  - Particle's base color inside body.
+  - Provides the particles inside the body with a same color.
 - Random Color
-  - Generate a color randomly if true.
+  - Provides the particles inside the body with randomly generated colors.
 
 # Other Body Types
 
@@ -35,7 +35,7 @@ A custom body is a body with user-specified sample points. Users can customize t
 
 ### Parameter Panel
 
-- Particle Local Position
+- Particle Local Space Position
   - The position of particles inside the custom body in local space.
 
 ## Mesh Body

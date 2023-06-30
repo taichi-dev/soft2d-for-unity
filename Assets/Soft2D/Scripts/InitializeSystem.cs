@@ -36,11 +36,8 @@ public class Soft2DLauncherWindow : EditorWindow
 
     private void OnGUI()
     {
-        GUILayout.Label("Before using Soft2D for Unity,please " +
-                        "click \"Run and Restart\" button, which will perform the following actions:\n" + 
-                        "1. The project's Graphics API setting will be modified to Vulkan or Metal.\n" + 
-                        "2. The project's Scripting Backend setting will be modified to IL2CPP.\n" + 
-                        "3. If the current rendering pipeline is the URP, a macro \"SOFT2D_URP_PIPELINE\" will be added into the project settings.",
+        GUILayout.Label("Before using Soft2D for Unity,\n please " +
+                        "click the button below to automatically modify some settings.",
             EditorStyles.boldLabel,GUILayout.ExpandWidth(false));
         EditorGUILayout.Space(20);
         if (GUILayout.Button("Run and Restart"))

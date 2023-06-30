@@ -395,7 +395,7 @@ MonoBehaviour:
   isDynamic: 0
   linear_velocity: {x: 0, y: 0}
   angular_velocity: 0
-  autoCorrection: 0
+  autoUpdate: 0
 --- !u!50 &1826291640
 Rigidbody2D:
   serializedVersion: 4
@@ -575,7 +575,6 @@ MonoBehaviour:
   S2NormalForceScale: 0.1
   S2VelocityForceScale: 0.1
   S2FineGridScale: 4
-  S2EnableWorldQuery: 1
 --- !u!4 &1858378113
 Transform:
   m_ObjectHideFlags: 0
