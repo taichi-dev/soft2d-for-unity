@@ -69,7 +69,7 @@ namespace Taichi.Soft2D.Plugin
             gravity = serializedObject.FindProperty("gravity");
             enableForceField = serializedObject.FindProperty("enableForceField");
             forceFieldScale = serializedObject.FindProperty("forceFieldScale");
-            enableDebug = serializedObject.FindProperty("enableDebugTools");
+            enableDebug = serializedObject.FindProperty("enableDebuggingTools");
             colliderCol = serializedObject.FindProperty("colliderCol");
             triggerCol = serializedObject.FindProperty("triggerCol");
             enableWorldBoundary = serializedObject.FindProperty("enableWorldBoundary");
@@ -120,13 +120,13 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.EndVertical();
 
             EditorGUILayout.Space(10);
-            EditorGUILayout.LabelField("Debug Tools Settings", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField("Debugging Tools Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("box");
-            EditorGUILayout.PropertyField(enableDebug, new GUIContent("Enable Debug Tools","enable Debug Tools"));
-            if (Soft2DManager.enableDebugTools)
+            EditorGUILayout.PropertyField(enableDebug, new GUIContent("Enable Debugging Tools","enable Debugging Tools"));
+            if (Soft2DManager.enableDebuggingTools)
             {
-                EditorGUILayout.PropertyField(colliderCol, new GUIContent("Collider Color","Collider's color showed on Debug Tools"));
-                EditorGUILayout.PropertyField(triggerCol, new GUIContent("Trigger Color","Trigger's color showed on Debug Tools"));
+                EditorGUILayout.PropertyField(colliderCol, new GUIContent("Collider Color","Collider's color showed on Debugging Tools"));
+                EditorGUILayout.PropertyField(triggerCol, new GUIContent("Trigger Color","Trigger's color showed on Debugging Tools"));
             }
             EditorGUILayout.EndVertical();
 
@@ -194,7 +194,7 @@ namespace Taichi.Soft2D.Plugin
             EditorGUILayout.Space(10);
             EditorGUILayout.LabelField("Resolution Settings", EditorStyles.boldLabel);
             EditorGUILayout.BeginVertical("Box");
-            EditorGUILayout.PropertyField(S2GridResolution, new GUIContent("Grid Resolution","Debug Tools' gird resolution"));
+            EditorGUILayout.PropertyField(S2GridResolution, new GUIContent("Grid Resolution","Debugging Tools' gird resolution"));
             EditorGUILayout.PropertyField(S2FineGridResolution, new GUIContent("Fine Grid Scale", "A scale factor of fine grid resolution compared to background grid resolution"));
             EditorGUILayout.EndVertical();
 
