@@ -8,7 +8,7 @@
   <a href="https://www.youtube.com/channel/UCUweEINecpOaM8HAKLvfBJA">
     <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="youtube logo"  />
   </a>
-  <a href=" https://twitter.com/soft2d_official">
+  <a href="https://twitter.com/soft2d_official">
     <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="twitter logo"  />
   </a>
   <a href="https://discord.gg/JZwFWsuqKV">
@@ -26,7 +26,7 @@
     </p>
 </h4>
 
-[Soft2D](https://www.soft2d.tech/) 是一个实时的 2D 多材料连续体物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D-for-Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户在 Unity 中方便地实现各种物理模拟效果。本插件的详细使用方法请参考[用户教程](./Docs/Simplified_Chinese/Documentation.md)。
+[Soft2D](https://www.soft2d.tech/) 是一个实时的 2D 多材料连续体物理引擎，可以模拟流体、弹性体、雪和沙子等材料。Soft2D-for-Unity 插件为 Soft2D 提供了高层封装，并为用户提供了一系列易用的的接口，可以让用户在 Unity 中方便地实现各种物理模拟效果。本插件的详细使用方法请参考[用户文档](./Docs/Simplified_Chinese/Documentation.md)。
 
 <div align="center">
 <img src="images/waterwheel.gif" alt="waterwheel" width="300px"> <img src="images/maze.gif" alt="maze" width="300px">

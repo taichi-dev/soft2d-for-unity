@@ -8,7 +8,7 @@
   <a href="https://www.youtube.com/channel/UCUweEINecpOaM8HAKLvfBJA">
     <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="youtube logo"  />
   </a>
-  <a href=" https://twitter.com/soft2d_official">
+  <a href="https://twitter.com/soft2d_official">
     <img src="https://img.shields.io/static/v1?message=Twitter&logo=twitter&label=&color=1DA1F2&logoColor=white&labelColor=&style=for-the-badge" height="25px" alt="twitter logo"  />
   </a>
   <a href="https://discord.gg/JZwFWsuqKV">
@@ -26,7 +26,7 @@
     </p>
 </h4>
 
-[Soft2D](https://www.soft2d.tech/) is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D-for-Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling users to easily implement various physical simulations in Unity. The user documentation of Soft2D-for-Unity can be found [here](./Docs/English/Documentation.md).
+[Soft2D](https://www.soft2d.tech/) is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D-for-Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling users to easily implement various physical simulations in Unity. A detailed tutorial of Soft2D-for-Unity can be found in [User Documentation](./Docs/English/Documentation.md).
 
 <div align="center">
 <img src="images/waterwheel.gif" alt="waterwheel" width="300px"> <img src="images/maze.gif" alt="maze" width="300px">
