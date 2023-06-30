@@ -70,7 +70,7 @@ public class Soft2DLauncherWindow : EditorWindow
         PlayerSettings.SetArchitecture(BuildTargetGroup.Android, 1);
         
         // Check Render Pipeline
-        if (QualitySettings.renderPipeline != null)
+        if (GraphicsSettings.renderPipelineAsset != null && GraphicsSettings.renderPipelineAsset.GetType().Name == "UniversalRenderPipelineAsset")
         {
             CreateNewLayer("Soft2D");
             SetDefineSymbols(NamedBuildTarget.Android);
