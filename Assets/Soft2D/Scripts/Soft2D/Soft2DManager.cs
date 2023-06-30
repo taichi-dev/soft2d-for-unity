@@ -4,7 +4,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
-using UnityEngine.Serialization;
 
 namespace Taichi.Soft2D.Plugin
 {
@@ -328,12 +327,11 @@ namespace Taichi.Soft2D.Plugin
         private void Start()
         {
             if (enableWorldBoundary)
+            {
                 colliderAction += AddWorldBoundary;
-            
-            SerializedObject tagManager =
-                new SerializedObject(AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/TagManager.asset")[0]);
-            SerializedProperty layers = tagManager.FindProperty("layers");
-            if (string.IsNullOrEmpty(layers.GetArrayElementAtIndex(layerIndex).stringValue))
+            }
+
+            if (LayerMask.LayerToName(layerIndex) == "")
             {
                 layerIndex = 0;
             }
