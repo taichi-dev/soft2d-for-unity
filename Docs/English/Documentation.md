@@ -10,6 +10,7 @@ Soft2D is a 2D multi-material continuum physics engine designed for real-time ap
 |----------------------|----------------|----------------------|-------------------|
 |2021.3.22f1 or higher |Vulkan or Metal |2D built-in or 3D URP |IL2CPP             |
 
+> Note: MacOS currently only supports M1 chips.
 
 ### How to Use
 Users can use Soft2D-for-Unity in two ways:
