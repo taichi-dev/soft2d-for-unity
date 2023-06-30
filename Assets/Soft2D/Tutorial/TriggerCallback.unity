@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18011706, g: 0.22551754, b: 0.30669218, a: 1}
+  m_IndirectSpecularColor: {r: 0.1802907, g: 0.22573434, b: 0.30694622, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efd15ed1f2e271a44a28f87d93c62ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInitialized: 0
 --- !u!61 &117488843
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -596,7 +595,7 @@ MonoBehaviour:
   forceFieldScale: 0
   gravity: {x: 0, y: -30}
   timeStep: 0.004
-  enableDebugTools: 0
+  enableDebuggingTools: 0
   shaderType: 0
   enableWorldBoundary: 1
   collisionType: 0
@@ -611,6 +610,7 @@ MonoBehaviour:
   S2NormalForceScale: 0.1
   S2VelocityForceScale: 0.1
   S2FineGridScale: 4
+  S2EnableWorldQuery: 1
 --- !u!4 &1154355164
 Transform:
   m_ObjectHideFlags: 0
@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 1806368310}
   - component: {fileID: 1806368309}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CallbackScript
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
