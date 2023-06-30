@@ -3,7 +3,6 @@ A body is a continuum that can be simulated, composed of a group of particles. A
 
 
 ## Parameter Panel
-The parameter panel of body is divided into body settings, material settings, and color settings.
 
 ### Body Settings
 - Shape

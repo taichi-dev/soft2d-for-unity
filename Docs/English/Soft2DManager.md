@@ -2,9 +2,6 @@
 Soft2DManager is the core scene manager, responsible for managing the scene parameters, rendering, and managing objects (body, collider, and trigger). To use the features of the plugin, it is necessary to have a Soft2DManager in the scene. Corresponds to the `Soft2DManager` type in the code.
 
 ## Parameter Panel
-The parameter panel of Soft2DManager is divided into rendering settings, world settings, debugging tool settings, maximum value settings, resolution settings, collision settings, and world querying settings.
-
-
 ### World Settings
 World is a container that includes all the objects in the scene related to simulation, and performs physical simulation on these objects according to physical rules.
 

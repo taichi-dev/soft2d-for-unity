@@ -16,10 +16,10 @@ Users can use Soft2D-for-Unity in two ways:
 1. Download this repository and open it as a new project in Unity.
 2. Download the plugin package file from the Asset Store and import it into an existing project.
 
-### Using the Unity Project on Github
+#### Using the Unity Project on Github
 If you clone this project using `git`, make sure to use `git-lfs` to correctly pull the binary files in the project.
 
-### Download Plugin from Asset Store and Import into Existing Project
+#### Download Plugin from Asset Store and Import into Existing Project
 Download the Soft2D-for-Unity plugin from the [Unity Asset Store](https://assetstore.unity.com/packages/slug/256549) and import it into an existing project. Once the import is complete, the plugin will automatically pop up a start-up window. Clicking "Run and Restart" will perform the following actions:
 - The project's `Graphics API` setting will be modified to `Vulkan` or `Metal`.
 - The project's `Scripting Backend` setting will be modified to `IL2CPP`.
