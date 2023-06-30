@@ -25,7 +25,7 @@ Soft2D 是一个实时 2D 多材料连续体物理引擎，可以模拟流体、
 - 如果当前管线是 URP，一个名为 `SOFT2D_URP_PIPELINE` 的宏会被添加到项目设置中。
 
 ## 用户教程
-本章节介绍如何在 Unity 编辑器中使用 Soft2D-for-Unity 插件。本章节用到的所有教程场景均可以在 `Soft2D/Samples/Tutorial/` 中找到。
+本章节介绍如何在 Unity 编辑器中使用 Soft2D-for-Unity 插件。本章节用到的所有教程场景均可以在 `Soft2D/Tutorial/` 中找到。
 
 ### 使用 Soft2DManager 并创建一个 Body
 Soft2DManager 是核心的场景管理器，它负责管理场景的参数配置、渲染和管理各个物体（body、 collider 和 trigger）。场景里必须放置一个 Soft2DManager 才能使用插件的相关功能。详细介绍见 [Soft2DManager](./Soft2DManager.md)。
