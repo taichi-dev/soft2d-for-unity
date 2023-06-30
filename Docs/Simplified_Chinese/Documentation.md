@@ -77,8 +77,9 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/026ecf9b-a9bd-4b98
 见 [自定义着色器](./CustomShader.md)。
 
 ## 示例场景
-我们提供了数个示例场景用于展示 Soft2D-for-Unity 在游戏中的使用方法。这些示例场景可以在 `Soft2D/Samples/`中找到。目前示例场景只支持 3D URP 管线。
-### SandBox
+我们提供了数个示例场景用于展示 Soft2D-for-Unity 在游戏中的使用方法。这些示例场景可以在 `Soft2D/Samples/`中找到。
+
+### Sandbox
 这是一个包含多个关卡的小游戏，用户可以通过鼠标、手指或者重力陀螺仪对场景中的内容进行交互。本仓库中的 unity 项目默认的打包内容是这个小游戏的所有关卡。支持 Windows/Linux/MacOS/iOS/Android 平台。
 
 > 本场景的后处理效果只在 URP 管线中支持，Built-in 管线不支持后处理效果。

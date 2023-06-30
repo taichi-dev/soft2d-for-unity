@@ -74,7 +74,7 @@ Debugging tools can be used to visualize colliders or triggers in the scene. For
 See [Custom Shaders](./CustomShader.md).
 
 ## Sample Scenes
-We provide several sample scenes to demonstrate how to use Soft2D-for-Unity in games. These sample scenes can be found in `Soft2D/Samples/`. Currently, sample scenes only support the 3D URP pipeline.
+We provide several sample scenes to demonstrate how to use Soft2D-for-Unity in games. These sample scenes can be found in `Soft2D/Samples/`.
 
 ### Sandbox
 This is a game with multiple levels. Users can interact with the content in the scene through the mouse, fingers, or a gyroscope. The default building content of the Unity project in this repository is all the levels of this game. Supports Windows/Linux/MacOS/iOS/Android platforms.
