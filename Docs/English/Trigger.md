@@ -20,6 +20,9 @@ In addition to trigger events, users can also pass in custom callback functions 
 
 https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a5d525dd-c056-4340-b6b4-3f31c86c3918
 
+[Video on YouTube](https://www.youtube.com/watch?v=ja-Spz0sJTg).
+
+
 > Currently, custom callback functions support two types of operations on particle data: deleting particles and modifying particle tags.
 
 
