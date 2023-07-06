@@ -34,7 +34,7 @@ Soft2DManager 是核心的场景管理器，它负责管理场景的参数配置
 
 Body 是一个可以被模拟的连续体，由一组粒子组成。是 Soft2D-for-Unity 中最常用的类型。详细介绍见 [Body](./Body.md)。下面的视频展示了如何在编辑器中创建一个 body：
 
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118-97e9-0baa2d80e945
+https://github.com/taichi-dev/soft2d-for-unity/assets/82208770/bed8b185-2467-4f34-be2a-81f29e271d50
 
 [Video on YouTube](https://www.youtube.com/watch?v=gtEt04JAwVQ).
 
@@ -42,14 +42,14 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/6922f3a3-71bb-4118
 ### 创建 Custom Body
 Custom body 是用户指定采样点的 body。用户可以自定义 body 内部的粒子位置。详细介绍见 [Custom Body](./Body.md#custom-body)。
 
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/bcb8d860-8435-4a33-832a-618c5eb4dff6
+https://github.com/taichi-dev/soft2d-for-unity/assets/82208770/6954b318-e5dd-4799-b847-c89024a10ad2
 
 [Video on YouTube](https://www.youtube.com/watch?v=-rc05NdN4jM).
 
 ### 创建 Mesh Body
 Mesh body 是带有拓扑关系的 Body。每个传入网格的顶点位置会生成一个粒子，它们之间遵循网格内三角形的拓扑关系。详细介绍见 [Mesh Body](./Body.md#mesh-body)。
 
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927-96e4-c20d4e9b1d6c
+https://github.com/taichi-dev/soft2d-for-unity/assets/82208770/86027852-9290-4cf9-97d3-791f50ccc8b4
 
 [Video on YouTube](https://www.youtube.com/watch?v=6OEG7QIWqjw).
 
@@ -57,7 +57,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a9a608d9-a5b5-4927
 ### 创建 Emitter
 Emitter 是一个能自由控制发射 body 的发射器。详细介绍见 [Emitter](./Emitter.md)。
 
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/444ce93b-6727-4edb-80c2-81954cc613da
+https://github.com/taichi-dev/soft2d-for-unity/assets/82208770/7a7e637f-d03f-4057-808f-0308f2e645f1
 
 [Video on YouTube](https://www.youtube.com/watch?v=9FR2j3EZRdE).
 
@@ -65,7 +65,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/444ce93b-6727-4edb
 ### 创建 Collider
 Collider 是一个障碍物，会阻挡 body 的运动。详细介绍见 [Collider](./Collider.md)。
 
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed-915d-3ca825e6ef97
+https://github.com/taichi-dev/soft2d-for-unity/assets/82208770/2ad1d54d-3126-4d91-a7b5-bc7b4512f876
 
 [Video on YouTube](https://www.youtube.com/watch?v=e1W54tDIijg).
 
@@ -75,7 +75,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/24fb1448-2bc7-49ed
 
 Trigger 是一个拥有特定形状的空间区域，可以检测到经过它的粒子。详细介绍见 [Trigger](./Trigger.md)。
 
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302-96a5-02fbfcff12fa
+https://github.com/taichi-dev/soft2d-for-unity/assets/82208770/025a7644-3bcf-46a0-989b-a81ce02d8dde
 
 [Video on YouTube](https://www.youtube.com/watch?v=W67fbAGPOjU).
 
@@ -83,7 +83,7 @@ https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/5a1e835a-df52-4302
 ### 使用调试工具
 使用调试工具可以对场景中的 collider 或者 trigger 进行可视化。详细介绍见 [调试工具](./DebuggingTools.md)。
 
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/026ecf9b-a9bd-4b98-847d-d41d1d371671
+https://github.com/taichi-dev/soft2d-for-unity/assets/82208770/bfe01ab7-8819-4392-a05f-3762314952f3
 
 [Video on YouTube](https://www.youtube.com/watch?v=ECFgvXIuv4o).
 
