@@ -18,7 +18,7 @@ Trigger 提供了多个接口允许用户对 trigger 内的粒子进行查询和
 ## 自定义回调函数
 除了 trigger 事件以外，用户还可以传入自定义的回调函数来查询和操作 trigger 中的粒子。本章节将会介绍自定义回调函数的用法。下面的视频对其用法进行了一个直观展示：
 
-https://github.com/taichi-dev/soft2d-for-unity/assets/8120108/a5d525dd-c056-4340-b6b4-3f31c86c3918
+https://github.com/taichi-dev/soft2d-for-unity/assets/82208770/06a510b0-b248-42a6-8607-ee4e02b7c43a
 
 [Video on YouTube](https://www.youtube.com/watch?v=ja-Spz0sJTg).
 
