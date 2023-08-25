@@ -1,0 +1,19 @@
+Third Party Software Notices
+This package contains third-party software components governed by the license(s) indicated below:
+
+1. Component Name: Soft2D
+
+License Type: Apache License 2.0
+
+See https://github.com/taichi-dev/soft2d-release/blob/main/LICENSE for more details
+
+
+2. Component Name: Taichi-C-API
+License Type: Apache License 2.0
+
+See https://github.com/taichi-dev/taichi/blob/master/LICENSE for more details
+
+
+
+
+
