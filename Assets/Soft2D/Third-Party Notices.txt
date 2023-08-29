@@ -5,14 +5,24 @@ This package contains third-party software components governed by the license(s)
 
 License Type: Apache License 2.0
 
-See https://github.com/taichi-dev/soft2d-release/blob/main/LICENSE for more details
+See https://github.com/taichi-dev/soft2d-release/blob/main/LICENSE for more details.
 
 
 2. Component Name: Taichi-C-API
 License Type: Apache License 2.0
 
-See https://github.com/taichi-dev/taichi/blob/master/LICENSE for more details
+See https://github.com/taichi-dev/taichi/blob/master/LICENSE for more details.
 
+
+3. Component Name: Roboto-Bold Font
+License Type: Apache License 2.0
+
+See https://fonts.google.com/specimen/Roboto for more details.
+
+4. Component Name: car_mini_01 3D Model
+License Type: Standard Unity Asset Store EULA
+
+See https://assetstore.unity.com/packages/2d/environments/pixel-kit-car-free-195422 for more details.
 
 
 

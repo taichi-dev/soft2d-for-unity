@@ -25,8 +25,8 @@
         <a href="https://github.com/taichi-dev/soft2d-for-unity/blob/main/README_CN.md">简体中文</a> 
     </p>
 </h4>
-
-[Soft2D](https://www.soft2d.tech/) is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D-for-Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling users to easily implement various physical simulations in Unity. A detailed tutorial of Soft2D-for-Unity can be found in [User Documentation](./Docs/English/Documentation.md).
+z
+[Soft2D](https://www.soft2d.tech/) is a 2D multi-material continuum physics engine designed for real-time applications. Soft2D-for-Unity provides a high-level encapsulation for Soft2D and offers users a range of easy-to-use interfaces, enabling users to easily implement various physical simulations in Unity. A detailed tutorial of Soft2D-for-Unity can be found in [User Documentation](./Soft2D/Docs/English/Documentation.md).
 
 <div align="center">
 <img src="images/waterwheel.gif" alt="waterwheel" width="300px"> <img src="images/maze.gif" alt="maze" width="300px">
