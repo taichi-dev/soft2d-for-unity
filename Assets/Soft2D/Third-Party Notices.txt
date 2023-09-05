@@ -18,12 +18,3 @@ See https://github.com/taichi-dev/taichi/blob/master/LICENSE for more details.
 License Type: Apache License 2.0
 
 See https://fonts.google.com/specimen/Roboto for more details.
-
-4. Component Name: car_mini_01 3D Model
-License Type: Standard Unity Asset Store EULA
-
-See https://assetstore.unity.com/packages/2d/environments/pixel-kit-car-free-195422 for more details.
-
-
-
-
